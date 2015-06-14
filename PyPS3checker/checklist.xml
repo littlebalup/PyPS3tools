@@ -1,0 +1,1302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+  <NAND>
+    <sdk risklevel="WARNING">
+      <sdk_version name="ROS0" offset="C0030"></sdk_version>
+      <sdk_version name="ROS1" offset="7C0020"></sdk_version>
+	</sdk>
+    <bootldr_top_region>
+      <multibinentry risklevel="DANGER" name="001.01   bootldr0 (Top)" offset="0" length="4">
+	    <entry>00002A3F</entry>
+		<entry>00002A2A</entry>
+		<entry>00003044</entry>
+		<entry>00002A37</entry>
+		<entry>00002E8C</entry>
+		<entry>00002F1C</entry>
+		<!-- below refurbished consoles? -->
+        <entry>00002EF4</entry>
+        <entry>00002EE3</entry>
+        <entry>00002EAB</entry>
+        <entry>00002EB3</entry>
+        <entry>00002F13</entry>
+        <entry>00002F3B</entry>
+        <entry>00002F4B</entry>
+        <entry>00002F53</entry>
+        <entry>00002F5B</entry>
+        <entry>00002FFB</entry>
+        <entry>00003003</entry>
+        <entry>0000300B</entry>
+        <entry>0000301B</entry>
+	  </multibinentry>
+      <multibinentry risklevel="DANGER" name="001.02   bootldr1 (Top)" offset="10" length="4">
+	    <entry>00002A3F</entry>
+		<entry>00002A2A</entry>
+		<entry>00003044</entry>
+		<entry>00002A37</entry>
+		<entry>00002E8C</entry>
+		<entry>00002F1C</entry>
+		<!-- below refurbished consoles? -->
+        <entry>00002EF4</entry>
+        <entry>00002EE3</entry>
+        <entry>00002EAB</entry>
+        <entry>00002EB3</entry>
+        <entry>00002F13</entry>
+        <entry>00002F3B</entry>
+        <entry>00002F4B</entry>
+        <entry>00002F53</entry>
+        <entry>00002F5B</entry>
+        <entry>00002FFB</entry>
+        <entry>00003003</entry>
+        <entry>0000300B</entry>
+        <entry>0000301B</entry>
+	  </multibinentry>
+      <multibinentry risklevel="DANGER" name="001.03   bootldr Rev key (Top)" offset="4" length="C">
+	    <entry>04AD5618648D4994238FB8A1</entry>
+        <entry>5CE463CD5C9EB67AFEA01B54</entry>
+        <entry>1C2181C8EA41865C8B338AEF</entry>
+        <entry>3FF11F14C342443C88B18E90</entry>
+        <entry>BC30D5524B749965CF95AE5F</entry>
+        <entry>F996D84E1A9D50BF97F4A0CE</entry>
+        <entry>31B59A072ED45CB56808C2FC</entry>
+        <entry>065B860C5CF76AC4598DD7B4</entry>
+        <!-- refurbished consoles? -->
+        <entry>89EFFD15B3850E3B2A734484</entry>
+        <entry>6EED04A04E41532AC123C718</entry>
+        <entry>E644A075B60B7996C1297AA0</entry>
+        <entry>7B09CBEE002FAF5159F8D5A8</entry>
+        <entry>ED4C79D65D602876FFADA6FD</entry>
+        <entry>B19434A33CF1C866DF420E50</entry>
+        <entry>83EFB976C4DED135327CD377</entry>
+        <entry>61D19BA54168163C019F884B</entry>
+        <entry>92AC2C2157A577C84DDFECDB</entry>
+        <entry>41F793C709418F938944BA7A</entry>
+        <entry>FA46EC86570FCAAA064E8A86</entry>
+        <entry>F5A221B5C05F214201979DAA</entry>
+        <entry>7780B134B6DF258A1ABBAB4D</entry>
+        <entry>CB9E152428B44FD2F93FBC43</entry>
+        <entry>EFB3455D6A9FD751005E34BC</entry>
+        <entry>53921CE7F73341769B7A1ED6</entry>
+        <entry>53E6A0BBB0AFA20067D0B39A</entry>
+        <entry>AA3AEA6E3DA09A581E1E2100</entry>
+        <entry>C5A42771EE5E219A3BFC2C45</entry>
+        <entry>13ECA74A8E14D473129128E8</entry>
+        <entry>63B9D98130DB7BB0F39D124F</entry>
+        <entry>BBCCBF29ECD802844EB28AE6</entry>
+        <entry>2E604104D943D1B534D4C5F5</entry>
+        <entry>1FDC1E2DF00DA36701E2F8F6</entry>
+	  </multibinentry>
+      <datalist risklevel="DANGER" name="001.04   bootldr Statistics (Top)" offset="0" ldrsize="2">
+        <datatreshold key="*">0,5</datatreshold>
+      </datalist>
+      <datafill risklevel="DANGER" name="001.05   bootldr (Top) 0xFF Filled Area" regionstart="0" regionsize="40000" ldrsize="2">FF</datafill>
+    </bootldr_top_region>
+    <Header_Magic>
+      <datafill risklevel="WARNING" name="002.01   Header Magic 0x00 Filled Area 0" offset="40000" size="10">00</datafill>
+      <binentry risklevel="DANGER" name="002.02   Header Magic" offset="40010">000000000FACE0FF00000000DEADBEEF00000000000000000000000000007600</binentry>
+      <datafill risklevel="WARNING" name="002.03   Header Magic 0x00 Filled Area 1" offset="40030" size="1D0">00</datafill>
+    </Header_Magic>
+    <flash_region_table>
+      <binentry risklevel="DANGER" name="003.01   Flash Region Table Header" offset="40200">00000001000000090000000000EBFE00</binentry>
+      <binentry risklevel="DANGER" name="003.02   asecure_loader Offset - Length" offset="40210">00000000000006000000000000040000</binentry>
+      <binentry risklevel="DANGER" name="003.03   asecure_loader Name" offset="40220" ascii="true">617365637572655F6C6F61646572000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="003.04   eEID Offset - Length" offset="40240">00000000000406000000000000010000</binentry>
+      <binentry risklevel="DANGER" name="003.05   eEID Name" offset="40250" ascii="true">6545494400000000000000000000000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="003.06   cISD Offset - Length" offset="40270">00000000000506000000000000000800</binentry>
+      <binentry risklevel="DANGER" name="003.07   cISD Name" offset="40280" ascii="true">6349534400000000000000000000000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="003.08   cCSD Offset - Length" offset="402A0">0000000000050E000000000000000800</binentry>
+      <binentry risklevel="DANGER" name="003.09   cCSD Name" offset="402B0" ascii="true">6343534400000000000000000000000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="003.10   trvk_prg Offset - Length" offset="402D0">00000000000516000000000000002000</binentry>
+      <binentry risklevel="DANGER" name="003.11   trvk_prg Name" offset="402E0" ascii="true">7472766B5F707267000000000000000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="003.12   trvk_pkg Offset - Length" offset="40300">00000000000536000000000000002000</binentry>
+      <binentry risklevel="DANGER" name="003.13   trvk_pkg Name" offset="40310" ascii="true">7472766B5F706B67000000000000000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="003.14   creserved_0 Offset - Length" offset="40330">0000000000055600000000000002A800</binentry>
+      <binentry risklevel="DANGER" name="003.15   creserved_0 Name" offset="40340" ascii="true">6372657365727665645F30000000000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="003.16   ros Offset - Length" offset="40360">000000000007FE000000000000E00000</binentry>
+      <binentry risklevel="DANGER" name="003.17   ros Name" offset="40370" ascii="true">726F730000000000000000000000000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="003.18   cvtrm Offset - Length" offset="40390">0000000000E7FE000000000000040000</binentry>
+      <binentry risklevel="DANGER" name="003.19   cvtrm Name" offset="403A0" ascii="true">637674726D000000000000000000000000000000000000000000000000000000</binentry>
+      <datafill risklevel="WARNING" name="003.20   Flash Region Table 0x00 Filled Area" offset="403B0" size="450">00</datafill>
+    </flash_region_table>
+    <asure_loader_region>
+      <binentry risklevel="DANGER" name="004.01   asecure_loader Header" offset="40800">00000001000000010000000000040000</binentry>
+      <binentry risklevel="DANGER" name="004.02   metldr Offset" offset="40810">0000000000000040</binentry>
+      <multibinentry risklevel="DANGER" name="004.03   metldr Length" offset="40818" length="8">
+	    <entry>000000000000EE10</entry>
+        <entry>000000000000EDA0</entry>
+        <entry>000000000000EBF0</entry>
+        <entry>000000000000EDE0</entry>
+        <entry>000000000000E7B0</entry>
+      <!-- refurbished consoles? -->
+        <entry>000000000000E8C0</entry>
+        <entry>000000000000E8E0</entry>
+        <entry>000000000000EA60</entry>
+        <entry>000000000000E8D0</entry>
+        <entry>000000000000E890</entry>
+        <entry>000000000000E920</entry>
+        <entry>000000000000E960</entry>
+        <entry>000000000000F920</entry>
+        <entry>000000000000F9B0</entry>
+	  </multibinentry>
+      <binentry risklevel="DANGER" name="004.04   metldr Name" offset="40820" ascii="true">6D65746C64720000000000000000000000000000000000000000000000000000</binentry> <!-- METLDR -->
+      <multibinentry risklevel="DANGER" name="004.05   metldr RevKey" offset="40840" length="10">
+	    <entry>00000EDD2F6C622ECA7FAE0D2F76B5D4</entry>
+        <entry>00000ED648F43FDE3EEE37119C673663</entry>
+        <entry>00000EBB94C6A30BBF2F50752E8DC052</entry>
+        <entry>00000EDA81CF2EF41A336897E0493CB8</entry>
+        <entry>00000E771362F2C2E6835D6FC144F246</entry>
+      <!-- refurbished consoles? -->
+        <entry>00000E887822C41EB9F00FA4830A0B69</entry>
+        <entry>00000E8A5E1F9CED758B6B94442BF031</entry>
+        <entry>00000EA253E7EA237889AE20322A9708</entry>
+        <entry>00000E8943B6EF4AE20F7400C8809E53</entry>
+        <entry>00000E85BC78B8F02879A81184A0DA74</entry>
+        <entry>00000E8E99873BC715F280809C302225</entry>
+        <entry>00000E92C3266E4BBB282E76B7677095</entry>
+        <entry>00000E92DBA53B0AB5181D971524615B</entry>
+        <entry>00000F8E6ED7BCD81F11EA34425F9B9D</entry>
+        <entry>00000F8E656EC1D96595F85C1F9C6196</entry>
+        <entry>00000F8E39ECF2D2ACC0E0752248A9F8</entry>
+        <entry>00000F97EA838371878EF0892A5EF6B6</entry>
+        <entry>00000F97C36C2E4300AACBE6F64FAD92</entry>
+        <entry>00000F97A2834B1DFD969CC1769517C6</entry>
+	  </multibinentry>
+      <multibinentry risklevel="DANGER" name="004.06   metldr Binary Size" offset="40850" length="4">
+	    <entry>00000EDD</entry>
+        <entry>00000ED6</entry>
+        <entry>00000EBB</entry>
+        <entry>00000EDA</entry>
+        <entry>00000E77</entry>
+      <!-- refurbished consoles? -->
+        <entry>00000E88</entry>
+        <entry>00000E8A</entry>
+        <entry>00000EA2</entry>
+        <entry>00000E89</entry>
+        <entry>00000E85</entry>
+        <entry>00000E8E</entry>
+        <entry>00000E92</entry>
+        <entry>00000F8E</entry>
+        <entry>00000F97</entry>
+	  </multibinentry>
+      <datalist risklevel="DANGER" name="004.07   metldr Statistics" offset="40840" ldrsize="40842">
+        <datatreshold key="*">0,52</datatreshold>
+      </datalist>
+      <datafill risklevel="WARNING" name="004.08   asecure_loader 0x00 Filled Area" regionstart="40840" regionsize="2E7C0" ldrsize="40842">00</datafill>
+    </asure_loader_region>
+    <eEID_region>
+      <binentry risklevel="DANGER" name="005.01   eEID Header" offset="80800">0000000600001DD00000000000000000</binentry>
+      <binentry risklevel="DANGER" name="005.02   EID0 Offset - Length" offset="80810">00000070000008600000000000000000</binentry>
+      <binentry risklevel="DANGER" name="005.03   EID1 Offset - Length" offset="80820">000008D0000002A00000000000000001</binentry>
+      <binentry risklevel="DANGER" name="005.04   EID2 Offset - Length" offset="80830">00000B70000007300000000000000002</binentry>
+      <binentry risklevel="DANGER" name="005.05   EID3 Offset - Length" offset="80840">000012A0000001000000000000000003</binentry>
+      <binentry risklevel="DANGER" name="005.06   EID4 Offset - Length" offset="80850">000013A0000000300000000000000004</binentry>
+      <binentry risklevel="DANGER" name="005.07   EID5 Offset - Length" offset="80860">000013D000000A000000000000000005</binentry>
+      <multibinentry risklevel="DANGER" name="005.08   EID0 IDPS0" offset="80870" length="6">
+	    <entry>000000010082</entry>
+        <entry>000000010083</entry>
+        <entry>000000010084</entry>
+        <entry>000000010085</entry>
+        <entry>000000010086</entry>
+        <entry>000000010087</entry>
+        <entry>000000010088</entry>
+        <entry>000000010089</entry>
+        <entry>00000001008A</entry>
+        <entry>00000001008B</entry>
+        <entry>00000001008C</entry>
+        <entry>00000001008E</entry>
+        <entry>00000001008F</entry>
+	  </multibinentry>
+      <multibinentry risklevel="DANGER" name="005.09   EID0 IDPS1" offset="80876" length="2">
+	    <entry>0001</entry>
+        <entry>0002</entry>
+        <entry>0003</entry>
+        <entry>0004</entry>
+        <entry>0005</entry>
+        <entry>0006</entry>
+        <entry>0007</entry>
+        <entry>0008</entry>
+        <entry>0009</entry>
+        <entry>000A</entry>
+        <entry>000B</entry>
+        <entry>000C</entry>
+        <entry>000D</entry>
+        <entry>000E</entry>
+        <entry>000F</entry>
+	  </multibinentry>
+      <binentry risklevel="DANGER" name="005.10   EID0 Static" offset="80880">0012000B</binentry>
+      <binentry risklevel="DANGER" name="005.11   EID2 BlockSize/Padding" offset="81370">0080069000000000000000000000000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="005.12   EID3 Static0" offset="81AA0">00000001</binentry>
+      <binentry risklevel="DANGER" name="005.13   EID3 Static1" offset="81AA8">00000000</binentry>
+      <binentry risklevel="DANGER" name="005.14   EID3 Static2" offset="81AB0">000100D0</binentry>
+      <multibinentry risklevel="DANGER" name="005.15   EID5 IDPS0" offset="81BD0" length="6">
+	    <entry>000000010082</entry>
+        <entry>000000010083</entry>
+        <entry>000000010084</entry>
+        <entry>000000010085</entry>
+        <entry>000000010086</entry>
+        <entry>000000010087</entry>
+        <entry>000000010088</entry>
+        <entry>000000010089</entry>
+        <entry>00000001008A</entry>
+        <entry>00000001008B</entry>
+        <entry>00000001008C</entry>
+        <entry>00000001008E</entry>
+        <entry>00000001008F</entry>
+	  </multibinentry>
+      <multibinentry risklevel="DANGER" name="005.16   EID5 IDPS1" offset="81BD6" length="2">
+	    <entry>0001</entry>
+        <entry>0002</entry>
+        <entry>0003</entry>
+        <entry>0004</entry>
+        <entry>0005</entry>
+        <entry>0006</entry>
+        <entry>0007</entry>
+        <entry>0008</entry>
+        <entry>0009</entry>
+        <entry>000A</entry>
+        <entry>000B</entry>
+        <entry>000C</entry>
+        <entry>000D</entry>
+        <entry>000E</entry>
+        <entry>000F</entry>
+	  </multibinentry>
+      <binentry risklevel="DANGER" name="005.17   EID5 Static" offset="81BE0">00120730</binentry>
+      <datafill risklevel="WARNING" name="005.18   eEID Region 0xFF Filled Area" offset="825D0" size="E230">FF</datafill>
+      <datalist risklevel="DANGER" name="005.19   eEID Statistics0" offset="80880" size="AF0">
+        <datatreshold key="*">1,1</datatreshold>
+      </datalist>
+      <datalist risklevel="DANGER" name="005.20   eEID Statistics1" offset="81390" size="1240">
+        <datatreshold key="*">1,1</datatreshold>
+      </datalist>
+    </eEID_region>
+    <cISD_region>
+      <binentry risklevel="DANGER" name="006.01   cISD Header" offset="90800">00000003000002700000000000000000</binentry>
+      <binentry risklevel="DANGER" name="006.02   cISD0 Offset - Length" offset="90810">00000040000000200000000000000000</binentry>
+      <binentry risklevel="DANGER" name="006.03   cISD1 Offset - Length" offset="90820">00000060000002000000000000000001</binentry>
+      <binentry risklevel="DANGER" name="006.04   cISD2 Offset - Length" offset="90830">00000260000000100000000000000002</binentry>
+      <datafill risklevel="WARNING" name="006.05   cISD0 0xFF Filled Area" offset="90846" size="1A">FF</datafill>
+      <binentry risklevel="DANGER" name="006.06   cISD1 IDLog Header" offset="90860" ascii="true">7F49444C</binentry>
+      <multibinentry risklevel="DANGER" name="006.07   cISD1 Semistatic 1" offset="90864" length="6">
+	    <entry>000200600100</entry>
+	    <entry>000300680100</entry>
+	  </multibinentry>
+      <multibinentry risklevel="DANGER" name="006.08   cISD1 Semistatic 2" offset="908A4" length="6">
+	    <entry>001100110012</entry>
+        <entry>001300130018</entry>
+        <entry>001300130022</entry>
+        <entry>001900190028</entry>
+        <entry>002500250034</entry>
+        <entry>002800280038</entry>
+        <entry>003100310041</entry>
+        <entry>003900390049</entry>
+        <entry>004500450067</entry>
+        <entry>004700470071</entry>
+        <entry>005200520071</entry>
+        <entry>005400540080</entry>
+        <entry>006200620090</entry>
+        <entry>006200620092</entry>
+        <entry>006600660096</entry>
+        <entry>007300730096</entry>
+        <entry>007900790106</entry>
+        <entry>008500850106</entry>
+        <entry>008500850114</entry>
+        <entry>008700870114</entry>
+        <entry>009100910114</entry>
+        <entry>009900990118</entry>
+        <entry>010101010124</entry>
+        <entry>010101010128</entry>
+        <entry>010701070128</entry>
+        <entry>010701070134</entry>
+        <entry>011101110138</entry>
+        <entry>011101110140</entry>
+        <entry>011301130142</entry>
+        <entry>012101210150</entry>
+        <entry>012301230152</entry>
+        <entry>013101310160</entry>
+        <entry>016501650180</entry>
+	  </multibinentry>
+      <datafill risklevel="WARNING" name="006.09   cISD1 0xFF Filled Area 0" offset="908AC" size="4">FF</datafill>
+      <binentry risklevel="DANGER" name="006.10   cISD1 Static" offset="908AA">0001</binentry>
+      <multibinentry risklevel="DANGER" name="006.11   cISD1 Semistatic 3" offset="908B0" length="8">
+	    <entry>0001001100020012</entry>
+        <entry>0001001200020012</entry>
+        <entry>0002001100020012</entry>
+        <entry>0002001200020012</entry>
+	  </multibinentry>
+      <datafill risklevel="WARNING" name="006.12   cISD1 0xFF Filled Area 1" offset="908C8" size="198">FF</datafill>
+      <datalist risklevel="DANGER" name="006.13   cISD1 Statistics" offset="90870" size="3C">
+        <datatreshold key="FF">0</datatreshold>
+      </datalist>
+      <multibinentry risklevel="DANGER" name="006.14   cISD2" offset="90A60" length="10">
+	    <entry>1FFF0000000000000000000000000000</entry>
+		<entry>07FF0000000000000000000000000000</entry>
+		<entry>3FFF0000000000000000000000000000</entry>
+	  </multibinentry>
+      <datafill risklevel="WARNING" name="006.15   cISD 0xFF Filled Area" offset="90A70" size="590">FF</datafill>
+    </cISD_region>
+    <cCSD_region>
+      <binentry risklevel="DANGER" name="007.01   cCSD Header" offset="91000">00000001000008000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="007.02   cCSD Entry Table" offset="91010">00000020000000300000000000000000</binentry>
+      <datafill risklevel="WARNING" name="007.03   cCSD 0xFF Filled Area" offset="91020" size="7E0">FF</datafill>
+    </cCSD_region>
+    <Revokation_region>
+      <binentry risklevel="DANGER" name="008.01   trvk_prg0 SCE" offset="91830" ascii="true">53434500</binentry>
+      <!-- same comments than NOR -->
+      <binentry risklevel="DANGER" name="008.02   trvk_prg1 SCE" offset="92820" ascii="true">53434500</binentry>
+      <!-- same comments than NOR -->
+      <binentry risklevel="DANGER" name="008.03   trvk_pkg0 SCE" offset="93830" ascii="true">53434500</binentry>
+      <!-- same comments than NOR -->
+      <binentry risklevel="DANGER" name="008.04   trvk_pkg1 SCE" offset="94820" ascii="true">53434500</binentry>
+      <!-- same comments than NOR -->
+    </Revokation_region>
+    <CoreOS_region>
+      <multibinentry risklevel="WARNING" name="009.00   ROS Header" offset="C0000" length="20">
+	    <entry>000000000070001000000000007000100000000000E000000000000000000000</entry>
+	    <entry>000000000000002000000000000000200000000000E000000000000000000000</entry>
+	  </multibinentry>
+      <binentry risklevel="WARNING" name="009.01   ROS0 Header" offset="C0020" >000000000000000000000000006FFFE0</binentry>
+	  <hash risklevel="WARNING" name="009.02   ROS0 Hash" type="ROS" offset="C0030" size="6FFFE0"></hash>
+      <binentry risklevel="WARNING" name="009.03   ROS1 Header" offset="7C0010">000000000000000000000000006FFFE0</binentry>
+	  <hash risklevel="WARNING" name="009.04   ROS1 Hash" type="ROS" offset="7C0020" size="6FFFE0"></hash>
+    </CoreOS_region>
+    <cvtrm_region>
+      <binentry risklevel="DANGER" name="010.01   cvtrm Header" offset="EC0000" ascii="true">534345495654524D000000000000</binentry>
+      <binentry risklevel="DANGER" name="010.02   cvtrm Header Static 1" offset="EC0010">0000000000E802000000000000000028</binentry>
+      <binentry risklevel="DANGER" name="010.03   vtrm Magic 1" offset="EC0020" ascii="true">000000005654524D</binentry>
+ <!-- <datafill risklevel="WARNING" name="010.04   cvtrm 0xFF Filled Area 0" offset="EC011C" size="2E4">FF</datafill> --> <!-- Data filled on some CECHA. -->
+      <binentry risklevel="DANGER" name="010.05   vtrm Magic 2" offset="EC0400" ascii="true">000000005654524D</binentry>
+ <!-- <datafill risklevel="WARNING" name="010.06   vtrm 0xFF Filled Area" vtrmentrycount_offset="EC043E" regionstart="EC28C0" regionsize="36C00">FF</datafill> --> <!-- Data filled on some CECHA. -->
+      <datafill risklevel="WARNING" name="010.07   cvtrm 0x00 Filled Area" offset="EFF000" size="1000">00</datafill>
+    </cvtrm_region>
+    <cell_ext_os_area>
+      <multibinentry risklevel="DANGER" name="011.01   cell_ext_os_area Header" offset="E780000" length="10">
+	    <entry>FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</entry>
+		<entry>63656C6C5F6578745F6F735F61726561</entry>
+	  </multibinentry>
+      <datafill risklevel="WARNING" name="011.02   cell_ext_os_area 0xFF Filled Area 0" offset="E780028" size="1D8">FF</datafill>
+      <binentry risklevel="WARNING" name="011.03   cell_ext_os_area Break Section" offset="E780200">00000000FFFFFFFFFFFFFFFFFFFFFFFF00000003FFFFFFFFFFFFFFFFFFFFFFFF00000000000000000000FFFFFFFFFFFF000000000000000000000000FFFFFFFF0000000000000000FFFFFFFFFFFFFFFF</binentry>
+      <datafill risklevel="WARNING" name="011.04   cell_ext_os_area 0xFF Filled Area 1" offset="E780250" size="1B0">FF</datafill>
+    </cell_ext_os_area>
+    <bootldr_bottom_region>
+      <multibinentry risklevel="DANGER" name="012.01   bootldr0 (Bottom)" offset="F000000" length="4">
+	    <entry>00002A3F</entry>
+        <entry>00002A2A</entry>
+        <entry>00003044</entry>
+        <entry>00002A37</entry>
+        <entry>00002E8C</entry>
+        <entry>00002F1C</entry>
+      <!-- refurbished consoles? -->
+        <entry>00002EF4</entry>
+        <entry>00002EE3</entry>
+        <entry>00002EAB</entry>
+        <entry>00002EB3</entry>
+        <entry>00002F13</entry>
+        <entry>00002F3B</entry>
+        <entry>00002F4B</entry>
+        <entry>00002F53</entry>
+        <entry>00002F5B</entry>
+        <entry>00002FFB</entry>
+        <entry>00003003</entry>
+        <entry>0000300B</entry>
+        <entry>0000301B</entry>
+	  </multibinentry>
+      <multibinentry risklevel="DANGER" name="012.02   bootldr1 (Bottom)" offset="F000010" length="4">
+	    <entry>00002A3F</entry>
+		<entry>00002A2A</entry>
+		<entry>00003044</entry>
+		<entry>00002A37</entry>
+		<entry>00002E8C</entry>
+		<entry>00002F1C</entry>
+		<!-- below refurbished consoles? -->
+        <entry>00002EF4</entry>
+        <entry>00002EE3</entry>
+        <entry>00002EAB</entry>
+        <entry>00002EB3</entry>
+        <entry>00002F13</entry>
+        <entry>00002F3B</entry>
+        <entry>00002F4B</entry>
+        <entry>00002F53</entry>
+        <entry>00002F5B</entry>
+        <entry>00002FFB</entry>
+        <entry>00003003</entry>
+        <entry>0000300B</entry>
+        <entry>0000301B</entry>
+	  </multibinentry>
+      <multibinentry risklevel="DANGER" name="012.03   bootldr Rev key (Bottom)" offset="F000004" length="C">
+	    <entry>04AD5618648D4994238FB8A1</entry>
+        <entry>5CE463CD5C9EB67AFEA01B54</entry>
+        <entry>1C2181C8EA41865C8B338AEF</entry>
+        <entry>3FF11F14C342443C88B18E90</entry>
+        <entry>BC30D5524B749965CF95AE5F</entry>
+        <entry>F996D84E1A9D50BF97F4A0CE</entry>
+        <entry>31B59A072ED45CB56808C2FC</entry>
+        <entry>065B860C5CF76AC4598DD7B4</entry>
+        <!-- refurbished consoles? -->
+        <entry>89EFFD15B3850E3B2A734484</entry>
+        <entry>6EED04A04E41532AC123C718</entry>
+        <entry>E644A075B60B7996C1297AA0</entry>
+        <entry>7B09CBEE002FAF5159F8D5A8</entry>
+        <entry>ED4C79D65D602876FFADA6FD</entry>
+        <entry>B19434A33CF1C866DF420E50</entry>
+        <entry>83EFB976C4DED135327CD377</entry>
+        <entry>61D19BA54168163C019F884B</entry>
+        <entry>92AC2C2157A577C84DDFECDB</entry>
+        <entry>41F793C709418F938944BA7A</entry>
+        <entry>FA46EC86570FCAAA064E8A86</entry>
+        <entry>F5A221B5C05F214201979DAA</entry>
+        <entry>7780B134B6DF258A1ABBAB4D</entry>
+        <entry>CB9E152428B44FD2F93FBC43</entry>
+        <entry>EFB3455D6A9FD751005E34BC</entry>
+        <entry>53921CE7F73341769B7A1ED6</entry>
+        <entry>53E6A0BBB0AFA20067D0B39A</entry>
+        <entry>AA3AEA6E3DA09A581E1E2100</entry>
+        <entry>C5A42771EE5E219A3BFC2C45</entry>
+        <entry>13ECA74A8E14D473129128E8</entry>
+        <entry>63B9D98130DB7BB0F39D124F</entry>
+        <entry>BBCCBF29ECD802844EB28AE6</entry>
+        <entry>2E604104D943D1B534D4C5F5</entry>
+        <entry>1FDC1E2DF00DA36701E2F8F6</entry>
+	  </multibinentry>
+      <datalist risklevel="DANGER" name="012.04   bootldr Statistics (Bottom)" offset="F000000" ldrsize="F000002">
+        <datatreshold key="*">0,5</datatreshold>
+      </datalist>
+      <datafill risklevel="DANGER" name="012.05   bootldr 0xFF Filled Area" regionstart="F000000" regionsize="40000" ldrsize="F000002">FF</datafill>
+    </bootldr_bottom_region>
+    <datamatches>
+      <datamatchid risklevel="DANGER" id="0">bootldr size</datamatchid>
+      <datamatchid risklevel="DANGER" id="1">per console nonce</datamatchid>
+      <datamatchid risklevel="DANGER" id="2">bootldr</datamatchid>
+      <datamatchid risklevel="DANGER" id="3">metldr size</datamatchid>
+      <datamatchid risklevel="DANGER" id="4">vtrm header datas</datamatchid>
+      <datamatchid risklevel="DANGER" id="5">vtrm</datamatchid>
+      <id0>
+        <datamatch offset="0" length="4" id="0">bootldr0 Top</datamatch>
+        <datamatch offset="10" length="4" id="0">bootldr1 Top</datamatch>
+        <datamatch offset="F000000" length="4" id="0">bootldr0 Bottom</datamatch>
+        <datamatch offset="F000010" length="4" id="0">bootldr1 Bottom</datamatch>
+      </id0>
+      <id1>
+        <datamatch offset="14" length="C" id="1">bootldr0</datamatch>
+        <datamatch offset="F000014" length="C" id="1">bootldr1</datamatch>
+        <datamatch offset="40854" length="C" id="1">metldr</datamatch>
+        <datamatch offset="80884" length="C" id="1">eid0</datamatch>
+        <datamatch offset="81AB4" length="C" id="1">eid3</datamatch>
+        <datamatch offset="81BE4" length="C" id="1">eid5</datamatch>
+      </id1>
+      <id2>
+        <datamatch offset="0" length="40000" id="2" nodisp="true">bootldr Top</datamatch>
+        <datamatch offset="F000000" length="40000" id="2" nodisp="true">bootldr Bottom</datamatch>
+      </id2>
+      <id3>
+        <datamatch offset="40840" length="4" id="3">metldr size 0</datamatch>
+        <datamatch offset="40850" length="4" id="3">metldr size 1</datamatch>
+      </id3>
+      <id4>
+        <datamatch offset="EC0020" length="10" id="4">vtrm header 1</datamatch>
+        <datamatch offset="EC0400" length="10" id="4">vtrm header 2</datamatch>
+      </id4>
+      <id5>
+        <datamatch offset="EF94C0" length="14" id="5" seqrep="417">repetitions seq. 1</datamatch>
+        <datamatch offset="EFE6A0" length="14" id="5" seqrep="78">repetitions seq. 2</datamatch>
+      </id5>
+    </datamatches>
+    <repetitions>
+      <repcheck risklevel="DANGER" name="Header Magic Repetition" offset="40010">000000000FACE0FF00000000DEADBEEF</repcheck>
+      <repcheck risklevel="DANGER" name="asecure_loader Repetition" offset="40220">617365637572655F6C6F616465720000</repcheck>
+      <repcheck risklevel="DANGER" name="eEID Repetition" offset="40250">65454944000000000000000000000000</repcheck>
+      <repcheck risklevel="DANGER" name="cISD Repetition" offset="40280">63495344000000000000000000000000</repcheck>
+      <repcheck risklevel="DANGER" name="cCSD Repetition" offset="402B0">63435344000000000000000000000000</repcheck>
+      <repcheck risklevel="DANGER" name="trvk_prg Repetition" offset="402E0">7472766B5F7072670000000000000000</repcheck>
+      <repcheck risklevel="DANGER" name="trvk_pkg Repetition" offset="40310">7472766B5F706B670000000000000000</repcheck>
+      <repcheck risklevel="DANGER" name="ros Repetition" offset="40370">726F7300000000000000000000000000</repcheck>
+      <repcheck risklevel="DANGER" name="cvtrm Repetition" offset="403A0">637674726D0000000000000000000000</repcheck>
+    </repetitions>
+    <skulistdata>
+      <skudataentry offset="80876" size="2">idps</skudataentry>
+      <skudataentry offset="4081E" size="2">metldr0</skudataentry>
+      <skudataentry offset="40842" size="2">metldr1</skudataentry>
+      <skudataentry offset="2" size="2">bootldr0</skudataentry>
+      <skudataentry offset="12" size="2">bootldr1</skudataentry>
+      <skudataentry offset="2" size="2">bootldrsize</skudataentry>
+    </skulistdata>
+    <skumodels risklevel="WARNING">
+      <skulist id="01" name="CECHAxx (COK-001)" minver="1.00">
+        <skuentry type="idps">0001</skuentry>
+        <skuentry type="metldr0">EE10</skuentry>
+        <skuentry type="metldr1">0EDD</skuentry>
+        <skuentry type="bootldr0">2A3F</skuentry>
+        <skuentry type="bootldr1">2A3F</skuentry>
+        <skuentry type="bootldrsize">2A430</skuentry>
+      </skulist>
+      <skulist id="02" name="CECHExx (COK-002)" minver="2.70">
+        <skuentry type="idps">0003</skuentry>
+        <skuentry type="metldr0">EE10</skuentry>
+        <skuentry type="metldr1">0EDD</skuentry>
+        <skuentry type="bootldr0">2A3F</skuentry>
+        <skuentry type="bootldr1">2A3F</skuentry>
+        <skuentry type="bootldrsize">2A430</skuentry>
+      </skulist>
+      <skulist id="03" name="CECHExx (COK-002)" minver="1.00">
+        <skuentry type="idps">0004</skuentry>
+        <skuentry type="metldr0">EE10</skuentry>
+        <skuentry type="metldr1">0EDD</skuentry>
+        <skuentry type="bootldr0">2A3F</skuentry>
+        <skuentry type="bootldr1">2A3F</skuentry>
+        <skuentry type="bootldrsize">2A430</skuentry>
+      </skulist>
+      <skulist id="04" name="CECHAxx (COK-001)" minver="1.00">
+        <skuentry type="idps">0001</skuentry>
+        <skuentry type="metldr0">EDA0</skuentry>
+        <skuentry type="metldr1">0ED6</skuentry>
+        <skuentry type="bootldr0">2A2A</skuentry>
+        <skuentry type="bootldr1">2A2A</skuentry>
+        <skuentry type="bootldrsize">2A2E0</skuentry>
+      </skulist>
+      <skulist id="05" name="CECHBxx (COK-001)" minver="1.00">
+        <skuentry type="idps">0002</skuentry>
+        <skuentry type="metldr0">EDA0</skuentry>
+        <skuentry type="metldr1">0ED6</skuentry>
+        <skuentry type="bootldr0">2A2A</skuentry>
+        <skuentry type="bootldr1">2A2A</skuentry>
+        <skuentry type="bootldrsize">2A2E0</skuentry>
+      </skulist>
+      <skulist id="06" name="CECHCxx (COK-002)" minver="1.00">
+        <skuentry type="idps">0003</skuentry>
+        <skuentry type="metldr0">EDA0</skuentry>
+        <skuentry type="metldr1">0ED6</skuentry>
+        <skuentry type="bootldr0">2A2A</skuentry>
+        <skuentry type="bootldr1">2A2A</skuentry>
+        <skuentry type="bootldrsize">2A2E0</skuentry>
+      </skulist>
+      <skulist id="07" name="CECHCxx (COK-002)" minver="1.00">
+        <skuentry type="idps">0003</skuentry>
+        <skuentry type="metldr0">EBF0</skuentry>
+        <skuentry type="metldr1">0EBB</skuentry>
+        <skuentry type="bootldr0">3044</skuentry>
+        <skuentry type="bootldr1">3044</skuentry>
+        <skuentry type="bootldrsize">30480</skuentry>
+      </skulist>
+      <skulist id="08" name="CECHAxx (COK-001)" minver="1.00">
+        <skuentry type="idps">0001</skuentry>
+        <skuentry type="metldr0">EDE0</skuentry>
+        <skuentry type="metldr1">0EDA</skuentry>
+        <skuentry type="bootldr0">2A37</skuentry>
+        <skuentry type="bootldr1">2A37</skuentry>
+        <skuentry type="bootldrsize">2A3B0</skuentry>
+      </skulist>
+      <skulist id="09" name="CECHCxx (COK-002)" minver="1.00">
+        <skuentry type="idps">0003</skuentry>
+        <skuentry type="metldr0">EDE0</skuentry>
+        <skuentry type="metldr1">0EDA</skuentry>
+        <skuentry type="bootldr0">2A37</skuentry>
+        <skuentry type="bootldr1">2A37</skuentry>
+        <skuentry type="bootldrsize">2A3B0</skuentry>
+      </skulist>
+      <skulist id="10" name="CECHCxx (COK-002)" minver="1.00">
+        <skuentry type="idps">0003</skuentry>
+        <skuentry type="metldr0">E7B0</skuentry>
+        <skuentry type="metldr1">0E77</skuentry>
+        <skuentry type="bootldr0">2E8C</skuentry>
+        <skuentry type="bootldr1">2E8C</skuentry>
+        <skuentry type="bootldrsize">2E900</skuentry>
+      </skulist>
+      <skulist id="11" name="CECHGxx (SEM-001)" minver="1.90">
+        <skuentry type="idps">0005</skuentry>
+        <skuentry type="metldr0">E7B0</skuentry>
+        <skuentry type="metldr1">0E77</skuentry>
+        <skuentry type="bootldr0">2E8C</skuentry>
+        <skuentry type="bootldr1">2E8C</skuentry>
+        <skuentry type="bootldrsize">2E900</skuentry>
+      </skulist>
+      <skulist id="12" name="CECHGxx (SEM-001)" minver="2.30">
+        <skuentry type="idps">0005</skuentry>
+        <skuentry type="metldr0">E7B0</skuentry>
+        <skuentry type="metldr1">0E77</skuentry>
+        <skuentry type="bootldr0">2F1C</skuentry>
+        <skuentry type="bootldr1">2F1C</skuentry>
+        <skuentry type="bootldrsize">2F200</skuentry>
+      </skulist>
+      <skulist id="13" name="CECHGxx (SEM-001)" minver="2.30">
+        <skuentry type="idps">0005</skuentry>
+        <skuentry type="metldr0">E8C0</skuentry>
+        <skuentry type="metldr1">0E88</skuentry>
+        <skuentry type="bootldr0">2EF4</skuentry>
+        <skuentry type="bootldr1">2EF4</skuentry>
+        <skuentry type="bootldrsize">2EF80</skuentry>
+      </skulist>
+      <skulist id="14" name="CECHExx (COK-002)" minver="N/A">
+        <skuentry type="idps">0003</skuentry>
+        <skuentry type="metldr0">EA60</skuentry>
+        <skuentry type="metldr1">0EA2</skuentry>
+        <skuentry type="bootldr0">2EE3</skuentry>
+        <skuentry type="bootldr1">2EE3</skuentry>
+        <skuentry type="bootldrsize">2EE70</skuentry>
+      </skulist>
+      <skulist id="15" name="CECHExx (COK-002W)" minver="3.40">
+        <skuentry type="idps">0003</skuentry>
+        <skuentry type="metldr0">E920</skuentry>
+        <skuentry type="metldr1">0E8E</skuentry>
+        <skuentry type="bootldr0">2F4B</skuentry>
+        <skuentry type="bootldr1">2F4B</skuentry>
+        <skuentry type="bootldrsize">2F4F0</skuentry>
+      </skulist>
+      <skulist id="16" name="CECHGxx (SEM-001)" minver="2.30"> <!-- Refurbished -->
+        <skuentry type="idps">0005</skuentry>
+        <skuentry type="metldr0">E920</skuentry>
+        <skuentry type="metldr1">0E8E</skuentry>
+        <skuentry type="bootldr0">2F4B</skuentry>
+        <skuentry type="bootldr1">2F4B</skuentry>
+        <skuentry type="bootldrsize">2F4F0</skuentry>
+      </skulist>
+    </skumodels>
+  </NAND>
+  <NOR>
+    <sdk risklevel="WARNING">
+      <sdk_version risklevel="WARNING" name="ROS0" offset="C0010"></sdk_version>
+      <sdk_version risklevel="WARNING" name="ROS1" offset="7C0010"></sdk_version>
+	</sdk>
+    <first_region_header>
+      <datafill risklevel="WARNING" name="001.01   First Region Header 0x00 Filled Area 0" offset="0" size="10">00</datafill>
+      <binentry risklevel="DANGER" name="001.02   First Region Header Magic" offset="10">000000000FACE0FF00000000DEADBEEF00000000000000000000000000007800</binentry>
+      <datafill risklevel="WARNING" name="001.03   First Region Header 0x00 Filled Area 1" offset="30" size="1D0">00</datafill>
+    </first_region_header>
+    <flash_format>
+      <binentry risklevel="DANGER" name="002.01   Flash Format String" offset="200" ascii="true">49464900</binentry>
+      <binentry risklevel="DANGER" name="002.02   Flash Format Version" offset="204">000000010000000200000000</binentry>
+      <datafill risklevel="WARNING" name="002.03   Flash Format 0xFF Filled Area" offset="210" size="1F0">FF</datafill>
+    </flash_format>
+    <flash_region_table>
+      <binentry risklevel="DANGER" name="003.01   Flash Region Table Header" offset="400">000000010000000B0000000000EFFC00</binentry>
+      <binentry risklevel="DANGER" name="003.02   asecure_loader Offset - Length" offset="410">0000000000000400000000000002E800</binentry>
+      <binentry risklevel="DANGER" name="003.03   asecure_loader Name" offset="420" ascii="true">617365637572655F6C6F61646572000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="003.04   eEID Offset - Length" offset="440">000000000002EC000000000000010000</binentry>
+      <binentry risklevel="DANGER" name="003.05   eEID Name" offset="450" ascii="true">6545494400000000000000000000000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="003.06   cISD Offset - Length" offset="470">000000000003EC000000000000000800</binentry>
+      <binentry risklevel="DANGER" name="003.07   cISD Name" offset="480" ascii="true">6349534400000000000000000000000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="003.08   cCSD Offset - Length" offset="4A0">000000000003F4000000000000000800</binentry>
+      <binentry risklevel="DANGER" name="003.09   cCSD Name" offset="4B0" ascii="true">6343534400000000000000000000000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="003.10   trvk_prg0 Offset - Length" offset="4D0">000000000003FC000000000000020000</binentry>
+      <binentry risklevel="DANGER" name="003.11   trvk_prg0 Name" offset="4E0" ascii="true">7472766B5F707267300000000000000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="003.12   trvk_prg1 Offset - Length" offset="500">000000000005FC000000000000020000</binentry>
+      <binentry risklevel="DANGER" name="003.13   trvk_prg1 Name" offset="510" ascii="true">7472766B5F707267310000000000000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="003.14   trvk_pkg0 Offset - Length" offset="530">000000000007FC000000000000020000</binentry>
+      <binentry risklevel="DANGER" name="003.15   trvk_pkg0 Name" offset="540" ascii="true">7472766B5F706B67300000000000000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="003.16   trvk_pkg1 Offset - Length" offset="560">000000000009FC000000000000020000</binentry>
+      <binentry risklevel="DANGER" name="003.17   trvk_pkg1 Name" offset="570" ascii="true">7472766B5F706B67310000000000000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="003.18   ros0 Offset - Length" offset="590">00000000000BFC000000000000700000</binentry>
+      <binentry risklevel="DANGER" name="003.19   ros0 Name" offset="5A0" ascii="true">726F733000000000000000000000000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="003.20   ros1 Offset - Length" offset="5C0">00000000007BFC000000000000700000</binentry>
+      <binentry risklevel="DANGER" name="003.21   ros1 Name" offset="5D0" ascii="true">726F733100000000000000000000000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="003.22   cvtrm Offset - Length" offset="5F0">0000000000EBFC000000000000040000</binentry>
+      <binentry risklevel="DANGER" name="003.23   cvtrm Name" offset="600" ascii="true">637674726D000000000000000000000000000000000000000000000000000000</binentry>
+      <datafill risklevel="WARNING" name="003.24   Flash Region Table 0x00 Filled Area" offset="610" size="1F0">00</datafill>
+    </flash_region_table>
+    <asure_loader_region>
+      <binentry risklevel="DANGER" name="004.01   asecure_loader Header" offset="800">0000000100000001000000000002E800</binentry>
+      <binentry risklevel="DANGER" name="004.02   metldr Offset" offset="810">0000000000000040</binentry>
+      <multibinentry risklevel="DANGER" name="004.03   metldr Length" offset="818" length="8">
+	    <entry>000000000000E7B0</entry>
+        <entry>000000000000E8C0</entry>
+        <entry>000000000000E8E0</entry>
+        <entry>000000000000E8D0</entry>
+        <entry>000000000000EA60</entry>
+        <entry>000000000000E890</entry>
+        <entry>000000000000E920</entry>
+        <entry>000000000000E960</entry>
+        <entry>000000000000F920</entry>
+        <entry>000000000000F9B0</entry>
+	  </multibinentry>
+      <multibinentry risklevel="DANGER" name="004.04   metldr Name" offset="820" length="20" ascii="true">
+	    <entry>6D65746C64720000000000000000000000000000000000000000000000000000</entry>   <!--METLDR--> 
+        <entry>6D65746C64722E32000000000000000000000000000000000000000000000000</entry>   <!-- METLDR2-->
+	  </multibinentry>
+      <multibinentry risklevel="DANGER" name="004.05   metldr RevKey" offset="840" length="10">
+	    <entry>00000E771362F2C2E6835D6FC144F246</entry>
+        <entry>00000E887822C41EB9F00FA4830A0B69</entry>
+        <entry>00000E8A5E1F9CED758B6B94442BF031</entry>
+        <entry>00000EA253E7EA237889AE20322A9708</entry>
+        <entry>00000E8943B6EF4AE20F7400C8809E53</entry>
+        <entry>00000E85BC78B8F02879A81184A0DA74</entry>
+        <entry>00000E8E99873BC715F280809C302225</entry>
+        <entry>00000E92C3266E4BBB282E76B7677095</entry>
+        <entry>00000E92DBA53B0AB5181D971524615B</entry>
+        <entry>00000F8E6ED7BCD81F11EA34425F9B9D</entry>
+        <entry>00000F8E656EC1D96595F85C1F9C6196</entry>
+        <entry>00000F8E39ECF2D2ACC0E0752248A9F8</entry>
+        <entry>00000F97EA838371878EF0892A5EF6B6</entry>
+        <entry>00000F97C36C2E4300AACBE6F64FAD92</entry>
+        <entry>00000F97A2834B1DFD969CC1769517C6</entry>
+	  </multibinentry>
+      <multibinentry risklevel="DANGER" name="004.06   metldr Binary Size" offset="850" length="4">
+	    <entry>00000E77</entry>
+        <entry>00000E88</entry>
+        <entry>00000E8A</entry>
+        <entry>00000EA2</entry>
+        <entry>00000E89</entry>
+        <entry>00000E85</entry>
+        <entry>00000E8E</entry>
+        <entry>00000E92</entry>
+        <entry>00000F8E</entry>
+        <entry>00000F97</entry>
+	  </multibinentry>
+      <datalist risklevel="DANGER" name="004.07   metldr Statistics" offset="840" ldrsize="842">
+        <datatreshold key="*">0,52</datatreshold>
+      </datalist>
+      <datafill risklevel="WARNING" name="004.08   asecure_loader 0x00 Filled Area" regionstart="840" regionsize="2E7C0" ldrsize="842">00</datafill>
+    </asure_loader_region>
+    <eEID_region>
+      <binentry risklevel="DANGER" name="005.01   eEID Header" offset="2F000">0000000600001DD00000000000000000</binentry>
+      <binentry risklevel="DANGER" name="005.02   EID0 Offset - Length" offset="2F010">00000070000008600000000000000000</binentry>
+      <binentry risklevel="DANGER" name="005.03   EID1 Offset - Length" offset="2F020">000008D0000002A00000000000000001</binentry>
+      <binentry risklevel="DANGER" name="005.04   EID2 Offset - Length" offset="2F030">00000B70000007300000000000000002</binentry>
+      <binentry risklevel="DANGER" name="005.05   EID3 Offset - Length" offset="2F040">000012A0000001000000000000000003</binentry>
+      <binentry risklevel="DANGER" name="005.06   EID4 Offset - Length" offset="2F050">000013A0000000300000000000000004</binentry>
+      <binentry risklevel="DANGER" name="005.07   EID5 Offset - Length" offset="2F060">000013D000000A000000000000000005</binentry>
+      <multibinentry risklevel="DANGER" name="005.08   EID0 IDPS0" offset="2F070" length="6">
+	    <entry>000000010082</entry>
+        <entry>000000010083</entry>
+        <entry>000000010084</entry>
+        <entry>000000010085</entry>
+        <entry>000000010086</entry>
+        <entry>000000010087</entry>
+        <entry>000000010088</entry>
+        <entry>000000010089</entry>
+        <entry>00000001008A</entry>
+        <entry>00000001008B</entry>
+        <entry>00000001008C</entry>
+        <entry>00000001008E</entry>
+        <entry>00000001008F</entry>
+	  </multibinentry>
+      <multibinentry risklevel="DANGER" name="005.09   EID0 IDPS1" ismulti="true" offset="2F076" length="2">
+	    <entry>0001</entry>
+        <entry>0002</entry>
+        <entry>0003</entry>
+        <entry>0004</entry>
+        <entry>0005</entry>
+        <entry>0006</entry>
+        <entry>0007</entry>
+        <entry>0008</entry>
+        <entry>0009</entry>
+        <entry>000A</entry>
+        <entry>000B</entry>
+        <entry>000C</entry>
+        <entry>000D</entry>
+        <entry>000E</entry>
+        <entry>000F</entry>
+	  </multibinentry>
+      <binentry risklevel="DANGER" name="005.10   EID0 Static" offset="2F080">0012000B</binentry>
+      <binentry risklevel="DANGER" name="005.11   EID2 BlockSize/Padding" offset="2FB70">0080069000000000000000000000000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="005.12   EID3 Static0" offset="302A0">00000001</binentry>
+      <binentry risklevel="DANGER" name="005.13   EID3 Static1" offset="302A8">00000000</binentry>
+      <binentry risklevel="DANGER" name="005.14   EID3 Static2" offset="302B0">000100D0</binentry>
+      <multibinentry risklevel="DANGER" name="005.15   EID5 IDPS0" offset="303D0" length="6">
+	    <entry>000000010082</entry>
+        <entry>000000010083</entry>
+        <entry>000000010084</entry>
+        <entry>000000010085</entry>
+        <entry>000000010086</entry>
+        <entry>000000010087</entry>
+        <entry>000000010088</entry>
+        <entry>000000010089</entry>
+        <entry>00000001008A</entry>
+        <entry>00000001008B</entry>
+        <entry>00000001008C</entry>
+        <entry>00000001008E</entry>
+        <entry>00000001008F</entry>
+	  </multibinentry>
+      <multibinentry risklevel="DANGER" name="005.16   EID5 IDPS1" offset="303D6" length="2">
+	    <entry>0001</entry>
+        <entry>0002</entry>
+        <entry>0003</entry>
+        <entry>0004</entry>
+        <entry>0005</entry>
+        <entry>0006</entry>
+        <entry>0007</entry>
+        <entry>0008</entry>
+        <entry>0009</entry>
+        <entry>000A</entry>
+        <entry>000B</entry>
+        <entry>000C</entry>
+        <entry>000D</entry>
+        <entry>000E</entry>
+        <entry>000F</entry>
+	  </multibinentry>
+      <binentry risklevel="DANGER" name="005.17   EID5 Static" offset="303E0">00120730</binentry>
+      <datafill risklevel="WARNING" name="005.18   eEID Region 0xFF Filled Area" offset="30DD0" size="E230">FF</datafill>
+      <datalist risklevel="DANGER" name="005.19   eEID Statistics0" offset="2F080" size="AF0">
+        <datatreshold key="*">1,1</datatreshold>
+      </datalist>
+      <datalist risklevel="DANGER" name="005.20   eEID Statistics1" offset="2FB90" size="1240">
+        <datatreshold key="*">1,1</datatreshold>
+      </datalist>
+    </eEID_region>
+    <cISD_region>
+      <binentry risklevel="DANGER" name="006.01   cISD Header" offset="3F000">00000003000002700000000000000000</binentry>
+      <binentry risklevel="DANGER" name="006.02   cISD0 Offset - Length" offset="3F010">00000040000000200000000000000000</binentry>
+      <binentry risklevel="DANGER" name="006.03   cISD1 Offset - Length" offset="3F020">00000060000002000000000000000001</binentry>
+      <binentry risklevel="DANGER" name="006.04   cISD2 Offset - Length" offset="3F030">00000260000000100000000000000002</binentry>
+      <datafill risklevel="WARNING" name="006.05   cISD0 0xFF Filled Area" offset="3F046" size="1A">FF</datafill>
+      <binentry risklevel="DANGER" name="006.06   cISD1 IDLog Header" offset="3F060" ascii="true">7F49444C</binentry>
+      <multibinentry risklevel="DANGER" name="006.07   cISD1 Semistatic 1" offset="3F064" length="6">
+	    <entry>000200600100</entry>
+        <entry>000300680100</entry>
+	  </multibinentry>
+      <multibinentry risklevel="DANGER" name="006.08   cISD1 Semistatic 2" offset="3F0A4" length="6">
+	    <entry>004500450067</entry>
+        <entry>004700470071</entry>
+        <entry>005200520071</entry>
+        <entry>005400540080</entry>
+        <entry>006200620090</entry>
+        <entry>006200620092</entry>
+        <entry>006600660096</entry>
+        <entry>007300730096</entry>
+        <entry>007900790106</entry>
+        <entry>008500850106</entry>
+        <entry>008500850114</entry>
+        <entry>008700870114</entry>
+        <entry>009100910114</entry>
+        <entry>009900990118</entry>
+        <entry>010101010124</entry>
+        <entry>010101010128</entry>
+        <entry>010701070128</entry>
+        <entry>010701070134</entry>
+        <entry>011101110138</entry>
+        <entry>011101110140</entry>
+        <entry>011301130142</entry>
+        <entry>012101210150</entry>
+        <entry>012301230152</entry>
+        <entry>013101310160</entry>
+        <entry>016501650180</entry>
+	  </multibinentry>
+      <datafill risklevel="WARNING" name="006.09   cISD1 0xFF Filled Area 0" offset="3F0AC" size="4">FF</datafill>
+      <binentry risklevel="DANGER" name="006.10   cISD1 Static" offset="3F0AA">0001</binentry>
+      <multibinentry risklevel="DANGER" name="006.11   cISD1 Semistatic 3" offset="3F0B0" length="8">
+	    <entry>0002001100020012</entry>
+        <entry>0002001200020012</entry>
+	  </multibinentry>
+      <datafill risklevel="WARNING" name="006.12   cISD1 0xFF Filled Area 1" offset="3F0C8" size="198">FF</datafill>
+      <datalist risklevel="DANGER" name="006.13   cISD1 Statistics" offset="3F070" size="3C">
+        <datatreshold key="FF">0</datatreshold>
+      </datalist>
+      <multibinentry risklevel="DANGER" name="006.14   cISD2" offset="3F260" length="10">
+	    <entry>1FFF0000000000000000000000000000</entry>
+        <entry>07FF0000000000000000000000000000</entry>
+        <entry>3FFF0000000000000000000000000000</entry>
+	  </multibinentry>
+      <datafill risklevel="WARNING" name="006.15   cISD 0xFF Filled Area" offset="3F270" size="590">FF</datafill>
+      <!-- TODO: Fix the below section, it only works with byteswapped dumps -->
+      <!--  littlebalup's comment: bug should be due to impair (3) bytes  -->
+      <!--
+      <binentry risklevel="DANGER" name="cISD0 MAC ADDRESS" ismulti="true" offset="3F040">00141F</binentry>
+      <binentry risklevel="DANGER" name="cISD0 MAC ADDRESS" ismulti="true" offset="3F040">001315</binentry>
+      <binentry risklevel="DANGER" name="cISD0 MAC ADDRESS" ismulti="true" offset="3F040">0015C1</binentry>
+      <binentry risklevel="DANGER" name="cISD0 MAC ADDRESS" ismulti="true" offset="3F040">0019C5</binentry>
+      <binentry risklevel="DANGER" name="cISD0 MAC ADDRESS" ismulti="true" offset="3F040">001D0D</binentry>
+      <binentry risklevel="DANGER" name="cISD0 MAC ADDRESS" ismulti="true" offset="3F040">001FA7</binentry>
+      <binentry risklevel="DANGER" name="cISD0 MAC ADDRESS" ismulti="true" offset="3F040">0022A6</binentry>
+      <binentry risklevel="DANGER" name="cISD0 MAC ADDRESS" ismulti="true" offset="3F040">00248D</binentry>
+      <binentry risklevel="DANGER" name="cISD0 MAC ADDRESS" ismulti="true" offset="3F040">280DFC</binentry>
+      <binentry risklevel="DANGER" name="cISD0 MAC ADDRESS" ismulti="true" offset="3F040">A8E3EE</binentry>
+      <binentry risklevel="DANGER" name="cISD0 MAC ADDRESS" ismulti="true" offset="3F040">F8D0AC</binentry>
+      <binentry risklevel="DANGER" name="cISD0 MAC ADDRESS" ismulti="true" offset="3F040">FC0FE6</binentry>
+      -->
+    </cISD_region>
+    <cCSD_region>
+      <binentry risklevel="DANGER" name="007.01   cCSD Header" offset="3F800">00000001000008000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="007.02   cCSD Entry Table" offset="3F810">00000020000000300000000000000000</binentry>
+      <datafill risklevel="WARNING" name="007.03   cCSD 0xFF Filled Area" offset="3F820" size="7E0">FF</datafill>
+    </cCSD_region>
+    <Revokation_region>
+      <binentry risklevel="DANGER" name="008.01   trvk_prg0 SCE" offset="40010" ascii="true">53434500</binentry>
+      <!--  Need to find a way to check trvk_prg0 0x00 filled area (start is relative to data size at 4000E, length 0x0D00)  -->
+      <!--  Need to find a way to check trvk_prg0 0xFF filled area (follow previous 0x00 area to 5FFFF)  -->
+      <binentry risklevel="DANGER" name="008.02   trvk_prg1 SCE" offset="60010" ascii="true">53434500</binentry>
+      <!--  Need to find a way to check trvk_prg1 0x00 filled area (start is relative to data size at 6000E, length 0x0D00)  -->
+      <!--  Need to find a way to check trvk_prg1 0xFF filled area (follow previous 0x00 area to 7FFFF)  -->
+      <binentry risklevel="DANGER" name="008.03   trvk_pkg0 SCE" offset="80010" ascii="true">53434500</binentry>
+      <!--  Need to find a way to check trvk_pkg0 0x00 filled area (start is relative to data size at 8000E, length 0x0D80)  -->
+      <!--  Need to find a way to check trvk_pkg0 0xFF filled area (follow previous 0x00 area to 9FFFF)  -->
+      <binentry risklevel="DANGER" name="008.04   trvk_pkg1 SCE" offset="A0010" ascii="true">53434500</binentry>
+      <!--  Need to find a way to check trvk_pkg1 0x00 filled area (start is relative to data size at A000E, length 0x0D80)  -->
+      <!--  Need to find a way to check trvk_pkg1 0xFF filled area (follow previous 0x00 area to BFFFF)  -->
+    </Revokation_region>
+    <CoreOS_region>
+      <binentry risklevel="WARNING" name="009.01   ROS0 Header" offset="C0000">000000000000000000000000006FFFE0</binentry>
+	  <hash risklevel="WARNING" name="009.02   ROS0 Hash" type="ROS" offset="C0010" size="6FFFE0"></hash>
+      <binentry risklevel="WARNING" name="009.03   ROS1 Header" offset="7C0000">000000000000000000000000006FFFE0</binentry>
+	  <hash risklevel="WARNING" name="009.04   ROS1 Hash" type="ROS" offset="7C0010" size="6FFFE0"></hash>
+    </CoreOS_region>
+    <cvtrm_region>
+      <datafill risklevel="WARNING" name="010.01   Pre cvtrm 0xFF Filled Area" offset="EBFFF0" size="10">FF</datafill>
+      <multibinentry risklevel="DANGER" name="010.02   cvtrm0 Header" offset="EC0000" length="10">
+	    <entry>53434549FFFFFFFFFFFFFFFFFFFFFFFF</entry>
+        <entry>00000000FFFDFFFFFFFFFFFFFFFFFFFF</entry>
+        <entry>00000000FFFFFFFFFFFFFFFFFFFFFFFF</entry>
+	  </multibinentry>
+      <datafill risklevel="WARNING" name="010.03   cvtrm0 0xFF Filled Area" offset="EC0010" size="3FF0">FF</datafill>
+      <binentry risklevel="DANGER" name="010.04   vtrm0 Magic" offset="EC4000" ascii="true">000000005654524D000000000000</binentry>
+      <binentry risklevel="DANGER" name="010.05   vtrm0 Reserved Entries" offset="EC4028">0000000000000209</binentry>
+      <!-- Some consoles do not follow next rule -->
+ <!-- <datafill risklevel="WARNING" name="010.06   vtrm0 0xFF Filled Area" vtrmentrycount_offset="EC403E" regionstart="EC5088" regionsize="186C0">FF</datafill> -->
+      <multibinentry risklevel="DANGER" name="010.07   cvtrm1 Header" offset="EE0000" length="10">
+	    <entry>53434549FFFFFFFFFFFFFFFFFFFFFFFF</entry>
+        <entry>00000000FFFDFFFFFFFFFFFFFFFFFFFF</entry>
+        <entry>00000000FFFFFFFFFFFFFFFFFFFFFFFF</entry>
+	  </multibinentry>
+      <datafill risklevel="WARNING" name="010.08   cvtrm1 0xFF Filled Area" offset="EE0010" size="3FF0">FF</datafill>
+      <binentry risklevel="DANGER" name="010.09   vtrm1 Magic" offset="EE4000" ascii="true">000000005654524D000000000000</binentry>
+      <binentry risklevel="DANGER" name="010.10   vtrm1 Reserved Entries" offset="EE4028">0000000000000209</binentry>
+      <!-- Some consoles do not follow next rule -->
+ <!-- <datafill risklevel="WARNING" name="010.11   vtrm1 0xFF Filled Area" vtrmentrycount_offset="EE403E" regionstart="EE5088" regionsize="186C0">FF</datafill> -->
+    </cvtrm_region>
+    <Second_Region_Header>
+      <datafill risklevel="WARNING" name="011.01   Second Region Header 0x00 Filled Area 0" offset="F00000" size="10">00</datafill>
+      <binentry risklevel="DANGER" name="011.02   Second Region Header Magic" offset="F00010">000000000FACE0FF00000000DEADFACE</binentry>
+      <binentry risklevel="DANGER" name="011.03   Second Region Header Count" offset="F00020">0000000000000003</binentry>
+      <datafill risklevel="WARNING" name="011.04   Second Region Header 0x00 Filled Area 1" offset="F00030" size="90">00</datafill>
+      <binentry risklevel="DANGER" name="011.05   Second Region Unknown Block 0" offset="F000C0">000000000000790000000000000001001070000001000001000000000000000310700000020000010000000000000003</binentry>
+      <datafill risklevel="WARNING" name="011.06   Second Region Header 0x00 Filled Area 2" offset="F000F0" size="60">00</datafill>
+      <binentry risklevel="DANGER" name="011.07   Second Region Unknown Block 1" offset="F00150">0000000000007A0000000000000004001070000001000001000000000000000310700000020000010000000000000003</binentry>
+      <datafill risklevel="WARNING" name="011.08   Second Region Header 0x00 Filled Area 3" offset="F00180" size="680">00</datafill>
+      <!-- should be size="E80", but dumps from DIA-001 boards have datas here -->
+    </Second_Region_Header>
+    <Unreferenced_Area>
+    <datafill risklevel="WARNING" name="012.01   unreferenced area 0xFF Filled" offset="F01000" size="1F000">FF</datafill>
+	</Unreferenced_Area>
+    <CELL_EXTNOR_AREA_Region>
+      <binentry risklevel="DANGER" name="013.01   CELL_EXTNOR_AREA Header" offset="F20000" ascii="true">43454C4C5F4558544E4F525F41524541</binentry>
+      <datafill risklevel="WARNING" name="013.02   CELL_EXTNOR_AREA 0x00 Filled Area 0" offset="F20040" size="1C0">00</datafill>
+      <datafill risklevel="WARNING" name="013.03   CELL_EXTNOR_AREA 0x00 Filled Area 1" offset="F20240" size="1FDC0">00</datafill>
+      <datafill risklevel="WARNING" name="013.04   CELL_EXTNOR_AREA 0x00 Filled Area 2" offset="F40030" size="1FFD0">00</datafill>
+      <datafill risklevel="WARNING" name="013.05   CELL_EXTNOR_AREA 0x00 Filled Area 3" offset="F60060" size="93A0">00</datafill>
+      <!-- should be offset="F60040" but some valid dumps have F60060 -->
+      <!-- OCRL0200 AREA or 0x00 area (or 0xFF area on DIA-001) -->
+      <datafill risklevel="WARNING" name="013.06   CELL_EXTNOR_AREA 0xFF Filled Area 0" offset="F69C00" size="16400">FF</datafill>
+      <datafill risklevel="WARNING" name="013.07   CELL_EXTNOR_AREA 0x00 Filled Area 5" offset="F80030" size="1FFD0">00</datafill>
+      <datafill risklevel="WARNING" name="013.08   CELL_EXTNOR_AREA 0x00 Filled Area 6" offset="FA0060" size="93A0">00</datafill>
+      <!-- should be offset="FA0040" but some valid dumps have FA0060 -->
+      <!-- OCRL0200 AREA or 0x00 area (or 0xFF area on DIA-001) -->
+      <datafill risklevel="WARNING" name="013.09   CELL_EXTNOR_AREA 0xFF Filled Area 1" offset="FA9C00" size="16400">FF</datafill>
+    </CELL_EXTNOR_AREA_Region>
+    <bootldr_region>
+      <multibinentry risklevel="DANGER" name="014.01   bootldr0" offset="FC0000" length="4">
+	    <entry>00002F1C</entry>
+        <entry>00002EF4</entry>
+        <entry>00002EE3</entry>
+        <entry>00002EAB</entry>
+        <entry>00002EB3</entry>
+        <entry>00002F13</entry>
+        <entry>00002F3B</entry>
+        <entry>00002F4B</entry>
+        <entry>00002F53</entry>
+        <entry>00002F5B</entry>
+        <entry>00002FFB</entry>
+        <entry>00003003</entry>
+        <entry>0000300B</entry>
+        <entry>0000301B</entry>
+	  </multibinentry>
+      <multibinentry risklevel="DANGER" name="014.02   bootldr1" offset="FC0010" length="4">
+	    <entry>00002F1C</entry>
+        <entry>00002EF4</entry>
+        <entry>00002EE3</entry>
+        <entry>00002EAB</entry>
+        <entry>00002EB3</entry>
+        <entry>00002F13</entry>
+        <entry>00002F3B</entry>
+        <entry>00002F4B</entry>
+        <entry>00002F53</entry>
+        <entry>00002F5B</entry>
+        <entry>00002FFB</entry>
+        <entry>00003003</entry>
+        <entry>0000300B</entry>
+        <entry>0000301B</entry>
+	  </multibinentry>
+      <multibinentry risklevel="DANGER" name="014.03   bootldr Rev key" offset="FC0004" length="C">
+	    <entry>065B860C5CF76AC4598DD7B4</entry>
+        <entry>89EFFD15B3850E3B2A734484</entry>
+        <entry>6EED04A04E41532AC123C718</entry>
+        <entry>E644A075B60B7996C1297AA0</entry>
+        <entry>7B09CBEE002FAF5159F8D5A8</entry>
+        <entry>ED4C79D65D602876FFADA6FD</entry>
+        <entry>B19434A33CF1C866DF420E50</entry>
+        <entry>83EFB976C4DED135327CD377</entry>
+        <entry>61D19BA54168163C019F884B</entry>
+        <entry>92AC2C2157A577C84DDFECDB</entry>
+        <entry>41F793C709418F938944BA7A</entry>
+        <entry>FA46EC86570FCAAA064E8A86</entry>
+        <entry>F5A221B5C05F214201979DAA</entry>
+        <entry>7780B134B6DF258A1ABBAB4D</entry>
+        <entry>CB9E152428B44FD2F93FBC43</entry>
+        <entry>EFB3455D6A9FD751005E34BC</entry>
+        <entry>53921CE7F73341769B7A1ED6</entry>
+        <entry>53E6A0BBB0AFA20067D0B39A</entry>
+        <entry>AA3AEA6E3DA09A581E1E2100</entry>
+        <entry>C5A42771EE5E219A3BFC2C45</entry>
+        <entry>13ECA74A8E14D473129128E8</entry>
+        <entry>63B9D98130DB7BB0F39D124F</entry>
+        <entry>BBCCBF29ECD802844EB28AE6</entry>
+        <entry>2E604104D943D1B534D4C5F5</entry>
+        <entry>1FDC1E2DF00DA36701E2F8F6</entry>
+	  </multibinentry>
+      <datalist risklevel="DANGER" name="014.04   bootldr Statistics" offset="FC0000" ldrsize="FC0002">
+        <datatreshold key="*">0,5</datatreshold>
+      </datalist>
+      <datafill risklevel="DANGER" name="014.05   bootldr 0xFF Filled Area" regionstart="FC0000" regionsize="40000" ldrsize="FC0002">FF</datafill> 
+    </bootldr_region>
+    <datamatches>
+      <datamatchid risklevel="DANGER" id="0">bootldr size</datamatchid>
+      <datamatchid risklevel="DANGER" id="1">per console nonce</datamatchid>
+      <datamatchid risklevel="DANGER" id="2">CELL_EXTNOR_AREA Hash1</datamatchid>
+      <datamatchid risklevel="DANGER" id="3">CELL_EXTNOR_AREA Hash2</datamatchid>
+      <datamatchid risklevel="DANGER" id="4">metldr size</datamatchid>
+      <datamatchid risklevel="DANGER" id="5">vtrm0</datamatchid>
+      <datamatchid risklevel="DANGER" id="6">vtrm1</datamatchid>
+      <id0>
+        <datamatch offset="FC0000" length="4" id="0">bootldr0</datamatch>
+        <datamatch offset="FC0010" length="4" id="0">bootldr1</datamatch>
+      </id0>
+      <id1>
+        <datamatch offset="854" length="C" id="1">metldr</datamatch>
+        <datamatch offset="2F084" length="C" id="1">eid0</datamatch>
+        <datamatch offset="302B4" length="C" id="1">eid3</datamatch>
+        <datamatch offset="303E4" length="C" id="1">eid5</datamatch>
+        <datamatch offset="FC0014" length="C" id="1">bootldr</datamatch>
+      </id1>
+      <id2>
+        <datamatch offset="F40000" length="30" id="2">CELL_EXTNOR_AREA F40000 Hash</datamatch>
+        <datamatch offset="F80000" length="30" id="2">CELL_EXTNOR_AREA F80000 Hash</datamatch>
+      </id2>
+      <id3>
+        <datamatch offset="F60000" length="50" id="3">CELL_EXTNOR_AREA F60000 Hash</datamatch>
+        <!-- should be length="30" but some valid dumps have 40 or 50 -->
+        <datamatch offset="FA0000" length="50" id="3">CELL_EXTNOR_AREA FA0000 Hash</datamatch>
+        <!-- should be length="30" but some valid dumps have 40 or 50 -->
+      </id3>
+      <id4>
+        <datamatch offset="840" length="4" id="4">metldr0</datamatch>
+        <datamatch offset="850" length="4" id="4">metldr1</datamatch>
+      </id4>
+      <id5>
+        <datamatch offset="EDD748" length="14" id="5" seqrep="C7">repetitions seq. 1</datamatch>
+        <datamatch offset="EDE6E8" length="14" id="5" seqrep="141">repetitions seq. 2</datamatch>
+      </id5>
+      <id6>
+        <datamatch offset="EFD748" length="14" id="6" seqrep="C7">repetitions seq. 1</datamatch>
+        <datamatch offset="EFE6E8" length="14" id="6" seqrep="141">repetitions seq. 2</datamatch>
+      </id6>
+    </datamatches>
+    <repetitions>
+      <repcheck risklevel="DANGER" name="Header Magic0 Repetitions" offset="10">000000000FACE0FF00000000DEADBEEF</repcheck>
+      <repcheck risklevel="DANGER" name="Header Magic1 Repetitions" offset="F00010">000000000FACE0FF00000000DEADFACE</repcheck>
+      <repcheck risklevel="DANGER" name="asecure_loader Repetitions" offset="420">617365637572655F6C6F616465720000</repcheck>
+      <repcheck risklevel="DANGER" name="eEID Repetitions" offset="450">65454944000000000000000000000000</repcheck>
+      <repcheck risklevel="DANGER" name="cISD Repetitions" offset="480">63495344000000000000000000000000</repcheck>
+      <repcheck risklevel="DANGER" name="cCSD Repetitions" offset="4B0">63435344000000000000000000000000</repcheck>
+      <repcheck risklevel="DANGER" name="trvk_prg0 Repetitions" offset="4E0">7472766B5F7072673000000000000000</repcheck>
+      <repcheck risklevel="DANGER" name="trvk_prg1 Repetitions" offset="510">7472766B5F7072673100000000000000</repcheck>
+      <repcheck risklevel="DANGER" name="trvk_pkg0 Repetitions" offset="540">7472766B5F706B673000000000000000</repcheck>
+      <repcheck risklevel="DANGER" name="trvk_pkg1 Repetitions" offset="570">7472766B5F706B673100000000000000</repcheck>
+      <repcheck risklevel="DANGER" name="ros0 Repetitions" offset="5A0">726F7330000000000000000000000000</repcheck>
+      <repcheck risklevel="DANGER" name="ros1 Repetitions" offset="5D0">726F7331000000000000000000000000</repcheck>
+      <repcheck risklevel="DANGER" name="cvtrm Repetitions" offset="600">637674726D0000000000000000000000</repcheck>
+    </repetitions>
+    <skulistdata>
+      <skudataentry offset="2F076" size="2">idps</skudataentry>
+      <skudataentry offset="81E" size="2">metldr0</skudataentry>
+      <skudataentry offset="842" size="2">metldr1</skudataentry>
+      <skudataentry offset="FC0002" size="2">bootldr0</skudataentry>
+      <skudataentry offset="FC0012" size="2">bootldr1</skudataentry>
+      <skudataentry offset="FC0002" size="2">bootldrsize</skudataentry>
+    </skulistdata>
+    <skumodels risklevel="WARNING">
+      <skulist id="01" name="CECHHxx (DIA-001)" minver="2.30">
+        <skuentry type="idps">0006</skuentry>
+        <skuentry type="metldr0">E7B0</skuentry>
+        <skuentry type="metldr1">0E77</skuentry>
+        <skuentry type="bootldr0">2F1C</skuentry>
+        <skuentry type="bootldr1">2F1C</skuentry>
+        <skuentry type="bootldrsize">2F200</skuentry>
+      </skulist>
+      <skulist id="02" name="CECHHxx or CECHMxx (DIA-001)" minver="2.30">
+        <skuentry type="idps">0006</skuentry>
+        <skuentry type="metldr0">E8C0</skuentry>
+        <skuentry type="metldr1">0E88</skuentry>
+        <skuentry type="bootldr0">2EF4</skuentry>
+        <skuentry type="bootldr1">2EF4</skuentry>
+        <skuentry type="bootldrsize">2EF80</skuentry>
+      </skulist>
+      <skulist id="03" name="CECHHxx (DIA-001)" minver="1.97">
+        <skuentry type="idps">0006</skuentry>
+        <skuentry type="metldr0">E8E0</skuentry>
+        <skuentry type="metldr1">0E8A</skuentry>
+        <skuentry type="bootldr0">2EF4</skuentry>
+        <skuentry type="bootldr1">2EF4</skuentry>
+        <skuentry type="bootldrsize">2EF80</skuentry>
+      </skulist>
+      <skulist id="04" name="CECHJxx datecode:8B (DIA-002)" minver="2.30">
+        <skuentry type="idps">0007</skuentry>
+        <skuentry type="metldr0">E8E0</skuentry>
+        <skuentry type="metldr1">0E8A</skuentry>
+        <skuentry type="bootldr0">2EF4</skuentry>
+        <skuentry type="bootldr1">2EF4</skuentry>
+        <skuentry type="bootldrsize">2EF80</skuentry>
+      </skulist>
+      <skulist id="05" name="CECHHxx or CECHMxx (DIA-001)" minver="1.97">
+        <skuentry type="idps">0006</skuentry>
+        <skuentry type="metldr0">EA60</skuentry>
+        <skuentry type="metldr1">0EA2</skuentry>
+        <skuentry type="bootldr0">2EE3</skuentry>
+        <skuentry type="bootldr1">2EE3</skuentry>
+        <skuentry type="bootldrsize">2EE70</skuentry>
+      </skulist>
+      <skulist id="06" name="CECHJxx or CECHKxx datecode:8C (DIA-002)" minver="2.30">
+        <skuentry type="idps">0007</skuentry>
+        <skuentry type="metldr0">EA60</skuentry>
+        <skuentry type="metldr1">0EA2</skuentry>
+        <skuentry type="bootldr0">2EE3</skuentry>
+        <skuentry type="bootldr1">2EE3</skuentry>
+        <skuentry type="bootldrsize">2EE70</skuentry>
+      </skulist>
+      <skulist id="07" name="CECHLxx or CECHPxx (VER-001)" minver="2.45">
+        <skuentry type="idps">0008</skuentry>
+        <skuentry type="metldr0">E8D0</skuentry>
+        <skuentry type="metldr1">0E89</skuentry>
+        <skuentry type="bootldr0">2EAB</skuentry>
+        <skuentry type="bootldr1">2EAB</skuentry>
+        <skuentry type="bootldrsize">2EAF0</skuentry>
+      </skulist>
+      <skulist id="08" name="CECHLxx (VER-001)" minver="2.45">
+        <skuentry type="idps">0008</skuentry>
+        <skuentry type="metldr0">E8D0</skuentry>
+        <skuentry type="metldr1">0E89</skuentry>
+        <skuentry type="bootldr0">2EB3</skuentry>
+        <skuentry type="bootldr1">2EB3</skuentry>
+        <skuentry type="bootldrsize">2EB70</skuentry>
+      </skulist>
+      <skulist id="09" name="CECHLxx (VER-001)" minver="2.30">
+        <skuentry type="idps">0008</skuentry>
+        <skuentry type="metldr0">E890</skuentry>
+        <skuentry type="metldr1">0E85</skuentry>
+        <skuentry type="bootldr0">2F13</skuentry>
+        <skuentry type="bootldr1">2F13</skuentry>
+        <skuentry type="bootldrsize">2F170</skuentry>
+      </skulist>
+      <skulist id="10" name="CECH-20xx (DYN-001)" minver="2.70">
+        <skuentry type="idps">0009</skuentry>
+        <skuentry type="metldr0">E890</skuentry>
+        <skuentry type="metldr1">0E85</skuentry>
+        <skuentry type="bootldr0">2F13</skuentry>
+        <skuentry type="bootldr1">2F13</skuentry>
+        <skuentry type="bootldrsize">2F170</skuentry>
+      </skulist>
+      <skulist id="11" name="CECH-20xx (DYN-001)" minver="2.70">
+        <skuentry type="idps">0009</skuentry>
+        <skuentry type="metldr0">E920</skuentry>
+        <skuentry type="metldr1">0E8E</skuentry>
+        <skuentry type="bootldr0">2F3B</skuentry>
+        <skuentry type="bootldr1">2F3B</skuentry>
+        <skuentry type="bootldrsize">2F3F0</skuentry>
+      </skulist>
+      <skulist id="12" name="CECH-20xx (DYN-001)" minver="3.40">
+        <skuentry type="idps">0009</skuentry>
+        <skuentry type="metldr0">E920</skuentry>
+        <skuentry type="metldr1">0E8E</skuentry>
+        <skuentry type="bootldr0">2F4B</skuentry>
+        <skuentry type="bootldr1">2F4B</skuentry>
+        <skuentry type="bootldrsize">2F4F0</skuentry>
+      </skulist>
+      <skulist id="13" name="CECH-21xx (SUR-001)" minver="3.20">
+        <skuentry type="idps">000A</skuentry>
+        <skuentry type="metldr0">E920</skuentry>
+        <skuentry type="metldr1">0E8E</skuentry>
+        <skuentry type="bootldr0">2F4B</skuentry>
+        <skuentry type="bootldr1">2F4B</skuentry>
+        <skuentry type="bootldrsize">2F4F0</skuentry>
+      </skulist>
+      <skulist id="14" name="CECH-25xx datecode:0C (JSD-001 or JTP-001)"
+               minver="3.40">
+        <skuentry type="idps">000B</skuentry>
+        <skuentry type="metldr0">E920</skuentry>
+        <skuentry type="metldr1">0E8E</skuentry>
+        <skuentry type="bootldr0">2F4B</skuentry>
+        <skuentry type="bootldr1">2F4B</skuentry>
+        <skuentry type="bootldrsize">2F4F0</skuentry>
+      </skulist>
+      <skulist id="15" name="CECH-25xx datecode:0D or 1A (JSD-001 or JTP-001)" minver="3.50">
+        <skuentry type="idps">000B</skuentry>
+        <skuentry type="metldr0">E960</skuentry>
+        <skuentry type="metldr1">0E92</skuentry>
+        <skuentry type="bootldr0">2F53</skuentry>
+        <skuentry type="bootldr1">2F53</skuentry>
+        <skuentry type="bootldrsize">2F570</skuentry>
+      </skulist>
+      <skulist
+	    id="16"
+        name="CECH-25xx datecode:1A or 1B (JSD-001 or JTP-001)"
+        warn="true" warnmsg="WARNING: NOR dump must be patched with 4.xx Patchset to install CFW on this machine!"
+        minver="3.56">
+        <skuentry type="idps">000B</skuentry>
+        <skuentry type="metldr0">E960</skuentry>
+        <skuentry type="metldr1">0E92</skuentry>
+        <skuentry type="bootldr0">2F5B</skuentry>
+        <skuentry type="bootldr1">2F5B</skuentry>
+        <skuentry type="bootldrsize">2F5F0</skuentry>
+      </skulist>
+      <!-- NON-Downgradeable dumps -->
+      <skulist id="17" name="CECH-25xx datecode:1B or none (JSD-001 or JTP-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="3.60">
+        <skuentry type="idps">000B</skuentry>
+        <skuentry type="metldr0">F920</skuentry>
+        <skuentry type="metldr1">0F8E</skuentry>
+        <skuentry type="bootldr0">2FFB</skuentry>
+        <skuentry type="bootldr1">2FFB</skuentry>
+        <skuentry type="bootldrsize">2FFF0</skuentry>
+      </skulist>
+      <skulist id="18" name="CECH-30xx (KTE-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="3.60">
+        <skuentry type="idps">000C</skuentry>
+        <skuentry type="metldr0">F920</skuentry>
+        <skuentry type="metldr1">0F8E</skuentry>
+        <skuentry type="bootldr0">2FFB</skuentry>
+        <skuentry type="bootldr1">2FFB</skuentry>
+        <skuentry type="bootldrsize">2FFF0</skuentry>
+      </skulist>
+      <skulist id="19" name="CECH-30xx (KTE-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="3.65">
+        <skuentry type="idps">000C</skuentry>
+        <skuentry type="metldr0">F9B0</skuentry>
+        <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="bootldr0">3003</skuentry>
+        <skuentry type="bootldr1">3003</skuentry>
+        <skuentry type="bootldrsize">30070</skuentry>
+      </skulist>
+      <skulist id="20" name="CECH-30xx datecode:1C (KTE-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="3.72">
+        <skuentry type="idps">000C</skuentry>
+        <skuentry type="metldr0">F9B0</skuentry>
+        <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="bootldr0">300B</skuentry>
+        <skuentry type="bootldr1">300B</skuentry>
+        <skuentry type="bootldrsize">300F0</skuentry>
+      </skulist>
+      <skulist id="21" name="CECH-40xx (MSX-001 or MPX-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.20">
+        <skuentry type="idps">000D</skuentry>
+        <skuentry type="metldr0">F9B0</skuentry>
+        <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="bootldr0">301B</skuentry>
+        <skuentry type="bootldr1">301B</skuentry>
+        <skuentry type="bootldrsize">301F0</skuentry>
+      </skulist>
+      <skulist id="22" name="CECH-40xx 12GB (MSX-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.22">
+        <skuentry type="idps">002C</skuentry>
+        <skuentry type="metldr0">F9B0</skuentry>
+        <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="bootldr0">301B</skuentry>
+        <skuentry type="bootldr1">301B</skuentry>
+        <skuentry type="bootldrsize">301F0</skuentry>
+      </skulist>
+    </skumodels>
+  </NOR>
+</root>

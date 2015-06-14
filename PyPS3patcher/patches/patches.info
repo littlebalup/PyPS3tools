@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<patches>
+	<nofsm>
+		<name>4.75 CEX Patched (FERROX based)</name>
+		<hash>fb00f805c27130579a6fe2a2489a66a7</hash>
+	</nofsm>
+	<fsm>
+		<hash>f162e0d72eba0f46b7fb36e6aab63958</hash>
+	</fsm>
+	<norRVK>
+		<hash>24d2f27c6543447d13156d7647f3b5e9</hash>
+	</norRVK>
+	<nandRVK>
+		<hash>d0143b0125149adb8b14eedb844b4dea</hash>
+	</nandRVK>
+</patches>

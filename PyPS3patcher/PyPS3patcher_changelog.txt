@@ -1,0 +1,8 @@
+PyPS3patcher - Python patcher scypt for PS3 flash memory dump files
+Copyright (C) 2015 littlebalup@gmail.com
+-------------------------------------------------------------------
+
+
+v0.2, 14 jun 2015
+-----------------
+Initial public release (with noFSM patch 4.75)
