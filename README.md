@@ -11,5 +11,6 @@ Check the readme of each folders for details.
 
 
 Thanks to all PS3 dev. community.
+Many thanks to LS beta testers ;)
 
 
