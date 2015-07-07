@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 # *************************************************************************
-# PyPS3patcher - Python patcher scypt for PS3 flash memory dump files
+# PyPS3patcher - Python patcher script for PS3 flash memory dump files
 #
 # Copyright (C) 2015 littlebalup@gmail.com
 #
@@ -157,7 +157,7 @@ if __name__ == "__main__":
 	print " |_|    \__, |_|   |____/____/| .__/ \__,_|_| \___|_| |_|\___|_|   "
 	print "        |___/                 |_|                            %s "%release
 	print
-	print "Python patcher scypt for PS3 flash memory dump files"
+	print "Python patcher script for PS3 flash memory dump files"
 	print "Copyright (C) 2015 littlebalup@gmail.com"
 	print
 	if len(sys.argv) == 1:
@@ -172,7 +172,7 @@ if __name__ == "__main__":
 		print "                    cust_rvk  : apply a custom ROS patches + RVK patches."
 		print "                    swap      : byte reverse."
 		print "  [input_file]   Original dump filename."
-		print "  [output_file]  Saved generated filename (optionnal). If not defined, will be"
+		print "  [output_file]  Saved generated filename (optional). If not defined, will be"
 		print "                 saved as \"[input_file].patched.bin\" for patch commands or as"
 		print "                 \"[input_file].swaped.bin\" for swap command."
 		print " NOTES :"

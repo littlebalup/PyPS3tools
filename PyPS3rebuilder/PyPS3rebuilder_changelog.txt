@@ -1,4 +1,4 @@
-PyPS3patcher - Python patcher script for PS3 flash memory dump files
+PyPS3patcher - Python patcher scypt for PS3 flash memory dump files
 Copyright (C) 2015 littlebalup@gmail.com
 -------------------------------------------------------------------
 

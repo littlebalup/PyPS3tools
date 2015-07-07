@@ -1,4 +1,4 @@
-PyPS3checker - Python checker scypt for PS3 flash memory dump files
+PyPS3checker - Python checker script for PS3 flash memory dump files
 Copyright (C) 2015 littlebalup@gmail.com
 -------------------------------------------------------------------
 
@@ -11,7 +11,7 @@ responsibility for the consequences of your use of it.
 
 System requirements:
 -------------------
- - Any system able to run Python 2.7.x (windows, linux, MAC... )
+ - Any system able to run Python 2.7.x (Windows, Linux, MAC... )
  - Python 2.7.2 or any upper Python 2 version : https://www.python.org 
 
  
@@ -19,7 +19,7 @@ Features:
 --------
 Compatible with any type of PS3 flash memory dump file: 
  - Regular NOR dump (teensy, progskeet, dumps from homebrew)
- - Revesed NOR dump (E3 flasher)
+ - Reversed NOR dump (E3 flasher)
  - Interleaved NAND dump
  
 Customization of checks and hashs can be done by editing the "checklist.xml" and "hashlist.xml" files.
@@ -31,12 +31,12 @@ Check log auto-generated as "[mydump].checklog.txt"
 
 Usage:
 -----
-To display help/commands list, simply run the scipt without any argument.
+To display help/commands list, simply run the script without any argument.
  - from windows command prompt: 
         checker.py
- - from linux/MAC console: 
+ - from Linux/MAC console: 
         ./checker.py
-   (under unix systems, do not forget to set the script as executable using "chmod")
+   (under Unix systems, do not forget to set the script as executable using "chmod")
 
    
 Command: 

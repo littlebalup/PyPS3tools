@@ -1,4 +1,4 @@
-PyPS3checker - Python checker scypt for PS3 flash memory dump files
+PyPS3checker - Python checker script for PS3 flash memory dump files
 Copyright (C) 2015 littlebalup@gmail.com
 -------------------------------------------------------------------
 

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 # *************************************************************************
-# PyPS3checker - Python checker scypt for PS3 flash memory dump files
+# PyPS3checker - Python checker script for PS3 flash memory dump files
 #
 # Copyright (C) 2015 littlebalup@gmail.com
 #
@@ -86,7 +86,7 @@ if __name__ == "__main__":
 	print " |_|    \__, |_|   |____/____/ \___|_| |_|\___|\___|_|\_\___|_|   "
 	print "        |___/                                               %s "%release
 	print
-	print "Python checker scypt for PS3 flash memory dump files"
+	print "Python checker script for PS3 flash memory dump files"
 	print "Copyright (C) 2015 littlebalup@gmail.com"
 	print
 	if len(sys.argv) == 1:
