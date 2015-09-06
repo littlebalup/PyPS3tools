@@ -2,6 +2,8 @@
 
 <root>
   <type name="ROS">
+    <hash name="4.76 CEX Patched (FERROX based)">5BFD81166CBCB66830D504C930476508</hash>
+    <hash name="4.76 CEX">51A7758AA326F54CB431FC59DC68AFD4</hash>
     <hash name="4.75 CEX Patched (FERROX based)">FB00F805C27130579A6FE2A2489A66A7</hash>
     <hash name="4.75 CEX">CD2DD6E1A68418B17716CEE65CC8DBBA</hash>
     <hash name="4.70 CEX Patched (Darkjiros - fixed)">75D5298F7C538C84FEDA1BD515E99B8F</hash>
