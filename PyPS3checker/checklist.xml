@@ -329,6 +329,7 @@
         <datatreshold key="FF">0</datatreshold>
       </datalist>
       <multibinentry risklevel="DANGER" name="006.14   cISD2" offset="90A60" length="10">
+	    <entry>00000000000000000000000000000000</entry>
 	    <entry>1FFF0000000000000000000000000000</entry>
 		<entry>07FF0000000000000000000000000000</entry>
 		<entry>3FFF0000000000000000000000000000</entry>
@@ -585,8 +586,8 @@
         <skuentry type="bootldr1">2A37</skuentry>
         <skuentry type="bootldrsize">2A3B0</skuentry>
       </skulist>
-      <skulist id="09" name="CECHCxx (COK-002)" minver="1.00">
-        <skuentry type="idps">0003</skuentry>
+      <skulist id="09" name="CECHBxx (COK-001)" minver="1.00">
+        <skuentry type="idps">0002</skuentry>
         <skuentry type="metldr0">EDE0</skuentry>
         <skuentry type="metldr1">0EDA</skuentry>
         <skuentry type="bootldr0">2A37</skuentry>
@@ -595,13 +596,21 @@
       </skulist>
       <skulist id="10" name="CECHCxx (COK-002)" minver="1.00">
         <skuentry type="idps">0003</skuentry>
+        <skuentry type="metldr0">EDE0</skuentry>
+        <skuentry type="metldr1">0EDA</skuentry>
+        <skuentry type="bootldr0">2A37</skuentry>
+        <skuentry type="bootldr1">2A37</skuentry>
+        <skuentry type="bootldrsize">2A3B0</skuentry>
+      </skulist>
+      <skulist id="11" name="CECHCxx (COK-002)" minver="1.00">
+        <skuentry type="idps">0003</skuentry>
         <skuentry type="metldr0">E7B0</skuentry>
         <skuentry type="metldr1">0E77</skuentry>
         <skuentry type="bootldr0">2E8C</skuentry>
         <skuentry type="bootldr1">2E8C</skuentry>
         <skuentry type="bootldrsize">2E900</skuentry>
       </skulist>
-      <skulist id="11" name="CECHGxx (SEM-001)" minver="1.90">
+      <skulist id="12" name="CECHGxx (SEM-001)" minver="1.90">
         <skuentry type="idps">0005</skuentry>
         <skuentry type="metldr0">E7B0</skuentry>
         <skuentry type="metldr1">0E77</skuentry>
@@ -609,7 +618,7 @@
         <skuentry type="bootldr1">2E8C</skuentry>
         <skuentry type="bootldrsize">2E900</skuentry>
       </skulist>
-      <skulist id="12" name="CECHGxx (SEM-001)" minver="2.30">
+      <skulist id="13" name="CECHGxx (SEM-001)" minver="2.30">
         <skuentry type="idps">0005</skuentry>
         <skuentry type="metldr0">E7B0</skuentry>
         <skuentry type="metldr1">0E77</skuentry>
@@ -617,7 +626,7 @@
         <skuentry type="bootldr1">2F1C</skuentry>
         <skuentry type="bootldrsize">2F200</skuentry>
       </skulist>
-      <skulist id="13" name="CECHGxx (SEM-001)" minver="2.30">
+      <skulist id="14" name="CECHGxx (SEM-001)" minver="2.30">
         <skuentry type="idps">0005</skuentry>
         <skuentry type="metldr0">E8C0</skuentry>
         <skuentry type="metldr1">0E88</skuentry>
@@ -625,7 +634,7 @@
         <skuentry type="bootldr1">2EF4</skuentry>
         <skuentry type="bootldrsize">2EF80</skuentry>
       </skulist>
-      <skulist id="14" name="CECHExx (COK-002)" minver="N/A">
+      <skulist id="15" name="CECHExx (COK-002)" minver="N/A">
         <skuentry type="idps">0003</skuentry>
         <skuentry type="metldr0">EA60</skuentry>
         <skuentry type="metldr1">0EA2</skuentry>
@@ -633,7 +642,7 @@
         <skuentry type="bootldr1">2EE3</skuentry>
         <skuentry type="bootldrsize">2EE70</skuentry>
       </skulist>
-      <skulist id="15" name="CECHExx (COK-002W)" minver="3.40">
+      <skulist id="16" name="CECHExx (COK-002W)" minver="3.40">
         <skuentry type="idps">0003</skuentry>
         <skuentry type="metldr0">E920</skuentry>
         <skuentry type="metldr1">0E8E</skuentry>
@@ -641,7 +650,7 @@
         <skuentry type="bootldr1">2F4B</skuentry>
         <skuentry type="bootldrsize">2F4F0</skuentry>
       </skulist>
-      <skulist id="16" name="CECHGxx (SEM-001)" minver="2.30"> <!-- Refurbished -->
+      <skulist id="17" name="CECHGxx (SEM-001)" minver="2.30"> <!-- Refurbished -->
         <skuentry type="idps">0005</skuentry>
         <skuentry type="metldr0">E920</skuentry>
         <skuentry type="metldr1">0E8E</skuentry>
@@ -881,6 +890,7 @@
         <datatreshold key="FF">0</datatreshold>
       </datalist>
       <multibinentry risklevel="DANGER" name="006.14   cISD2" offset="3F260" length="10">
+	    <entry>00000000000000000000000000000000</entry>
 	    <entry>1FFF0000000000000000000000000000</entry>
         <entry>07FF0000000000000000000000000000</entry>
         <entry>3FFF0000000000000000000000000000</entry>
