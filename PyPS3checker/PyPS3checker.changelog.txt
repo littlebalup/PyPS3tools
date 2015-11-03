@@ -2,9 +2,12 @@ PyPS3checker - Python checker script for PS3 flash memory dump files
 Copyright (C) 2015 littlebalup@gmail.com
 -------------------------------------------------------------------
 
-v0.2.2, (03 nov 2015) :
-Added one CECHBxx SKU entry (NAND)
-Added none-wifi machine entry in cISD2 check (NOR & NAND)
+v0.3, (03 nov 2015) :
+Fixed bug displaying the whole dump data in console if reversed check fails.
+Added alternate conditions to determine if dump is reversed or not.
+Various minor  wording corrections.
+Added one CECHBxx SKU check entry (NAND).
+Added none-wifi machines entry in cISD2 check (NOR & NAND).
 
 v0.2.1, (06 sept 2015) :
 Added 4.76 ROS hashs to hashlist.

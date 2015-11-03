@@ -27,14 +27,51 @@ class Tee(object):
         for f in self.files:
             f.write(obj)
 
-def checkReversed(file):
-	bytes = file[0x200:(0x200 + 0x4)]
+def checkReversed(data):
+	bytes = data[0x14:(0x14 + 0x4)]  # FACEOFF
+	if bytes == '\x0F\xAC\xE0\xFF':
+		f.close()
+		return False
+	elif bytes == '\xAC\x0F\xFF\xE0':
+		f.close()
+		return True
+	bytes = data[0x1C:(0x1C + 0x4)]  # DEADBEEF
+	if bytes == '\xDE\xAD\xBE\xEF':
+		f.close()
+		return False
+	elif bytes == '\xAD\xDE\xEF\xBE':
+		f.close()
+		return True
+	bytes = data[0x200:(0x200 + 0x4)]  # IFI
 	if bytes == '\x49\x46\x49\x00':
+		f.close()
 		return False
 	elif bytes == '\x46\x49\x00\x49':
+		f.close()
 		return True
-	else:
-		sys.exit("ERROR: unable to define if file %s is byte reversed! It doesn't seem to be a valid dump."%file)
+	bytes = data[0x3F060:(0x3F060 + 0x4)]  # I.DL
+	if bytes == '\x7F\x49\x44\x4C':
+		f.close()
+		return False
+	elif bytes == '\x49\x7F\x4C\x44':
+		f.close()
+		return True
+	bytes = data[0xF00014:(0xF00014 + 0x4)]  # FACEOFF
+	if bytes == '\x0F\xAC\xE0\xFF':
+		f.close()
+		return False
+	elif bytes == '\xAC\x0F\xFF\xE0':
+		f.close()
+		return True
+	bytes = data[0xF0001C:(0xF0001C + 0x4)]  # DEADFACE
+	if bytes == '\xDE\xAD\xFA\xCE':
+		f.close()
+		return False
+	elif bytes == '\xAD\xDE\xCE\xFA':
+		f.close()
+		return True
+	f.close()
+	sys.exit("ERROR: unable to determine if reversed data! Too much curruptions.")
 
 def getDatas(file, offset, length):
 	bytes = file[offset:(offset + length)]
@@ -75,7 +112,7 @@ def getMD5(file, offset, length):
 
 if __name__ == "__main__":
 
-	release = "v0.2"
+	release = "v0.3"
 
 
 	print
@@ -105,7 +142,7 @@ if __name__ == "__main__":
 	# get args and set recording lists and counts
 	inputFile = sys.argv[1]
 	if not os.path.isfile(inputFile):
-		sys.exit("ERROR: input file \"%s\" was not found!"%inputFile)
+		sys.exit("ERROR: input file \"%s\" not found!"%inputFile)
 
 	dangerList = []
 	warningList = []
@@ -114,15 +151,15 @@ if __name__ == "__main__":
 	warningCount = 0
 
 	# parse file
-	print "Loading file to memory...",
+	print "Loading file \"%s\" to memory..."%inputFile,
 	f = open(inputFile,"rb")
 	rawfiledata = f.read()
 	f.close()
 	# parse xml
 	if not os.path.isfile("checklist.xml"):
-		sys.exit("ERROR: checklist.xml file was not found!")
+		sys.exit("ERROR: checklist.xml file not found!")
 	if not os.path.isfile("hashlist.xml"):
-		sys.exit("ERROR: hashlist.xml file was not found!")
+		sys.exit("ERROR: hashlist.xml file not found!")
 	with open('checklist.xml', 'rt') as f:
 		chktree = ElementTree.parse(f)
 	with open('hashlist.xml', 'rt') as f:
@@ -140,8 +177,7 @@ if __name__ == "__main__":
 		flashType = "NAND"
 	else:
 		print
-		print "ERROR: unable to define flash type! It doesn't seem to be a valid dump."
-		quit()
+		sys.exit("ERROR: unable to determine flash type! It doesn't seem to be a valid dump.")
 
 	print " Done"
 
@@ -469,7 +505,10 @@ if __name__ == "__main__":
 						warningCount += 1
 						warningList.append("repcheck : %s"%subnode.attrib.get("name"))
 					print "%s!"%risklevel
-					print "  Following data expected at offset 0x%s :"%subnode.attrib.get("offset").upper()
+					if isReversed:
+						print "  Following data (reversed) expected at offset 0x%s :"%subnode.attrib.get("offset").upper()
+					else:
+						print "  Following data expected at offset 0x%s :"%subnode.attrib.get("offset").upper()
 					print_formatedlines(subnode.text, 32)
 					if nothing:
 						print "    No matching data found!"

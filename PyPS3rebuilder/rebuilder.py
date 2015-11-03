@@ -76,7 +76,7 @@ def checkReversed(file):
 		f.close()
 		return True
 	f.close()
-	sys.exit("ERROR: unable to define if file %s is byte reversed! Too much curruptions."%file)
+	sys.exit("ERROR: unable to determine if file %s is byte reversed! Too much curruptions."%file)
 
 def reverse(data):
 	rev = ''.join([c for t in zip(data[1::2], data[::2]) for c in t])
@@ -114,7 +114,7 @@ def copyDatas(donor, receiver, offset, length, swap):
 
 if __name__ == "__main__":
 
-	release = "v0.2"
+	release = "v0.3"
 
 	print
 	print "  ____        ____  ____ _____          _           _ _     _           "
@@ -219,11 +219,11 @@ if __name__ == "__main__":
 
 	inputFile = sys.argv[2]
 	if not os.path.isfile(inputFile):
-		sys.exit("ERROR: input file \"%s\" was not found!"%inputFile)
+		sys.exit("ERROR: input file \"%s\" not found!"%inputFile)
 
 	donorFile = sys.argv[3]
 	if not os.path.isfile(donorFile):
-		sys.exit("ERROR: donor file \"%s\" was not found!"%donorFile)
+		sys.exit("ERROR: donor file \"%s\" not found!"%donorFile)
 
 	if len(sys.argv) > 4:
 		outputFile = sys.argv[4]

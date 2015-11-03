@@ -52,7 +52,7 @@ def checkReversed(file):
 	elif bytes == '\x46\x49\x00\x49':
 		return True
 	else:
-		sys.exit("ERROR: unable to define if file %s is byte reversed! It doesn't seem to be a valid dump."%file)
+		sys.exit("ERROR: unable to determine if file %s is byte reversed! It doesn't seem to be a valid dump."%file)
 
 def reverse(data):
 	rev = ''.join([c for t in zip(data[1::2], data[::2]) for c in t])
@@ -141,7 +141,7 @@ def ending():
 
 if __name__ == "__main__":
 
-	release = "v0.2"
+	release = "v0.3"
 
 	with open("patches/patches.info", "rt") as f:
 		tree = ElementTree.parse(f)
@@ -208,7 +208,7 @@ if __name__ == "__main__":
 
 	inputFile = sys.argv[2]
 	if not os.path.isfile(inputFile):
-		sys.exit("ERROR: input file \"%s\" was not found!"%inputFile)
+		sys.exit("ERROR: input file \"%s\" not found!"%inputFile)
 
 	if len(sys.argv) > 3:
 		outputFile = sys.argv[3]
@@ -227,8 +227,7 @@ if __name__ == "__main__":
 	elif fileSize == 268435456:
 		flashType = "NAND"
 	else:
-		print "ERROR: unable to define flash type! It doesn't seem to be a valid dump."
-		quit()
+		sys.exit("ERROR: unable to determine flash type! It doesn't seem to be a valid dump.")
 	print "Flash type :", flashType
 
 	# check if bytes reversed dump:
@@ -261,20 +260,20 @@ if __name__ == "__main__":
 
 	if patchsType == "fsm":
 		if not os.path.isfile(fsmROS_patchFile):
-			sys.exit("ERROR: patch file \"%s\" was not found!"%fsmROS_patchFile)
+			sys.exit("ERROR: patch file \"%s\" not found!"%fsmROS_patchFile)
 		elif not checkMD5(fsmROS_patchFile, fsmROS_patchMD5):
 			sys.exit("ERROR: patch file \"%s\" seems corrupted!"%fsmROS_patchFile)
 		ROSpatchFile = fsmROS_patchFile
 	elif patchsType in ["nofsm", "nofsm_rvk"]:
 		if not os.path.isfile(nofsmROS_patchFile):
-			sys.exit("ERROR: patch file \"%s\" was not found!"%nofsmROS_patchFile)
+			sys.exit("ERROR: patch file \"%s\" not found!"%nofsmROS_patchFile)
 		elif not checkMD5(nofsmROS_patchFile, nofsmROS_patchMD5):
 			sys.exit("ERROR: patch file \"%s\" seems corrupted!"%nofsmROS_patchFile)
 		ROSpatchFile = nofsmROS_patchFile
 	else: # custom
 		ROSpatchFile = "patch.bin"
 		if not os.path.isfile(ROSpatchFile):
-			sys.exit("ERROR: patch file \"%s\" was not found!"%ROSpatchFile)
+			sys.exit("ERROR: patch file \"%s\" not found!"%ROSpatchFile)
 		if not os.path.getsize(ROSpatchFile) == 7340000:
 			sys.exit("ERROR: wrong size of patch file \"%s\" !"%ROSpatchFile)
 
@@ -282,12 +281,12 @@ if __name__ == "__main__":
 
 	if apply_rvk and flashType == "NOR":
 		if not os.path.isfile(norRVK_patchFile):
-			sys.exit("ERROR: patch file \"%s\" was not found!"%norRVK_patchFile)
+			sys.exit("ERROR: patch file \"%s\" not found!"%norRVK_patchFile)
 		elif not checkMD5(norRVK_patchFile, norRVK_patchMD5):
 			sys.exit("ERROR: patch file \"%s\" seems corrupted!"%norRVK_patchFile)
 	elif apply_rvk and flashType == "NAND":
 		if not os.path.isfile(nandRVK_patchFile):
-			sys.exit("ERROR: patch file \"%s\" was not found!"%nandRVK_patchFile)
+			sys.exit("ERROR: patch file \"%s\" not found!"%nandRVK_patchFile)
 		elif not checkMD5(nandRVK_patchFile, nandRVK_patchMD5):
 			sys.exit("ERROR: patch file \"%s\" seems corrupted!"%nandRVK_patchFile)
 
