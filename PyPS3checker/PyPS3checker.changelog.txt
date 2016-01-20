@@ -2,6 +2,9 @@ PyPS3checker - Python checker script for PS3 flash memory dump files
 Copyright (C) 2015 littlebalup@gmail.com
 -------------------------------------------------------------------
 
+v0.3.1, (20 jan 2016) :
+Added OFW 4.78 ROS hashs to hashlist.
+
 v0.3, (03 nov 2015) :
 Fixed bug displaying the whole dump data in console if reversed check fails.
 Added alternate conditions to determine if dump is reversed or not.
