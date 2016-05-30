@@ -99,7 +99,7 @@ def getMD5(file, offset, length):
 
 if __name__ == "__main__":
 
-	release = "v0.3"
+	release = "v0.3.x"
 
 
 	print

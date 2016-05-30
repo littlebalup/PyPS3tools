@@ -141,7 +141,7 @@ def ending():
 
 if __name__ == "__main__":
 
-	release = "v0.3"
+	release = "v0.3.x"
 
 	with open("patches/patches.info", "rt") as f:
 		tree = ElementTree.parse(f)
