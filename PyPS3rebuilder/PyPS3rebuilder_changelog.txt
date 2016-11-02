@@ -1,4 +1,4 @@
-PyPS3patcher - Python patcher scypt for PS3 flash memory dump files
+PyPS3rebuilder - Python script to rebuild PS3 flash memory dump files
 Copyright (C) 2015 littlebalup@gmail.com
 -------------------------------------------------------------------
 
@@ -6,4 +6,4 @@ v0.3, (03 nov 2015) :
 Various minor wording corrections.
 
 v0.2, (14 jun 2015) :
-Initial public release (with noFSM patch 4.75)
+Initial public release
