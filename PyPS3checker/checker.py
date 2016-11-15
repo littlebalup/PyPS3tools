@@ -333,6 +333,9 @@ if __name__ == "__main__":
 					start = int(subnode.attrib.get("regionstart"), 16) + ldrsize
 					length = int(subnode.attrib.get("regionsize"), 16) - ldrsize
 				elif subnode.attrib.get("sizefrom") is not None:
+					datasize = int(string2hex(getDatas(rawfiledata, int(subnode.attrib.get("sizefrom"), 16), 0x2)), 16)
+					start = int(subnode.attrib.get("regionstart"), 16) + datasize
+					length = int(subnode.attrib.get("regionsize"), 16) - datasize
 				else:
 					start = int(subnode.attrib.get("offset"), 16)
 					length = int(subnode.attrib.get("size"), 16)
