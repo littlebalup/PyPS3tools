@@ -99,7 +99,7 @@ def getMD5(file, offset, length):
 
 if __name__ == "__main__":
 
-	release = "v0.3.x"
+	release = "v0.4.x"
 
 
 	print
@@ -332,6 +332,7 @@ if __name__ == "__main__":
 					ldrsize = (int(string2hex(getDatas(rawfiledata, int(subnode.attrib.get("ldrsize"), 16), 0x2)), 16) * 0x10) + 0x40
 					start = int(subnode.attrib.get("regionstart"), 16) + ldrsize
 					length = int(subnode.attrib.get("regionsize"), 16) - ldrsize
+				elif subnode.attrib.get("sizefrom") is not None:
 				else:
 					start = int(subnode.attrib.get("offset"), 16)
 					length = int(subnode.attrib.get("size"), 16)

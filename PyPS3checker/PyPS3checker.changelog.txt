@@ -2,6 +2,9 @@ PyPS3checker - Python checker script for PS3 flash memory dump files
 Copyright (C) 2015 littlebalup@gmail.com
 -------------------------------------------------------------------
 
+v0.4.0, (15 nov 2016) :
+Fixed CELL_EXTNOR_AREA 0x00 Filled Area 3 and 6.
+
 v0.3.4, (02 nov 2016) :
 Added patched 4.81 ROS hashs to hashlist.
 

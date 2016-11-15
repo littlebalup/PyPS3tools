@@ -980,13 +980,11 @@
       <datafill risklevel="WARNING" name="013.02   CELL_EXTNOR_AREA 0x00 Filled Area 0" offset="F20040" size="1C0">00</datafill>
       <datafill risklevel="WARNING" name="013.03   CELL_EXTNOR_AREA 0x00 Filled Area 1" offset="F20240" size="1FDC0">00</datafill>
       <datafill risklevel="WARNING" name="013.04   CELL_EXTNOR_AREA 0x00 Filled Area 2" offset="F40030" size="1FFD0">00</datafill>
-      <datafill risklevel="WARNING" name="013.05   CELL_EXTNOR_AREA 0x00 Filled Area 3" offset="F60060" size="93A0">00</datafill>
-      <!-- should be offset="F60040" but some valid dumps have F60060 -->
+      <datafill risklevel="WARNING" name="013.05   CELL_EXTNOR_AREA 0x00 Filled Area 3" regionstart="F6000C" regionsize="93F4" sizefrom="F6000E">00</datafill>
       <!-- OCRL0200 AREA or 0x00 area (or 0xFF area on DIA-001) -->
       <datafill risklevel="WARNING" name="013.06   CELL_EXTNOR_AREA 0xFF Filled Area 0" offset="F69C00" size="16400">FF</datafill>
       <datafill risklevel="WARNING" name="013.07   CELL_EXTNOR_AREA 0x00 Filled Area 5" offset="F80030" size="1FFD0">00</datafill>
-      <datafill risklevel="WARNING" name="013.08   CELL_EXTNOR_AREA 0x00 Filled Area 6" offset="FA0060" size="93A0">00</datafill>
-      <!-- should be offset="FA0040" but some valid dumps have FA0060 -->
+      <datafill risklevel="WARNING" name="013.08   CELL_EXTNOR_AREA 0x00 Filled Area 6" regionstart="FA000C" regionsize="93F4" sizefrom="FA000E">00</datafill>
       <!-- OCRL0200 AREA or 0x00 area (or 0xFF area on DIA-001) -->
       <datafill risklevel="WARNING" name="013.09   CELL_EXTNOR_AREA 0xFF Filled Area 1" offset="FA9C00" size="16400">FF</datafill>
     </CELL_EXTNOR_AREA_Region>
@@ -1079,9 +1077,9 @@
         <datamatch offset="F80000" length="30" id="2">CELL_EXTNOR_AREA F80000 Hash</datamatch>
       </id2>
       <id3>
-        <datamatch offset="F60000" length="50" id="3">CELL_EXTNOR_AREA F60000 Hash</datamatch>
+        <datamatch offset="F60000" length="100" id="3">CELL_EXTNOR_AREA F60000 Hash</datamatch>
         <!-- should be length="30" but some valid dumps have 40 or 50 -->
-        <datamatch offset="FA0000" length="50" id="3">CELL_EXTNOR_AREA FA0000 Hash</datamatch>
+        <datamatch offset="FA0000" length="100" id="3">CELL_EXTNOR_AREA FA0000 Hash</datamatch>
         <!-- should be length="30" but some valid dumps have 40 or 50 -->
       </id3>
       <id4>
