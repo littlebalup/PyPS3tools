@@ -19,6 +19,13 @@ import hashlib
 from xml.etree import ElementTree
 from collections import Counter
 
+try:
+	from colorama import init, Fore, Back, Style
+except ImportError:
+	colorisok = False
+else:
+	colorisok = True
+	init(autoreset=True)
 
 class Tee(object):
     def __init__(self, *files):
@@ -96,22 +103,50 @@ def getMD5(file, offset, length):
 	h.update(getDatas(file, offset, length))
 	return h.hexdigest()
 
+def printcolored(color, text):
+	# available color: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET
+	# available style: DIM, NORMAL, BRIGHT, RESET_ALL
+	# available back: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET
+	if colorisok:
+		COLOR = getattr(Fore, "%s"%color.upper())
+		print(COLOR + Style.NORMAL + "%s"%text)
+	else:
+		print text
+
+def colored(color, text):
+	# available color: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET
+	# available style: DIM, NORMAL, BRIGHT, RESET_ALL
+	# available back: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET
+	if colorisok:
+		COLOR = getattr(Fore, "%s"%color.upper())
+		return COLOR + Style.NORMAL + "%s"%text
+	else:
+		return text
+
+def printok(): print colored("green", "OK")
+
+def printrisklevel(risklevel): 
+	if risklevel == "WARNING": print colored("yellow", "%s!"%risklevel)
+	if risklevel == "DANGER": print colored("red", "%s!"%risklevel)
+
 
 if __name__ == "__main__":
 
-	release = "v0.4.x"
-
+	release = "v0.5.x"
 
 	print
-	print "  ____        ____  ____ _____      _               _             "
-	print " |  _ \ _   _|  _ \/ ___|___ /  ___| |__   ___  ___| | _____ _ __ "
-	print " | |_) | | | | |_) \___ \ |_ \ / __| '_ \ / _ \/ __| |/ / _ \ '__|"
-	print " |  __/| |_| |  __/ ___) |__) | (__| | | |  __/ (__|   <  __/ |   "
-	print " |_|    \__, |_|   |____/____/ \___|_| |_|\___|\___|_|\_\___|_|   "
-	print "        |___/                                               %s "%release
 	print
-	print "Python checker script for PS3 flash memory dump files"
-	print "Copyright (C) 2015 littlebalup@gmail.com"
+	print
+	printcolored("cyan", "  ____        ____  ____ _____      _               _             ")
+	printcolored("cyan", " |  _ \ _   _|  _ \/ ___|___ /  ___| |__   ___  ___| | _____ _ __ ")
+	printcolored("cyan", " | |_) | | | | |_) \___ \ |_ \ / __| '_ \ / _ \/ __| |/ / _ \ '__|")
+	printcolored("cyan", " |  __/| |_| |  __/ ___) |__) | (__| | | |  __/ (__|   <  __/ |   ")
+	printcolored("cyan", " |_|    \__, |_|   |____/____/ \___|_| |_|\___|\___|_|\_\___|_|   ")
+	printcolored("cyan", "        |___/                                               %s "%release)
+	print
+	printcolored("white", " Python checker script for PS3 flash memory dump files")
+	printcolored("cyan", " Copyright (C) 2015 littlebalup@gmail.com")
+	print
 	print
 	if len(sys.argv) == 1:
 		print "Usage:"
@@ -171,7 +206,7 @@ if __name__ == "__main__":
 	# create and start log
 	cl = open('%s.checklog.txt'%inputFile, 'w')
 	cl.write("PyPS3checker %s. Check log.\n\n"%release + "Checked file : %s\n"%inputFile)
-	original = sys.stdout
+	# original = sys.stdout
 	sys.stdout = Tee(sys.stdout, cl)
 
 	print
@@ -213,7 +248,7 @@ if __name__ == "__main__":
 			d[tag] = subnode.text.lower()
 		if d == skufiledata:
 			ChkResult = True
-			print "OK"
+			printok()
 			print "   %s"%node.attrib.get("name")
 			print "   Minimum version %s"%node.attrib.get("minver")
 			if node.attrib.get("warn") == "true":
@@ -228,7 +263,7 @@ if __name__ == "__main__":
 		elif risklevel == "WARNING":
 			warningCount += 1
 			warningList.append("SKU identification")
-		print "%s!"%risklevel
+		printrisklevel(risklevel)
 		print "   No matching SKU found!"
 
 	# SDK vesrions
@@ -276,7 +311,7 @@ if __name__ == "__main__":
 				filedata = string2hex(getDatas(rawfiledata, int(subnode.attrib.get("offset"), 16), len(subnode.text)/2))
 				print "%s :"%subnode.attrib.get("name"),
 				if filedata.lower() == subnode.text.lower():
-					print "OK"
+					printok()
 				else:
 					if risklevel == "DANGER":
 						dangerCount += 1
@@ -284,7 +319,7 @@ if __name__ == "__main__":
 					elif risklevel == "WARNING":
 						warningCount += 1
 						warningList.append(subnode.attrib.get("name"))
-					print "%s!"%risklevel
+					printrisklevel(risklevel)
 					print "  At offset : 0x%s"%subnode.attrib.get("offset").upper()
 					if isReversed:
 						print "  Actual data (reversed from original) :"
@@ -302,7 +337,7 @@ if __name__ == "__main__":
 				print "%s :"%subnode.attrib.get("name"),
 				for entry in chktree.findall(".//%s/%s/%s[@name='%s']/"%(flashType, node.tag, subnode.tag, subnode.attrib.get("name"))):
 					if filedata.lower() == entry.text.lower():
-						print "OK"
+						printok()
 						ChkResult = True
 						break
 				if ChkResult == False:
@@ -312,7 +347,7 @@ if __name__ == "__main__":
 					elif risklevel == "WARNING":
 						warningCount += 1
 						warningList.append(subnode.attrib.get("name"))
-					print "%s!"%risklevel
+					printrisklevel(risklevel)
 					print "  At offset : 0x%s"%subnode.attrib.get("offset").upper()
 					if isReversed:
 						print "  Actual data (reversed from original) :"
@@ -351,7 +386,7 @@ if __name__ == "__main__":
 					c += 1
 				f.close()
 				if ChkResult:
-					print "OK"
+					printok()
 				else:
 					if risklevel == "DANGER":
 						dangerCount += 1
@@ -359,7 +394,7 @@ if __name__ == "__main__":
 					elif risklevel == "WARNING":
 						warningCount += 1
 						warningList.append(subnode.attrib.get("name"))
-					print "%s!"%risklevel
+					printrisklevel(risklevel)
 					print "  All bytes from offset 0x%X to offset 0x%X should be 0x%s."%(start, start + length, subnode.text.upper())
 					print "  Byte at offset 0x%X has value : 0x%s"%(FalseOffset, FalseValue.upper())
 					print "  Subsequent bytes in the range may be wrong as well."
@@ -369,11 +404,16 @@ if __name__ == "__main__":
 				checkCount += 1
 				ChkResult = False
 				print "%s :"%subnode.attrib.get("name"),
-				hashdata = getMD5(rawfiledata, int(subnode.attrib.get("offset"), 16), int(subnode.attrib.get("size"), 16))
+				if subnode.attrib.get("sizeoffset") is not None:
+					size = int(string2hex(getDatas(rawfiledata, int(subnode.attrib.get("sizeoffset"), 16), int(subnode.attrib.get("sizelength"), 16))), 16)
+				else:
+					size = int(subnode.attrib.get("size"), 16)
+				hashdata = getMD5(rawfiledata, int(subnode.attrib.get("offset"), 16), size)
 				for hash in hashtree.findall(".//type[@name='%s']/"%(subnode.attrib.get("type"))):
 					if hashdata.lower() == hash.text.lower():
-						print "OK"
+						printok()
 						ChkResult = True
+						print "  Size = 0x%X"%size
 						print "  MD5 =", hashdata.upper()
 						print "  Version =", hash.attrib.get("name")
 						break
@@ -384,7 +424,8 @@ if __name__ == "__main__":
 					elif risklevel == "WARNING":
 						warningCount += 1
 						warningList.append(subnode.attrib.get("name"))
-					print "%s!"%risklevel
+					printrisklevel(risklevel)
+					print "  Size = 0x%X"%size
 					print "  MD5 =", hashdata.upper()
 					print "  Version = (unknown)"
 				print
@@ -414,7 +455,7 @@ if __name__ == "__main__":
 							tag = datatreshold.attrib.get("key").upper()
 							r[tag] = c
 					if ChkResult:
-						print "OK"
+						printok()
 					else:
 						if risklevel == "DANGER":
 							dangerCount += 1
@@ -422,7 +463,7 @@ if __name__ == "__main__":
 						elif risklevel == "WARNING":
 							warningCount += 1
 							warningList.append(subnode.attrib.get("name"))
-						print "%s!"%risklevel
+						printrisklevel(risklevel)
 						if datatreshold.attrib.get("key") == "*":
 							print "  Any bytes",
 						else:
@@ -454,7 +495,7 @@ if __name__ == "__main__":
 					elif risklevel == "WARNING":
 						warningCount += 1
 						warningList.append("datamatches : %s"%subnode.text)
-					print "%s!"%risklevel
+					printrisklevel(risklevel)
 					print "  Following datas should be the same :"
 					for id in chktree.findall(".//%s/%s//datamatch[@id='%s']"%(flashType, node.tag, subnode.attrib.get("id"))):
 						if id.attrib.get("nodisp") is not None:
@@ -468,7 +509,7 @@ if __name__ == "__main__":
 							print_formatedlines(d[id.text], 32)
 					print
 				else:
-					print "OK"
+					printok()
 
 			if subnode.tag == "repcheck":
 				checkCount += 1
@@ -495,7 +536,7 @@ if __name__ == "__main__":
 					elif risklevel == "WARNING":
 						warningCount += 1
 						warningList.append("repcheck : %s"%subnode.attrib.get("name"))
-					print "%s!"%risklevel
+					printrisklevel(risklevel)
 					if isReversed:
 						print "  Following data (reversed) expected at offset 0x%s :"%subnode.attrib.get("offset").upper()
 					else:
@@ -509,26 +550,56 @@ if __name__ == "__main__":
 						print "   ", ", ".join(indexlist)
 						print
 				else:
-					print "OK"
+					printok()
 
 
+	print
+	print
+	print "******* Additional information *******"
+	if flashType == "NOR":
+		HDD = getDatas(rawfiledata, 0xF20204, 0x3C)
+		MAC = string2hex(getDatas(rawfiledata, 0x3F040, 0x6)).upper()
+		CID = string2hex(getDatas(rawfiledata, 0x3F06A, 0x6)).upper()
+		eCID = getDatas(rawfiledata, 0x3F070, 0x20)
+		board_id = getDatas(rawfiledata, 0x3F090, 0x8)
+		kiban_id = getDatas(rawfiledata, 0x3F098, 0xC)
+		print "HDD :", " ".join(HDD.split())
+	if flashType == "NAND":
+		MAC = string2hex(getDatas(rawfiledata, 0x90840, 0x6)).upper()
+		CID = string2hex(getDatas(rawfiledata, 0x9086A, 0x6)).upper()
+		eCID = getDatas(rawfiledata, 0x90870, 0x20)
+		board_id = getDatas(rawfiledata, 0x90890, 0x8)
+		kiban_id = getDatas(rawfiledata, 0x90898, 0xC)
+	print "MAC address :", ":".join(a+b for a,b in zip(MAC[::2], MAC[1::2]))
+	print "CID : 0x%s"%CID
+	print "eCID : %s"%eCID
+	print "board_id (part of console S/N) : %s"%board_id
+	print "kiban_id (board barcode) : %s"%kiban_id
+
+	print
 	print
 	print
 	print "******* Checks completed *******"
 	print
 	print "Total number of checks =", checkCount
-	print "Number of dangers =", dangerCount
-	print "Number of warnings =", warningCount
+	print "Number of dangers =",
+	if dangerCount > 0: print colored("red", dangerCount)
+	else: print colored("green", dangerCount)
+	print "Number of warnings =",
+	if warningCount > 0: print colored("yellow", warningCount)
+	else: print colored("green", warningCount)
 
 	if dangerCount > 0:
 		print
-		print "Following check(s) returned a DANGER :"
-		print " ", '\n  '.join(dangerList)
+		print "Following check(s) returned a",
+		printrisklevel("DANGER")
+		print colored("red", "  " + "\n  ".join(dangerList))
 		
 	if warningCount > 0:
 		print
-		print "Following check(s) returned a WARNING :"
-		print " ", '\n  '.join(warningList)
+		print "Following check(s) returned a",
+		printrisklevel("WARNING")
+		print colored("yellow", "  " + "\n  ".join(warningList))
 
 	print
 	print "All checks done in %.2f seconds."%(time.time() - startTime)

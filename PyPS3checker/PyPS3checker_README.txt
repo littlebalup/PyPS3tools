@@ -12,7 +12,8 @@ responsibility for the consequences of your use of it.
 System requirements:
 -------------------
  - Any system able to run Python 2.7.x (Windows, Linux, MAC... )
- - Python 2.7.2 or any upper Python 2 version : https://www.python.org 
+ - Python 2.7.2 or any upper Python 2 version : https://www.python.org
+ - (optional to display colored text) Colorama python module
 
  
 Features:

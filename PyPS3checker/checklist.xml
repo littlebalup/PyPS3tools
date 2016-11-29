@@ -313,6 +313,7 @@
         <entry>011301130142</entry>
         <entry>012101210150</entry>
         <entry>012301230152</entry>
+        <entry>012901290158</entry>
         <entry>013101310160</entry>
         <entry>016501650180</entry>
 	  </multibinentry>
@@ -342,24 +343,39 @@
       <datafill risklevel="WARNING" name="007.03   cCSD 0xFF Filled Area" offset="91020" size="7E0">FF</datafill>
     </cCSD_region>
     <Revokation_region>
+      <multibinentry risklevel="DANGER" name="008.00   trvk_prg Region Header" offset="91800" length="20">
+	    <entry>0000000000000020000000000000002000000000000020000000000000000000</entry>
+	    <entry>0000000000001010000000000000101000000000000020000000000000000000</entry>
+	  </multibinentry>
       <binentry risklevel="DANGER" name="008.01   trvk_prg0 SCE" offset="91830" ascii="true">53434500</binentry>
-      <!-- same comments than NOR -->
-      <binentry risklevel="DANGER" name="008.02   trvk_prg1 SCE" offset="92820" ascii="true">53434500</binentry>
-      <!-- same comments than NOR -->
-      <binentry risklevel="DANGER" name="008.03   trvk_pkg0 SCE" offset="93830" ascii="true">53434500</binentry>
-      <!-- same comments than NOR -->
-      <binentry risklevel="DANGER" name="008.04   trvk_pkg1 SCE" offset="94820" ascii="true">53434500</binentry>
-      <!-- same comments than NOR -->
-    </Revokation_region>
-    <CoreOS_region>
+	  <hash risklevel="WARNING" name="008.02   trvk_prg0 Hash" type="TRVK_PRG" offset="91830" sizeoffset="9182E" sizelength="2"></hash>
+	  <!-- <datafill risklevel="WARNING" name="008.02   trvk_prg0 0x00 filled area" regionstart="91830" regionsize="FE0" sizefrom="9182E">00</datafill> -->
+      <binentry risklevel="DANGER" name="008.03   trvk_prg1 SCE" offset="92820" ascii="true">53434500</binentry>
+	  <hash risklevel="WARNING" name="008.04   trvk_prg1 Hash" type="TRVK_PRG" offset="92820" sizeoffset="9281E" sizelength="2"></hash>
+	  <!-- <datafill risklevel="WARNING" name="008.04   trvk_prg1 0xFF filled area" regionstart="92820" regionsize="FE0" sizefrom="9281E">FF</datafill> -->
+      <multibinentry risklevel="DANGER" name="008.00   trvk_pkg Region Header" offset="93800" length="20">
+	    <entry>0000000000000020000000000000002000000000000020000000000000000000</entry>
+	    <entry>0000000000001010000000000000101000000000000020000000000000000000</entry>
+	  </multibinentry>
+      <binentry risklevel="DANGER" name="008.05   trvk_pkg0 SCE" offset="93830" ascii="true">53434500</binentry>
+ <!-- <hash risklevel="WARNING" name="008.06   trvk_pkg0 Hash" type="TRVK_PKG" offset="93830" sizeoffset="9382E" sizelength="2"></hash> -->
+	  <!-- <datafill risklevel="WARNING" name="008.05   trvk_pkg0 0x00 filled area" regionstart="93830" regionsize="FE0" sizefrom="9382E">00</datafill> -->
+      <binentry risklevel="DANGER" name="008.07   trvk_pkg1 SCE" offset="94820" ascii="true">53434500</binentry>
+ <!-- <hash risklevel="WARNING" name="008.08   trvk_pkg1 Hash" type="TRVK_PKG" offset="94820" sizeoffset="9481E" sizelength="2"></hash> -->
+	  <!-- <datafill risklevel="WARNING" name="008.07   trvk_pkg1 0xFF filled area" regionstart="94820" regionsize="FE0" sizefrom="9481E">FF</datafill> -->
+	</Revokation_region>
+    <Unreferenced_Area>
+	  <datafill risklevel="WARNING" name="008.08   unreferenced area 0xFF filled" offset="95800" size="2A800">FF</datafill>
+	</Unreferenced_Area>
+	<CoreOS_region>
       <multibinentry risklevel="WARNING" name="009.00   ROS Header" offset="C0000" length="20">
 	    <entry>000000000070001000000000007000100000000000E000000000000000000000</entry>
 	    <entry>000000000000002000000000000000200000000000E000000000000000000000</entry>
 	  </multibinentry>
       <binentry risklevel="WARNING" name="009.01   ROS0 Header" offset="C0020" >000000000000000000000000006FFFE0</binentry>
-	  <hash risklevel="WARNING" name="009.02   ROS0 Hash" type="ROS" offset="C0030" size="6FFFE0"></hash>
+	  <hash risklevel="WARNING" name="009.02   ROS0 Hash" type="ROS" offset="C0030" sizeoffset="C003D" sizelength="3"></hash>
       <binentry risklevel="WARNING" name="009.03   ROS1 Header" offset="7C0010">000000000000000000000000006FFFE0</binentry>
-	  <hash risklevel="WARNING" name="009.04   ROS1 Hash" type="ROS" offset="7C0020" size="6FFFE0"></hash>
+	  <hash risklevel="WARNING" name="009.04   ROS1 Hash" type="ROS" offset="7C0020" sizeoffset="7C002D" sizelength="3"></hash>
     </CoreOS_region>
     <cvtrm_region>
       <binentry risklevel="DANGER" name="010.01   cvtrm Header" offset="EC0000" ascii="true">534345495654524D000000000000</binentry>
@@ -876,6 +892,7 @@
         <entry>011301130142</entry>
         <entry>012101210150</entry>
         <entry>012301230152</entry>
+        <entry>012901290158</entry>
         <entry>013101310160</entry>
         <entry>016501650180</entry>
 	  </multibinentry>
@@ -920,23 +937,29 @@
     </cCSD_region>
     <Revokation_region>
       <binentry risklevel="DANGER" name="008.01   trvk_prg0 SCE" offset="40010" ascii="true">53434500</binentry>
-      <!--  Need to find a way to check trvk_prg0 0x00 filled area (start is relative to data size at 4000E, length 0x0D00)  -->
-      <!--  Need to find a way to check trvk_prg0 0xFF filled area (follow previous 0x00 area to 5FFFF)  -->
-      <binentry risklevel="DANGER" name="008.02   trvk_prg1 SCE" offset="60010" ascii="true">53434500</binentry>
-      <!--  Need to find a way to check trvk_prg1 0x00 filled area (start is relative to data size at 6000E, length 0x0D00)  -->
-      <!--  Need to find a way to check trvk_prg1 0xFF filled area (follow previous 0x00 area to 7FFFF)  -->
-      <binentry risklevel="DANGER" name="008.03   trvk_pkg0 SCE" offset="80010" ascii="true">53434500</binentry>
-      <!--  Need to find a way to check trvk_pkg0 0x00 filled area (start is relative to data size at 8000E, length 0x0D80)  -->
-      <!--  Need to find a way to check trvk_pkg0 0xFF filled area (follow previous 0x00 area to 9FFFF)  -->
-      <binentry risklevel="DANGER" name="008.04   trvk_pkg1 SCE" offset="A0010" ascii="true">53434500</binentry>
-      <!--  Need to find a way to check trvk_pkg1 0x00 filled area (start is relative to data size at A000E, length 0x0D80)  -->
-      <!--  Need to find a way to check trvk_pkg1 0xFF filled area (follow previous 0x00 area to BFFFF)  -->
+	  <hash risklevel="WARNING" name="008.02   trvk_prg0 Hash" type="TRVK_PRG" offset="40010" sizeoffset="4000E" sizelength="2"></hash>
+	  <!-- <datafill risklevel="WARNING" name="008.02   trvk_prg0 0x00 filled area" regionstart="40010" regionsize="FE0" sizefrom="4000E">00</datafill> -->
+      <datafill risklevel="WARNING" name="008.02   trvk_prg0 0xFF filled area" offset="40FF0" size="1F010">FF</datafill>
+      <binentry risklevel="DANGER" name="008.03   trvk_prg1 SCE" offset="60010" ascii="true">53434500</binentry>
+	  <hash risklevel="WARNING" name="008.04   trvk_prg1 Hash" type="TRVK_PRG" offset="60010" sizeoffset="6000E" sizelength="2"></hash>
+	  <!-- <datafill risklevel="WARNING" name="008.04   trvk_prg1 0x00 filled area" regionstart="60010" regionsize="FE0" sizefrom="6000E">00</datafill> -->
+      <datafill risklevel="WARNING" name="008.04   trvk_prg1 0xFF filled area" offset="60FF0" size="1F010">FF</datafill>
+      <binentry risklevel="DANGER" name="008.05   trvk_pkg0 SCE" offset="80010" ascii="true">53434500</binentry>
+ <!-- <hash risklevel="WARNING" name="008.06   trvk_pkg0 Hash" type="TRVK_PKG" offset="80010" sizeoffset="8000E" sizelength="2"></hash> -->
+	  <!-- <datafill risklevel="WARNING" name="008.06   trvk_pkg0 0x00 filled area" regionstart="80010" regionsize="FE0" sizefrom="8000E">00</datafill> -->
+      <datafill risklevel="WARNING" name="008.06   trvk_pkg0 0xFF filled area" offset="80FF0" size="1F010">FF</datafill>
+      <binentry risklevel="DANGER" name="008.07   trvk_pkg1 SCE" offset="A0010" ascii="true">53434500</binentry>
+ <!-- <hash risklevel="WARNING" name="008.08   trvk_pkg1 Hash" type="TRVK_PKG" offset="A0010" sizeoffset="A000E" sizelength="2"></hash> -->
+	  <!-- <datafill risklevel="WARNING" name="008.08   trvk_pkg1 0x00 filled area" regionstart="A0010" regionsize="FE0" sizefrom="A000E">00</datafill> -->
+      <datafill risklevel="WARNING" name="008.08   trvk_pkg1 0xFF filled area" offset="A0FF0" size="1F010">FF</datafill>
     </Revokation_region>
     <CoreOS_region>
       <binentry risklevel="WARNING" name="009.01   ROS0 Header" offset="C0000">000000000000000000000000006FFFE0</binentry>
-	  <hash risklevel="WARNING" name="009.02   ROS0 Hash" type="ROS" offset="C0010" size="6FFFE0"></hash>
-      <binentry risklevel="WARNING" name="009.03   ROS1 Header" offset="7C0000">000000000000000000000000006FFFE0</binentry>
-	  <hash risklevel="WARNING" name="009.04   ROS1 Hash" type="ROS" offset="7C0010" size="6FFFE0"></hash>
+	  <hash risklevel="WARNING" name="009.02   ROS0 Hash" type="ROS" offset="C0010" sizeoffset="C001D" sizelength="3"></hash>
+      <datafill risklevel="WARNING" name="009.03   ROS0 unused 0xFF Filled Area" offset="7BFFF0" size="10">FF</datafill>
+      <binentry risklevel="WARNING" name="009.04   ROS1 Header" offset="7C0000">000000000000000000000000006FFFE0</binentry>
+	  <hash risklevel="WARNING" name="009.05   ROS1 Hash" type="ROS" offset="7C0010" sizeoffset="7C001D" sizelength="3"></hash>
+      <datafill risklevel="WARNING" name="009.06   ROS1 unused 0xFF Filled Area" offset="EBFFF0" size="10">FF</datafill>
     </CoreOS_region>
     <cvtrm_region>
       <datafill risklevel="WARNING" name="010.01   Pre cvtrm 0xFF Filled Area" offset="EBFFF0" size="10">FF</datafill>
@@ -1223,8 +1246,7 @@
         <skuentry type="bootldr1">2F4B</skuentry>
         <skuentry type="bootldrsize">2F4F0</skuentry>
       </skulist>
-      <skulist id="14" name="CECH-25xx datecode:0C (JSD-001 or JTP-001)"
-               minver="3.40">
+      <skulist id="14" name="CECH-25xx datecode:0C (JSD-001 or JTP-001)" minver="3.40">
         <skuentry type="idps">000B</skuentry>
         <skuentry type="metldr0">E920</skuentry>
         <skuentry type="metldr1">0E8E</skuentry>
