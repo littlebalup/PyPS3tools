@@ -2,7 +2,7 @@ PyPS3checker - Python checker script for PS3 flash memory dump files
 Copyright (C) 2015 littlebalup@gmail.com
 -------------------------------------------------------------------
 
-v0.5.0, (15 nov 2016) :
+v0.5.0, (29 nov 2016) :
 Added CFW and DEX OFW ROS hashs recognition (thanks to baileyscream and all CFW devs).
 Added trvk_prg hash check.
 Added "Additional information" field (HDD, MAC address...).
