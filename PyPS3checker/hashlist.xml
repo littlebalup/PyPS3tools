@@ -329,6 +329,12 @@
   <!-- MISC -->
     <hash name="2.43 Leaked JIG">4C503EC4737A08F79FD8B4A4DFE0F31F</hash>
   <!-- CFW/MFW -->
+    <hash name="4.82v5 Overflow Cobra noBD">CD3823F6D7158F7D287C2EBC7B985FA5</hash>
+    <hash name="4.82v4 Overflow Cobra">8222831E0B6AFE881C21F02F5D3C612F</hash>
+    <hash name="4.82v3 Overflow noBD">F6D12FDA46DC871329E9A53612B66171</hash>
+    <hash name="4.82v2 Overflow Dual Boot">5352E8270ACBBC6AA783276A403413D4</hash>
+    <hash name="4.82v1 Overflow Standard">7F56FF7442E9CE5A7CED90DD9FB73F71</hash>
+    <hash name="4.82 SPY Cobra">53DEAF64EAA5035958685B71ED879488</hash>
     <hash name="4.82v1.00 FERROX Cobra">C434AAF084F48BD0F3ADCDF7ECBDEB47</hash>
     <hash name="4.82v1.00 FERROX Standard">3E4D58A6F1F966690418234D90FFA4C7</hash>
     <hash name="4.81.2 REBUG REX">E95FF04634C7AA08881DBFCBF725E87B</hash>
