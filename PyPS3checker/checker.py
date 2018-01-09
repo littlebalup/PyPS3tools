@@ -197,6 +197,8 @@ if __name__ == "__main__":
 			rawfiledata = reverse(rawfiledata)
 	elif fileSize == 268435456:
 		flashType = "NAND"
+	elif fileSize == 250609664:
+		flashType = "NAND_PS3Xploit"
 	else:
 		print
 		sys.exit("ERROR: unable to determine flash type! It doesn't seem to be a valid dump.")
@@ -570,6 +572,12 @@ if __name__ == "__main__":
 		eCID = getDatas(rawfiledata, 0x90870, 0x20)
 		board_id = getDatas(rawfiledata, 0x90890, 0x8)
 		kiban_id = getDatas(rawfiledata, 0x90898, 0xC)
+	if flashType == "NAND_PS3Xploit":
+		MAC = string2hex(getDatas(rawfiledata, 0x90840-0x40000, 0x6)).upper()
+		CID = string2hex(getDatas(rawfiledata, 0x9086A-0x40000, 0x6)).upper()
+		eCID = getDatas(rawfiledata, 0x90870-0x40000, 0x20)
+		board_id = getDatas(rawfiledata, 0x90890-0x40000, 0x8)
+		kiban_id = getDatas(rawfiledata, 0x90898-0x40000, 0xC)
 	print "MAC address :", ":".join(a+b for a,b in zip(MAC[::2], MAC[1::2]))
 	print "CID : 0x%s"%CID
 	print "eCID : %s"%eCID

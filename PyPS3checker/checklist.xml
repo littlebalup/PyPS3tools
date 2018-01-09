@@ -676,6 +676,438 @@
       </skulist>
     </skumodels>
   </NAND>
+  <NAND_PS3Xploit>
+    <sdk risklevel="WARNING">
+      <sdk_version name="ROS0" offset="80030"></sdk_version>
+      <sdk_version name="ROS1" offset="780020"></sdk_version>
+	</sdk>
+    <Header_Magic>
+      <datafill risklevel="WARNING" name="002.01   Header Magic 0x00 Filled Area 0" offset="0" size="10">00</datafill>
+      <binentry risklevel="DANGER" name="002.02   Header Magic" offset="10">000000000FACE0FF00000000DEADBEEF00000000000000000000000000007600</binentry>
+      <datafill risklevel="WARNING" name="002.03   Header Magic 0x00 Filled Area 1" offset="30" size="1D0">00</datafill>
+    </Header_Magic>
+    <flash_region_table>
+      <binentry risklevel="DANGER" name="003.01   Flash Region Table Header" offset="200">00000001000000090000000000EBFE00</binentry>
+      <binentry risklevel="DANGER" name="003.02   asecure_loader Offset - Length" offset="210">00000000000006000000000000040000</binentry>
+      <binentry risklevel="DANGER" name="003.03   asecure_loader Name" offset="220" ascii="true">617365637572655F6C6F61646572000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="003.04   eEID Offset - Length" offset="240">00000000000406000000000000010000</binentry>
+      <binentry risklevel="DANGER" name="003.05   eEID Name" offset="250" ascii="true">6545494400000000000000000000000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="003.06   cISD Offset - Length" offset="270">00000000000506000000000000000800</binentry>
+      <binentry risklevel="DANGER" name="003.07   cISD Name" offset="280" ascii="true">6349534400000000000000000000000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="003.08   cCSD Offset - Length" offset="2A0">0000000000050E000000000000000800</binentry>
+      <binentry risklevel="DANGER" name="003.09   cCSD Name" offset="2B0" ascii="true">6343534400000000000000000000000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="003.10   trvk_prg Offset - Length" offset="2D0">00000000000516000000000000002000</binentry>
+      <binentry risklevel="DANGER" name="003.11   trvk_prg Name" offset="2E0" ascii="true">7472766B5F707267000000000000000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="003.12   trvk_pkg Offset - Length" offset="300">00000000000536000000000000002000</binentry>
+      <binentry risklevel="DANGER" name="003.13   trvk_pkg Name" offset="310" ascii="true">7472766B5F706B67000000000000000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="003.14   creserved_0 Offset - Length" offset="330">0000000000055600000000000002A800</binentry>
+      <binentry risklevel="DANGER" name="003.15   creserved_0 Name" offset="340" ascii="true">6372657365727665645F30000000000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="003.16   ros Offset - Length" offset="360">000000000007FE000000000000E00000</binentry>
+      <binentry risklevel="DANGER" name="003.17   ros Name" offset="370" ascii="true">726F730000000000000000000000000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="003.18   cvtrm Offset - Length" offset="390">0000000000E7FE000000000000040000</binentry>
+      <binentry risklevel="DANGER" name="003.19   cvtrm Name" offset="3A0" ascii="true">637674726D000000000000000000000000000000000000000000000000000000</binentry>
+      <datafill risklevel="WARNING" name="003.20   Flash Region Table 0x00 Filled Area" offset="3B0" size="450">00</datafill>
+    </flash_region_table>
+    <asure_loader_region>
+      <binentry risklevel="DANGER" name="004.01   asecure_loader Header" offset="800">00000001000000010000000000040000</binentry>
+      <binentry risklevel="DANGER" name="004.02   metldr Offset" offset="810">0000000000000040</binentry>
+      <multibinentry risklevel="DANGER" name="004.03   metldr Length" offset="818" length="8">
+	    <entry>000000000000EE10</entry>
+        <entry>000000000000EDA0</entry>
+        <entry>000000000000EBF0</entry>
+        <entry>000000000000EDE0</entry>
+        <entry>000000000000E7B0</entry>
+      <!-- refurbished consoles? -->
+        <entry>000000000000E8C0</entry>
+        <entry>000000000000E8E0</entry>
+        <entry>000000000000EA60</entry>
+        <entry>000000000000E8D0</entry>
+        <entry>000000000000E890</entry>
+        <entry>000000000000E920</entry>
+        <entry>000000000000E960</entry>
+        <entry>000000000000F920</entry>
+        <entry>000000000000F9B0</entry>
+	  </multibinentry>
+      <binentry risklevel="DANGER" name="004.04   metldr Name" offset="820" ascii="true">6D65746C64720000000000000000000000000000000000000000000000000000</binentry> <!-- METLDR -->
+      <multibinentry risklevel="DANGER" name="004.05   metldr RevKey" offset="840" length="10">
+	    <entry>00000EDD2F6C622ECA7FAE0D2F76B5D4</entry>
+        <entry>00000ED648F43FDE3EEE37119C673663</entry>
+        <entry>00000EBB94C6A30BBF2F50752E8DC052</entry>
+        <entry>00000EDA81CF2EF41A336897E0493CB8</entry>
+        <entry>00000E771362F2C2E6835D6FC144F246</entry>
+      <!-- refurbished consoles? -->
+        <entry>00000E887822C41EB9F00FA4830A0B69</entry>
+        <entry>00000E8A5E1F9CED758B6B94442BF031</entry>
+        <entry>00000EA253E7EA237889AE20322A9708</entry>
+        <entry>00000E8943B6EF4AE20F7400C8809E53</entry>
+        <entry>00000E85BC78B8F02879A81184A0DA74</entry>
+        <entry>00000E8E99873BC715F280809C302225</entry>
+        <entry>00000E92C3266E4BBB282E76B7677095</entry>
+        <entry>00000E92DBA53B0AB5181D971524615B</entry>
+        <entry>00000F8E6ED7BCD81F11EA34425F9B9D</entry>
+        <entry>00000F8E656EC1D96595F85C1F9C6196</entry>
+        <entry>00000F8E39ECF2D2ACC0E0752248A9F8</entry>
+        <entry>00000F97EA838371878EF0892A5EF6B6</entry>
+        <entry>00000F97C36C2E4300AACBE6F64FAD92</entry>
+        <entry>00000F97A2834B1DFD969CC1769517C6</entry>
+	  </multibinentry>
+      <multibinentry risklevel="DANGER" name="004.06   metldr Binary Size" offset="850" length="4">
+	    <entry>00000EDD</entry>
+        <entry>00000ED6</entry>
+        <entry>00000EBB</entry>
+        <entry>00000EDA</entry>
+        <entry>00000E77</entry>
+      <!-- refurbished consoles? -->
+        <entry>00000E88</entry>
+        <entry>00000E8A</entry>
+        <entry>00000EA2</entry>
+        <entry>00000E89</entry>
+        <entry>00000E85</entry>
+        <entry>00000E8E</entry>
+        <entry>00000E92</entry>
+        <entry>00000F8E</entry>
+        <entry>00000F97</entry>
+	  </multibinentry>
+      <datalist risklevel="DANGER" name="004.07   metldr Statistics" offset="840" ldrsize="842">
+        <datatreshold key="*">0,52</datatreshold>
+      </datalist>
+      <datafill risklevel="WARNING" name="004.08   asecure_loader 0x00 Filled Area" regionstart="840" regionsize="2E7C0" ldrsize="842">00</datafill>
+    </asure_loader_region>
+    <eEID_region>
+      <binentry risklevel="DANGER" name="005.01   eEID Header" offset="40800">0000000600001DD00000000000000000</binentry>
+      <binentry risklevel="DANGER" name="005.02   EID0 Offset - Length" offset="40810">00000070000008600000000000000000</binentry>
+      <binentry risklevel="DANGER" name="005.03   EID1 Offset - Length" offset="40820">000008D0000002A00000000000000001</binentry>
+      <binentry risklevel="DANGER" name="005.04   EID2 Offset - Length" offset="40830">00000B70000007300000000000000002</binentry>
+      <binentry risklevel="DANGER" name="005.05   EID3 Offset - Length" offset="40840">000012A0000001000000000000000003</binentry>
+      <binentry risklevel="DANGER" name="005.06   EID4 Offset - Length" offset="40850">000013A0000000300000000000000004</binentry>
+      <binentry risklevel="DANGER" name="005.07   EID5 Offset - Length" offset="40860">000013D000000A000000000000000005</binentry>
+      <multibinentry risklevel="DANGER" name="005.08   EID0 IDPS0" offset="40870" length="6">
+	    <entry>000000010082</entry>
+        <entry>000000010083</entry>
+        <entry>000000010084</entry>
+        <entry>000000010085</entry>
+        <entry>000000010086</entry>
+        <entry>000000010087</entry>
+        <entry>000000010088</entry>
+        <entry>000000010089</entry>
+        <entry>00000001008A</entry>
+        <entry>00000001008B</entry>
+        <entry>00000001008C</entry>
+        <entry>00000001008E</entry>
+        <entry>00000001008F</entry>
+	  </multibinentry>
+      <multibinentry risklevel="DANGER" name="005.09   EID0 IDPS1" offset="40876" length="2">
+	    <entry>0001</entry>
+        <entry>0002</entry>
+        <entry>0003</entry>
+        <entry>0004</entry>
+        <entry>0005</entry>
+        <entry>0006</entry>
+        <entry>0007</entry>
+        <entry>0008</entry>
+        <entry>0009</entry>
+        <entry>000A</entry>
+        <entry>000B</entry>
+        <entry>000C</entry>
+        <entry>000D</entry>
+        <entry>000E</entry>
+        <entry>000F</entry>
+	  </multibinentry>
+      <binentry risklevel="DANGER" name="005.10   EID0 Static" offset="40880">0012000B</binentry>
+      <binentry risklevel="DANGER" name="005.11   EID2 BlockSize/Padding" offset="41370">0080069000000000000000000000000000000000000000000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="005.12   EID3 Static0" offset="41AA0">00000001</binentry>
+      <binentry risklevel="DANGER" name="005.13   EID3 Static1" offset="41AA8">00000000</binentry>
+      <binentry risklevel="DANGER" name="005.14   EID3 Static2" offset="41AB0">000100D0</binentry>
+      <multibinentry risklevel="DANGER" name="005.15   EID5 IDPS0" offset="41BD0" length="6">
+	    <entry>000000010082</entry>
+        <entry>000000010083</entry>
+        <entry>000000010084</entry>
+        <entry>000000010085</entry>
+        <entry>000000010086</entry>
+        <entry>000000010087</entry>
+        <entry>000000010088</entry>
+        <entry>000000010089</entry>
+        <entry>00000001008A</entry>
+        <entry>00000001008B</entry>
+        <entry>00000001008C</entry>
+        <entry>00000001008E</entry>
+        <entry>00000001008F</entry>
+	  </multibinentry>
+      <multibinentry risklevel="DANGER" name="005.16   EID5 IDPS1" offset="41BD6" length="2">
+	    <entry>0001</entry>
+        <entry>0002</entry>
+        <entry>0003</entry>
+        <entry>0004</entry>
+        <entry>0005</entry>
+        <entry>0006</entry>
+        <entry>0007</entry>
+        <entry>0008</entry>
+        <entry>0009</entry>
+        <entry>000A</entry>
+        <entry>000B</entry>
+        <entry>000C</entry>
+        <entry>000D</entry>
+        <entry>000E</entry>
+        <entry>000F</entry>
+	  </multibinentry>
+      <binentry risklevel="DANGER" name="005.17   EID5 Static" offset="41BE0">00120730</binentry>
+      <datafill risklevel="WARNING" name="005.18   eEID Region 0xFF Filled Area" offset="425D0" size="E230">FF</datafill>
+      <datalist risklevel="DANGER" name="005.19   eEID Statistics0" offset="40880" size="AF0">
+        <datatreshold key="*">1,1</datatreshold>
+      </datalist>
+      <datalist risklevel="DANGER" name="005.20   eEID Statistics1" offset="41390" size="1240">
+        <datatreshold key="*">1,1</datatreshold>
+      </datalist>
+    </eEID_region>
+    <cISD_region>
+      <binentry risklevel="DANGER" name="006.01   cISD Header" offset="50800">00000003000002700000000000000000</binentry>
+      <binentry risklevel="DANGER" name="006.02   cISD0 Offset - Length" offset="50810">00000040000000200000000000000000</binentry>
+      <binentry risklevel="DANGER" name="006.03   cISD1 Offset - Length" offset="50820">00000060000002000000000000000001</binentry>
+      <binentry risklevel="DANGER" name="006.04   cISD2 Offset - Length" offset="50830">00000260000000100000000000000002</binentry>
+      <datafill risklevel="WARNING" name="006.05   cISD0 0xFF Filled Area" offset="50846" size="1A">FF</datafill>
+      <binentry risklevel="DANGER" name="006.06   cISD1 IDLog Header" offset="50860" ascii="true">7F49444C</binentry>
+      <multibinentry risklevel="DANGER" name="006.07   cISD1 Semistatic 1" offset="50864" length="6">
+	    <entry>000200600100</entry>
+	    <entry>000300680100</entry>
+	  </multibinentry>
+      <multibinentry risklevel="DANGER" name="006.08   cISD1 Semistatic 2" offset="508A4" length="6">
+	    <entry>001100110012</entry>
+        <entry>001300130018</entry>
+        <entry>001300130022</entry>
+        <entry>001900190028</entry>
+        <entry>002500250034</entry>
+        <entry>002800280038</entry>
+        <entry>003100310041</entry>
+        <entry>003900390049</entry>
+        <entry>004500450067</entry>
+        <entry>004700470071</entry>
+        <entry>005200520071</entry>
+        <entry>005400540080</entry>
+        <entry>005600560086</entry>
+        <entry>006200620090</entry>
+        <entry>006200620092</entry>
+        <entry>006600660096</entry>
+        <entry>007300730096</entry>
+        <entry>007900790106</entry>
+        <entry>008500850106</entry>
+        <entry>008500850114</entry>
+        <entry>008700870114</entry>
+        <entry>009100910114</entry>
+        <entry>009900990118</entry>
+        <entry>010101010124</entry>
+        <entry>010101010128</entry>
+        <entry>010701070128</entry>
+        <entry>010701070134</entry>
+        <entry>011101110138</entry>
+        <entry>011101110140</entry>
+        <entry>011301130142</entry>
+        <entry>012101210150</entry>
+        <entry>012301230152</entry>
+        <entry>012901290158</entry>
+        <entry>013101310160</entry>
+        <entry>016501650180</entry>
+	  </multibinentry>
+      <datafill risklevel="WARNING" name="006.09   cISD1 0xFF Filled Area 0" offset="508AC" size="4">FF</datafill>
+      <binentry risklevel="DANGER" name="006.10   cISD1 Static" offset="508AA">0001</binentry>
+      <multibinentry risklevel="DANGER" name="006.11   cISD1 Semistatic 3" offset="508B0" length="8">
+	    <entry>0001001100020012</entry>
+        <entry>0001001200020012</entry>
+        <entry>0002001100020012</entry>
+        <entry>0002001200020012</entry>
+	  </multibinentry>
+      <datafill risklevel="WARNING" name="006.12   cISD1 0xFF Filled Area 1" offset="508C8" size="198">FF</datafill>
+      <datalist risklevel="DANGER" name="006.13   cISD1 Statistics" offset="50870" size="3C">
+        <datatreshold key="FF">0</datatreshold>
+      </datalist>
+      <multibinentry risklevel="DANGER" name="006.14   cISD2" offset="50A60" length="10">
+	    <entry>00000000000000000000000000000000</entry>
+	    <entry>1FFF0000000000000000000000000000</entry>
+		<entry>07FF0000000000000000000000000000</entry>
+		<entry>3FFF0000000000000000000000000000</entry>
+	  </multibinentry>
+      <datafill risklevel="WARNING" name="006.15   cISD 0xFF Filled Area" offset="50A70" size="590">FF</datafill>
+    </cISD_region>
+    <cCSD_region>
+      <binentry risklevel="DANGER" name="007.01   cCSD Header" offset="51000">00000001000008000000000000000000</binentry>
+      <binentry risklevel="DANGER" name="007.02   cCSD Entry Table" offset="51010">00000020000000300000000000000000</binentry>
+      <datafill risklevel="WARNING" name="007.03   cCSD 0xFF Filled Area" offset="51020" size="7E0">FF</datafill>
+    </cCSD_region>
+    <Revokation_region>
+      <multibinentry risklevel="DANGER" name="008.00   trvk_prg Region Header" offset="51800" length="20">
+	    <entry>0000000000000020000000000000002000000000000020000000000000000000</entry>
+	    <entry>0000000000001010000000000000101000000000000020000000000000000000</entry>
+	  </multibinentry>
+      <binentry risklevel="DANGER" name="008.01   trvk_prg0 SCE" offset="51830" ascii="true">53434500</binentry>
+	  <hash risklevel="WARNING" name="008.02   trvk_prg0 Hash" type="TRVK_PRG" offset="51830" sizeoffset="5182E" sizelength="2"></hash>
+	  <!-- <datafill risklevel="WARNING" name="008.02   trvk_prg0 0x00 filled area" regionstart="91830" regionsize="FE0" sizefrom="9182E">00</datafill> -->
+      <binentry risklevel="DANGER" name="008.03   trvk_prg1 SCE" offset="52820" ascii="true">53434500</binentry>
+	  <hash risklevel="WARNING" name="008.04   trvk_prg1 Hash" type="TRVK_PRG" offset="52820" sizeoffset="5281E" sizelength="2"></hash>
+	  <!-- <datafill risklevel="WARNING" name="008.04   trvk_prg1 0xFF filled area" regionstart="92820" regionsize="FE0" sizefrom="9281E">FF</datafill> -->
+      <multibinentry risklevel="DANGER" name="008.00   trvk_pkg Region Header" offset="53800" length="20">
+	    <entry>0000000000000020000000000000002000000000000020000000000000000000</entry>
+	    <entry>0000000000001010000000000000101000000000000020000000000000000000</entry>
+	  </multibinentry>
+      <binentry risklevel="DANGER" name="008.05   trvk_pkg0 SCE" offset="53830" ascii="true">53434500</binentry>
+ <!-- <hash risklevel="WARNING" name="008.06   trvk_pkg0 Hash" type="TRVK_PKG" offset="93830" sizeoffset="9382E" sizelength="2"></hash> -->
+	  <!-- <datafill risklevel="WARNING" name="008.05   trvk_pkg0 0x00 filled area" regionstart="93830" regionsize="FE0" sizefrom="9382E">00</datafill> -->
+      <binentry risklevel="DANGER" name="008.07   trvk_pkg1 SCE" offset="54820" ascii="true">53434500</binentry>
+ <!-- <hash risklevel="WARNING" name="008.08   trvk_pkg1 Hash" type="TRVK_PKG" offset="94820" sizeoffset="9481E" sizelength="2"></hash> -->
+	  <!-- <datafill risklevel="WARNING" name="008.07   trvk_pkg1 0xFF filled area" regionstart="94820" regionsize="FE0" sizefrom="9481E">FF</datafill> -->
+	</Revokation_region>
+    <Unreferenced_Area>
+	  <datafill risklevel="WARNING" name="008.08   unreferenced area 0xFF filled" offset="55800" size="2A800">FF</datafill>
+	</Unreferenced_Area>
+	<CoreOS_region>
+      <multibinentry risklevel="WARNING" name="009.00   ROS Header" offset="80000" length="20">
+	    <entry>000000000070001000000000007000100000000000E000000000000000000000</entry>
+	    <entry>000000000000002000000000000000200000000000E000000000000000000000</entry>
+	  </multibinentry>
+      <binentry risklevel="WARNING" name="009.01   ROS0 Header" offset="80020" >000000000000000000000000006FFFE0</binentry>
+	  <hash risklevel="WARNING" name="009.02   ROS0 Hash" type="ROS" offset="80030" sizeoffset="8003D" sizelength="3"></hash>
+      <binentry risklevel="WARNING" name="009.03   ROS1 Header" offset="780010">000000000000000000000000006FFFE0</binentry>
+	  <hash risklevel="WARNING" name="009.04   ROS1 Hash" type="ROS" offset="780020" sizeoffset="78002D" sizelength="3"></hash>
+    </CoreOS_region>
+    <cvtrm_region>
+      <binentry risklevel="DANGER" name="010.01   cvtrm Header" offset="E80000" ascii="true">534345495654524D000000000000</binentry>
+      <binentry risklevel="DANGER" name="010.02   cvtrm Header Static 1" offset="E80010">0000000000E802000000000000000028</binentry>
+      <binentry risklevel="DANGER" name="010.03   vtrm Magic 1" offset="E80020" ascii="true">000000005654524D</binentry>
+ <!-- <datafill risklevel="WARNING" name="010.04   cvtrm 0xFF Filled Area 0" offset="EC011C" size="2E4">FF</datafill> --> <!-- Data filled on some CECHA. -->
+      <binentry risklevel="DANGER" name="010.05   vtrm Magic 2" offset="E80400" ascii="true">000000005654524D</binentry>
+ <!-- <datafill risklevel="WARNING" name="010.06   vtrm 0xFF Filled Area" vtrmentrycount_offset="EC043E" regionstart="EC28C0" regionsize="36C00">FF</datafill> --> <!-- Data filled on some CECHA. -->
+      <datafill risklevel="WARNING" name="010.07   cvtrm 0x00 Filled Area" offset="EBF000" size="1000">00</datafill>
+    </cvtrm_region>
+    <cell_ext_os_area>
+      <multibinentry risklevel="DANGER" name="011.01   cell_ext_os_area Header" offset="E740000" length="10">
+	    <entry>FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</entry>
+		<entry>63656C6C5F6578745F6F735F61726561</entry>
+	  </multibinentry>
+      <datafill risklevel="WARNING" name="011.02   cell_ext_os_area 0xFF Filled Area 0" offset="E740028" size="1D8">FF</datafill>
+      <binentry risklevel="WARNING" name="011.03   cell_ext_os_area Break Section" offset="E740200">00000000FFFFFFFFFFFFFFFFFFFFFFFF00000003FFFFFFFFFFFFFFFFFFFFFFFF00000000000000000000FFFFFFFFFFFF000000000000000000000000FFFFFFFF0000000000000000FFFFFFFFFFFFFFFF</binentry>
+      <datafill risklevel="WARNING" name="011.04   cell_ext_os_area 0xFF Filled Area 1" offset="E740250" size="1B0">FF</datafill>
+    </cell_ext_os_area>
+    <datamatches>
+      <datamatchid risklevel="DANGER" id="1">per console nonce</datamatchid>
+      <datamatchid risklevel="DANGER" id="3">metldr size</datamatchid>
+      <datamatchid risklevel="DANGER" id="4">vtrm header datas</datamatchid>
+      <datamatchid risklevel="DANGER" id="5">vtrm</datamatchid>
+      <id1>
+        <datamatch offset="854" length="C" id="1">metldr</datamatch>
+        <datamatch offset="40884" length="C" id="1">eid0</datamatch>
+        <datamatch offset="41AB4" length="C" id="1">eid3</datamatch>
+        <datamatch offset="41BE4" length="C" id="1">eid5</datamatch>
+      </id1>
+      <id3>
+        <datamatch offset="840" length="4" id="3">metldr size 0</datamatch>
+        <datamatch offset="850" length="4" id="3">metldr size 1</datamatch>
+      </id3>
+      <id4>
+        <datamatch offset="E80020" length="10" id="4">vtrm header 1</datamatch>
+        <datamatch offset="E80400" length="10" id="4">vtrm header 2</datamatch>
+      </id4>
+      <id5>
+        <datamatch offset="EB94C0" length="14" id="5" seqrep="417">repetitions seq. 1</datamatch>
+        <datamatch offset="EBE6A0" length="14" id="5" seqrep="78">repetitions seq. 2</datamatch>
+      </id5>
+    </datamatches>
+    <repetitions>
+      <repcheck risklevel="DANGER" name="Header Magic Repetition" offset="10">000000000FACE0FF00000000DEADBEEF</repcheck>
+      <repcheck risklevel="DANGER" name="asecure_loader Repetition" offset="220">617365637572655F6C6F616465720000</repcheck>
+      <repcheck risklevel="DANGER" name="eEID Repetition" offset="250">65454944000000000000000000000000</repcheck>
+      <repcheck risklevel="DANGER" name="cISD Repetition" offset="280">63495344000000000000000000000000</repcheck>
+      <repcheck risklevel="DANGER" name="cCSD Repetition" offset="2B0">63435344000000000000000000000000</repcheck>
+      <repcheck risklevel="DANGER" name="trvk_prg Repetition" offset="2E0">7472766B5F7072670000000000000000</repcheck>
+      <repcheck risklevel="DANGER" name="trvk_pkg Repetition" offset="310">7472766B5F706B670000000000000000</repcheck>
+      <repcheck risklevel="DANGER" name="ros Repetition" offset="370">726F7300000000000000000000000000</repcheck>
+      <repcheck risklevel="DANGER" name="cvtrm Repetition" offset="3A0">637674726D0000000000000000000000</repcheck>
+    </repetitions>
+    <skulistdata>
+      <skudataentry offset="40876" size="2">idps</skudataentry>
+      <skudataentry offset="81E" size="2">metldr0</skudataentry>
+      <skudataentry offset="842" size="2">metldr1</skudataentry>
+    </skulistdata>
+    <skumodels risklevel="WARNING">
+      <skulist id="01" name="CECHAxx (COK-001)" minver="1.00">
+        <skuentry type="idps">0001</skuentry>
+        <skuentry type="metldr0">EE10</skuentry>
+        <skuentry type="metldr1">0EDD</skuentry>
+      </skulist>
+      <skulist id="02" name="CECHExx (COK-002)" minver="2.70">
+        <skuentry type="idps">0003</skuentry>
+        <skuentry type="metldr0">EE10</skuentry>
+        <skuentry type="metldr1">0EDD</skuentry>
+      </skulist>
+      <skulist id="03" name="CECHExx (COK-002)" minver="1.00">
+        <skuentry type="idps">0004</skuentry>
+        <skuentry type="metldr0">EE10</skuentry>
+        <skuentry type="metldr1">0EDD</skuentry>
+      </skulist>
+      <skulist id="04" name="CECHAxx (COK-001)" minver="1.00">
+        <skuentry type="idps">0001</skuentry>
+        <skuentry type="metldr0">EDA0</skuentry>
+        <skuentry type="metldr1">0ED6</skuentry>
+      </skulist>
+      <skulist id="05" name="CECHBxx (COK-001)" minver="1.00">
+        <skuentry type="idps">0002</skuentry>
+        <skuentry type="metldr0">EDA0</skuentry>
+        <skuentry type="metldr1">0ED6</skuentry>
+      </skulist>
+      <skulist id="06" name="CECHCxx (COK-002)" minver="1.00">
+        <skuentry type="idps">0003</skuentry>
+        <skuentry type="metldr0">EDA0</skuentry>
+        <skuentry type="metldr1">0ED6</skuentry>
+      </skulist>
+      <skulist id="07" name="CECHCxx (COK-002)" minver="1.00">
+        <skuentry type="idps">0003</skuentry>
+        <skuentry type="metldr0">EBF0</skuentry>
+        <skuentry type="metldr1">0EBB</skuentry>
+      </skulist>
+      <skulist id="08" name="CECHAxx (COK-001)" minver="1.00">
+        <skuentry type="idps">0001</skuentry>
+        <skuentry type="metldr0">EDE0</skuentry>
+        <skuentry type="metldr1">0EDA</skuentry>
+      </skulist>
+      <skulist id="09" name="CECHBxx (COK-001)" minver="1.00">
+        <skuentry type="idps">0002</skuentry>
+        <skuentry type="metldr0">EDE0</skuentry>
+        <skuentry type="metldr1">0EDA</skuentry>
+      </skulist>
+      <skulist id="10" name="CECHCxx (COK-002)" minver="1.00">
+        <skuentry type="idps">0003</skuentry>
+        <skuentry type="metldr0">EDE0</skuentry>
+        <skuentry type="metldr1">0EDA</skuentry>
+      </skulist>
+      <skulist id="11" name="CECHCxx (COK-002)" minver="1.00">
+        <skuentry type="idps">0003</skuentry>
+        <skuentry type="metldr0">E7B0</skuentry>
+        <skuentry type="metldr1">0E77</skuentry>
+      </skulist>
+      <skulist id="12" name="CECHGxx (SEM-001)" minver="1.90">
+        <skuentry type="idps">0005</skuentry>
+        <skuentry type="metldr0">E7B0</skuentry>
+        <skuentry type="metldr1">0E77</skuentry>
+      </skulist>
+      <skulist id="14" name="CECHGxx (SEM-001)" minver="2.30">
+        <skuentry type="idps">0005</skuentry>
+        <skuentry type="metldr0">E8C0</skuentry>
+        <skuentry type="metldr1">0E88</skuentry>
+      </skulist>
+      <skulist id="15" name="CECHExx (COK-002)" minver="N/A">
+        <skuentry type="idps">0003</skuentry>
+        <skuentry type="metldr0">EA60</skuentry>
+        <skuentry type="metldr1">0EA2</skuentry>
+      </skulist>
+      <skulist id="16" name="CECHExx (COK-002W)" minver="3.40">
+        <skuentry type="idps">0003</skuentry>
+        <skuentry type="metldr0">E920</skuentry>
+        <skuentry type="metldr1">0E8E</skuentry>
+      </skulist>
+      <skulist id="17" name="CECHGxx (SEM-001)" minver="2.30"> <!-- Refurbished -->
+        <skuentry type="idps">0005</skuentry>
+        <skuentry type="metldr0">E920</skuentry>
+        <skuentry type="metldr1">0E8E</skuentry>
+      </skulist>
+    </skumodels>
+  </NAND_PS3Xploit>
   <NOR>
     <sdk risklevel="WARNING">
       <sdk_version risklevel="WARNING" name="ROS0" offset="C0010"></sdk_version>
