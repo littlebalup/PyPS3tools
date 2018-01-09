@@ -132,7 +132,7 @@ def printrisklevel(risklevel):
 
 if __name__ == "__main__":
 
-	release = "v0.5.x"
+	release = "v0.6.x"
 
 	print
 	print
