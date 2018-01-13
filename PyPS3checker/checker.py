@@ -66,6 +66,14 @@ def checkReversed(data):
 	elif bytes == '\xAD\xDE\xCE\xFA':
 		return True
 	sys.exit("ERROR: unable to determine if reversed data! Too much curruptions.")
+	
+def isMetldr2(data):
+	bytes = data[0x820:(0x820 + 0x8)]
+	if bytes == '\x6D\x65\x74\x6C\x64\x72\x00\x00':   # METLDR
+		return False
+	elif bytes == '\x6D\x65\x74\x6C\x64\x72\x2E\x32':   # METLDR.2
+		return True
+	sys.exit("ERROR: unable to determine if NAND or EMMC data! Too much curruptions.")
 
 def getDatas(file, offset, length):
 	bytes = file[offset:(offset + length)]
@@ -132,7 +140,7 @@ def printrisklevel(risklevel):
 
 if __name__ == "__main__":
 
-	release = "v0.6.x"
+	release = "v0.7.x"
 
 	print
 	print
@@ -198,7 +206,10 @@ if __name__ == "__main__":
 	elif fileSize == 268435456:
 		flashType = "NAND"
 	elif fileSize == 250609664:
-		flashType = "NAND_PS3Xploit"
+		if isMetldr2(rawfiledata) == True:
+			flashType = "EMMC_PS3Xploit"
+		else:
+			flashType = "NAND_PS3Xploit"
 	else:
 		print
 		sys.exit("ERROR: unable to determine flash type! It doesn't seem to be a valid dump.")
@@ -572,7 +583,7 @@ if __name__ == "__main__":
 		eCID = getDatas(rawfiledata, 0x90870, 0x20)
 		board_id = getDatas(rawfiledata, 0x90890, 0x8)
 		kiban_id = getDatas(rawfiledata, 0x90898, 0xC)
-	if flashType == "NAND_PS3Xploit":
+	if flashType in ['NAND_PS3Xploit', 'EMMC_PS3Xploit'] :
 		MAC = string2hex(getDatas(rawfiledata, 0x90840-0x40000, 0x6)).upper()
 		CID = string2hex(getDatas(rawfiledata, 0x9086A-0x40000, 0x6)).upper()
 		eCID = getDatas(rawfiledata, 0x90870-0x40000, 0x20)
@@ -611,7 +622,13 @@ if __name__ == "__main__":
 
 	print
 	print "All checks done in %.2f seconds."%(time.time() - startTime)
-
+	
+	if flashType in ['NOR', 'EMMC_PS3Xploit'] :
+		print colored("red", "\nIMPORTANT NOTICE:\nChecks of late CECH-25xxx, CECH-3xxxx and CECH-4xxxx consoles dumps still under development! \
+It could return both false positive and false negative results. \
+Please, send me your checklog.txt via my github repository (https://github.com/littlebalup/PyPS3tools/issues) \
+or by mail at littlebalup@gmail.com. It will help me a lot to improve checks ;)")
+		
 	cl.close()
 
 	if dangerCount > 0:
