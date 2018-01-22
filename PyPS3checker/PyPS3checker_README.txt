@@ -22,6 +22,7 @@ Compatible with any type of PS3 flash memory dump file:
  - Regular NOR dump (teensy, progskeet, dumps from homebrew, from PS3Xploit)
  - Reversed NOR dump (E3 flasher)
  - Full interleaved NAND dump, PS3Xploit NAND dump
+ - EMMC dump from PS3Xploit (still in WIP)
  
 Customization of checks and hashs can be done by editing the "checklist.xml" and "hashlist.xml" files.
 All initial checks are those from PS3dumpchecker (many thanks at Swizzy), plus a "risklevel" parameter

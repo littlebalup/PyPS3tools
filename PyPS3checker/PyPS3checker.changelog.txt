@@ -2,6 +2,10 @@ PyPS3checker - Python checker script for PS3 flash memory dump files
 Copyright (C) 2015 littlebalup@gmail.com
 -------------------------------------------------------------------
 
+v0.7.0, (13 Jan 2018) :
+Added 239MB EMMC dump support (PS3Xploit).
+Note: 4k checks still under development.
+
 v0.6.0, (09 Jan 2018) :
 Added 239MB NAND dump support (PS3Xploit).
 

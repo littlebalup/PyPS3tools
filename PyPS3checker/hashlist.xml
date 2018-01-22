@@ -19,6 +19,7 @@
 	<hash name="4.46">246998D22C8813E6C8C5B6B95714CF38</hash>
 	<hash name="4.45">F83ACB044E546DCB867778BAF3FEBE4B</hash>
 	<hash name="4.41">D1BC4C48B6305164E57DBCB0076A8637</hash> <!-- cfw -->
+	<hash name="4.40 (from factory)">43252D7C42C07AC7DE48EEDEA23015EC</hash> <!-- from a 42xxA dump -->
 	<hash name="4.40">2DCF12FD4D9E707C12D92918B72FA287</hash> <!-- cfw -->
 	<hash name="4.31">25569AC6CCDF7A2A22B10D58CAD1D602</hash> <!-- cfw -->
 	<hash name="4.30">848ADAB5B11FF0FE4AA25559B23B6840</hash> <!-- cfw -->
@@ -154,7 +155,7 @@
 
   <type name="ROS"> <!-- Matches Raw COS -->
   <!-- PATCHES -->
-    <hash name="4.82 CEX Patched (PS3Xploit v2.0)">C37D095BCDD9F57CE0710F8C0527CAA9</hash>
+    <hash name="4.82 CEX Patched (PS3Xploit v2.0)">4674CA6C38D45171F45C48191528E36F</hash>
     <hash name="4.82 CEX Patched (PS3Xploit v1.0)">EAF598ED0DA6C502B09240519D557402</hash>
     <hash name="4.82 CEX Patched (FERROX based)">32B8C0F25884933A00D1E924F84B2A68</hash>
     <hash name="4.81 CEX Patched (PS3Xploit)">0C309EB53ABBD7AC77AC77A6B610B10B</hash>
