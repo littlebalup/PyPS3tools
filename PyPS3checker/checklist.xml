@@ -1184,6 +1184,10 @@
         <entry>00000F97A2834B1DFD969CC1769517C6</entry>
       <!-- 4k -->
         <entry>00000F97B233329B8D28B967C65E2097</entry>
+		<entry>00000F97F3753DD3C934D609D3671E14</entry> <!-- from 4001B -->
+		<entry>00000F971F954203BE63FFC47336E6BE</entry> <!-- from 4208C -->
+		<entry>00000F97A613A21F06BF3B13BD07E0C2</entry> <!-- from 4208A -->
+		<entry>00000F9718DD255BA4B844C383E6D3A6</entry> <!-- from 4212C -->
 	  </multibinentry>
       <multibinentry risklevel="DANGER" name="004.06   metldr Binary Size" offset="850" length="4">
 	    <entry>00000EDD</entry>
@@ -1309,15 +1313,7 @@
 	    <entry>000300680100</entry>
 	  </multibinentry>
       <multibinentry risklevel="DANGER" name="006.08   cISD1 Semistatic 2" offset="508A4" length="6">
-	    <entry>001100110012</entry>
-        <entry>001300130018</entry>
-        <entry>001300130022</entry>
-        <entry>001900190028</entry>
-        <entry>002500250034</entry>
-        <entry>002800280038</entry>
-        <entry>003100310041</entry>
-        <entry>003900390049</entry>
-        <entry>004500450067</entry>
+	    <entry>004500450067</entry>
         <entry>004700470071</entry>
         <entry>005200520071</entry>
         <entry>005400540080</entry>
@@ -1343,9 +1339,15 @@
         <entry>012301230152</entry>
         <entry>012901290158</entry>
         <entry>013101310160</entry>
+		<entry>013301330162</entry> <!-- from 3000A -->
+		<entry>014501450170</entry> <!-- from 3004A -->
         <entry>016501650180</entry>
-      <!-- 4k -->
-        <entry>019301930210</entry>
+		<entry>016901690184</entry> <!-- from 4208A -->
+		<entry>017901790194</entry> <!-- from 4001B -->
+		<entry>019301930208</entry> <!-- from 4006B -->
+        <entry>019301930210</entry> <!-- from 4201A -->
+		<entry>019501950214</entry> <!-- from 4208C -->
+		<entry>020502050228</entry> <!-- from 4212C -->
 	  </multibinentry>
       <datafill risklevel="WARNING" name="006.09   cISD1 0xFF Filled Area 0" offset="508AC" size="4">FF</datafill>
       <binentry risklevel="DANGER" name="006.10   cISD1 Static" offset="508AA">0001</binentry>
@@ -1473,6 +1475,12 @@
         <skuentry type="metldr1">0F97</skuentry>
       </skulist>
       <skulist id="02" name="CECH-42xxA (NPX-001 or PQX-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.22">
+        <skuentry type="idps">000E</skuentry>
+        <skuentry type="metldr0">F9B0</skuentry>
+        <skuentry type="metldr1">0F97</skuentry>
+      </skulist>
+      <skulist id="03" name="CECH-42xxA (NPX-001 or PQX-001)" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.40">
         <skuentry type="idps">0012</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
@@ -1558,6 +1566,10 @@
         <entry>00000F97A2834B1DFD969CC1769517C6</entry>
       <!-- 4k -->
         <entry>00000F97B233329B8D28B967C65E2097</entry>
+		<entry>00000F97F3753DD3C934D609D3671E14</entry> <!-- from 4001B -->
+		<entry>00000F971F954203BE63FFC47336E6BE</entry> <!-- from 4208C -->
+		<entry>00000F97A613A21F06BF3B13BD07E0C2</entry> <!-- from 4208A -->
+		<entry>00000F9718DD255BA4B844C383E6D3A6</entry> <!-- from 4212C -->
 	  </multibinentry>
       <multibinentry risklevel="DANGER" name="004.06   metldr Binary Size" offset="850" length="4">
 	    <entry>00000E77</entry>
@@ -1615,6 +1627,7 @@
         <entry>000D</entry>
         <entry>000E</entry>
         <entry>000F</entry>
+		<entry>0011</entry> <!-- from 4208C -->
 	  </multibinentry>
       <binentry risklevel="DANGER" name="005.10   EID0 Static" offset="2F080">0012000B</binentry>
       <binentry risklevel="DANGER" name="005.11   EID2 BlockSize/Padding" offset="2FB70">0080069000000000000000000000000000000000000000000000000000000000</binentry>
@@ -1652,6 +1665,7 @@
         <entry>000D</entry>
         <entry>000E</entry>
         <entry>000F</entry>
+		<entry>0011</entry> <!-- from 4208C -->
 	  </multibinentry>
       <binentry risklevel="DANGER" name="005.17   EID5 Static" offset="303E0">00120730</binentry>
       <datafill risklevel="WARNING" name="005.18   eEID Region 0xFF Filled Area" offset="30DD0" size="E230">FF</datafill>
@@ -1700,13 +1714,23 @@
         <entry>012301230152</entry>
         <entry>012901290158</entry>
         <entry>013101310160</entry>
+		<entry>013301330162</entry> <!-- from 3000A -->
+		<entry>014501450170</entry> <!-- from 3004A -->
         <entry>016501650180</entry>
+		<entry>016901690184</entry> <!-- from 4208A -->
+		<entry>017901790194</entry> <!-- from 4001B -->
+		<entry>019301930208</entry> <!-- from 4006B -->
+        <entry>019301930210</entry> <!-- from 4201A -->
+		<entry>019501950214</entry> <!-- from 4208C -->
+		<entry>020502050228</entry> <!-- from 4212C -->
 	  </multibinentry>
       <datafill risklevel="WARNING" name="006.09   cISD1 0xFF Filled Area 0" offset="3F0AC" size="4">FF</datafill>
       <binentry risklevel="DANGER" name="006.10   cISD1 Static" offset="3F0AA">0001</binentry>
       <multibinentry risklevel="DANGER" name="006.11   cISD1 Semistatic 3" offset="3F0B0" length="8">
 	    <entry>0002001100020012</entry>
         <entry>0002001200020012</entry>
+		<entry>0002001100040012</entry> <!-- from 4208C -->
+        <entry>0002001200040012</entry>
 	  </multibinentry>
       <datafill risklevel="WARNING" name="006.12   cISD1 0xFF Filled Area 1" offset="3F0C8" size="198">FF</datafill>
       <datalist risklevel="DANGER" name="006.13   cISD1 Statistics" offset="3F070" size="3C">
@@ -1876,6 +1900,10 @@
         <entry>BBCCBF29ECD802844EB28AE6</entry>
         <entry>2E604104D943D1B534D4C5F5</entry>
         <entry>1FDC1E2DF00DA36701E2F8F6</entry>
+		<entry>84D9145F3453E0F6B14D5F6E</entry> <!-- from 4001B -->
+        <entry>D385A08930F3652E3C16D5B5</entry> <!-- from 4006B -->
+        <entry>4B3C0C95182D43E98D7BC286</entry> <!-- from 4208C -->
+		<entry>21A599A0B80D4DBE8D4D559A</entry> <!-- from 4212C -->
 	  </multibinentry>
       <datalist risklevel="DANGER" name="014.04   bootldr Statistics" offset="FC0000" ldrsize="FC0002">
         <datatreshold key="*">0,5</datatreshold>
@@ -2126,9 +2154,27 @@
         <skuentry type="bootldr1">301B</skuentry>
         <skuentry type="bootldrsize">301F0</skuentry>
       </skulist>
-      <skulist id="22" name="CECH-40xx 12GB (MSX-001)" warn="true"
+      <skulist id="22" name="CECH-40xx (MSX-001 or MPX-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.20">
+        <skuentry type="idps">000F</skuentry>
+        <skuentry type="metldr0">F9B0</skuentry>
+        <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="bootldr0">301B</skuentry>
+        <skuentry type="bootldr1">301B</skuentry>
+        <skuentry type="bootldrsize">301F0</skuentry>
+      </skulist>
+      <skulist id="23" name="CECH-40xx 12GB (MSX-001)" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.22">
         <skuentry type="idps">002C</skuentry>
+        <skuentry type="metldr0">F9B0</skuentry>
+        <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="bootldr0">301B</skuentry>
+        <skuentry type="bootldr1">301B</skuentry>
+        <skuentry type="bootldrsize">301F0</skuentry>
+      </skulist>
+      <skulist id="24" name="CECH-42xxx (NPX-001 or PQX-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.40"> <!-- from 4208C -->
+        <skuentry type="idps">0011</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
         <skuentry type="bootldr0">301B</skuentry>
