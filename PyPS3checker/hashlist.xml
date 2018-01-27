@@ -28,10 +28,12 @@
 	<hash name="4.30">848ADAB5B11FF0FE4AA25559B23B6840</hash>
 	<hash name="4.26">E6E09C3CBDB02E4AE09C738A5A451212</hash>
 	<hash name="4.25">DB971C7EDCABB570BFA7EDDDE0A2324F</hash>
+	<hash name="4.25 (from factory)">1085132297E8FA266AEAE703A15858ED</hash> <!-- from a 4001C dump -->
 	<hash name="4.22 (from factory)">B4E6EB152EB48A6F08E2859224B4F706</hash> <!-- from a 4208A dump -->
 	<hash name="4.21">10F4271AACAFBB1AD7A9E51C5F798CC8</hash>
 	<hash name="4.20">0287DBFFCB57382E032B363B5B582D3C</hash>
 	<hash name="4.20 (from factory)">0CBCA78D20F4BA0F0736E98AA87EAC40</hash> <!-- from a 4001B dump -->
+	<hash name="4.15 (from factory)">82E6290B7BAD9022B17C0FB427921815</hash> <!-- from a 4001 dump -->
 	<hash name="4.10/4.11">76B0EDADBB8D83A221C4C430B5B9A3B2</hash>
 	<hash name="4.10 (from factory)">8642C7891EA6A3D906619EE0E68CBD9A</hash> <!-- from a 3004A dump -->
 	<hash name="4.00/4.01">6624A1288279B819A075F6330EA32E6F</hash>

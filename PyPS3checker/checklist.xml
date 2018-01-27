@@ -1184,6 +1184,8 @@
         <entry>00000F97A2834B1DFD969CC1769517C6</entry>
       <!-- 4k -->
         <entry>00000F97B233329B8D28B967C65E2097</entry>
+		<entry>00000F977645F763C4C419B9BD87BD59</entry> <!-- from 4001 -->
+		<entry>00000F97ED4CF714FA8FDF7EF9239AD2</entry> <!-- from 4001C -->
 		<entry>00000F97F3753DD3C934D609D3671E14</entry> <!-- from 4001B -->
 		<entry>00000F971F954203BE63FFC47336E6BE</entry> <!-- from 4208C -->
 		<entry>00000F97A613A21F06BF3B13BD07E0C2</entry> <!-- from 4208A -->
@@ -1341,8 +1343,10 @@
         <entry>013101310160</entry>
 		<entry>013301330162</entry> <!-- from 3000A -->
 		<entry>014501450170</entry> <!-- from 3004A -->
+		<entry>016101610174</entry> <!-- from 4001 -->
         <entry>016501650180</entry>
 		<entry>016901690184</entry> <!-- from 4208A -->
+		<entry>017501750188</entry> <!-- from 4001C -->
 		<entry>017901790194</entry> <!-- from 4001B -->
 		<entry>019301930208</entry> <!-- from 4006B -->
         <entry>019301930210</entry> <!-- from 4201A -->
@@ -1566,6 +1570,8 @@
         <entry>00000F97A2834B1DFD969CC1769517C6</entry>
       <!-- 4k -->
         <entry>00000F97B233329B8D28B967C65E2097</entry>
+		<entry>00000F977645F763C4C419B9BD87BD59</entry> <!-- from 4001 -->
+		<entry>00000F97ED4CF714FA8FDF7EF9239AD2</entry> <!-- from 4001C -->
 		<entry>00000F97F3753DD3C934D609D3671E14</entry> <!-- from 4001B -->
 		<entry>00000F971F954203BE63FFC47336E6BE</entry> <!-- from 4208C -->
 		<entry>00000F97A613A21F06BF3B13BD07E0C2</entry> <!-- from 4208A -->
@@ -1716,8 +1722,10 @@
         <entry>013101310160</entry>
 		<entry>013301330162</entry> <!-- from 3000A -->
 		<entry>014501450170</entry> <!-- from 3004A -->
+		<entry>016101610174</entry> <!-- from 4001 -->
         <entry>016501650180</entry>
 		<entry>016901690184</entry> <!-- from 4208A -->
+		<entry>017501750188</entry> <!-- from 4001C -->
 		<entry>017901790194</entry> <!-- from 4001B -->
 		<entry>019301930208</entry> <!-- from 4006B -->
         <entry>019301930210</entry> <!-- from 4201A -->
@@ -1900,7 +1908,9 @@
         <entry>BBCCBF29ECD802844EB28AE6</entry>
         <entry>2E604104D943D1B534D4C5F5</entry>
         <entry>1FDC1E2DF00DA36701E2F8F6</entry>
+		<entry>6FC73326242465AE915F6ED9</entry> <!-- from 4001 -->
 		<entry>84D9145F3453E0F6B14D5F6E</entry> <!-- from 4001B -->
+		<entry>EFA7050FA2547E114FB2D5BC</entry> <!-- from 4001C -->
         <entry>D385A08930F3652E3C16D5B5</entry> <!-- from 4006B -->
         <entry>4B3C0C95182D43E98D7BC286</entry> <!-- from 4208C -->
 		<entry>21A599A0B80D4DBE8D4D559A</entry> <!-- from 4212C -->
@@ -2146,6 +2156,15 @@
         <skuentry type="bootldrsize">300F0</skuentry>
       </skulist>
       <skulist id="21" name="CECH-40xx (MSX-001 or MPX-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.15">
+        <skuentry type="idps">000D</skuentry>
+        <skuentry type="metldr0">F9B0</skuentry>
+        <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="bootldr0">3003</skuentry>
+        <skuentry type="bootldr1">3003</skuentry>
+        <skuentry type="bootldrsize">30070</skuentry>
+      </skulist>
+      <skulist id="22" name="CECH-40xx (MSX-001 or MPX-001)" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.20">
         <skuentry type="idps">000D</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
@@ -2154,7 +2173,7 @@
         <skuentry type="bootldr1">301B</skuentry>
         <skuentry type="bootldrsize">301F0</skuentry>
       </skulist>
-      <skulist id="22" name="CECH-40xx (MSX-001 or MPX-001)" warn="true"
+      <skulist id="23" name="CECH-40xx (MSX-001 or MPX-001)" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.20">
         <skuentry type="idps">000F</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
@@ -2163,7 +2182,7 @@
         <skuentry type="bootldr1">301B</skuentry>
         <skuentry type="bootldrsize">301F0</skuentry>
       </skulist>
-      <skulist id="23" name="CECH-40xx 12GB (MSX-001)" warn="true"
+      <skulist id="24" name="CECH-40xx 12GB (MSX-001)" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.22">
         <skuentry type="idps">002C</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
@@ -2172,7 +2191,7 @@
         <skuentry type="bootldr1">301B</skuentry>
         <skuentry type="bootldrsize">301F0</skuentry>
       </skulist>
-      <skulist id="24" name="CECH-42xxx (NPX-001 or PQX-001)" warn="true"
+      <skulist id="25" name="CECH-42xxx (NPX-001 or PQX-001)" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.40"> <!-- from 4208C -->
         <skuentry type="idps">0011</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
