@@ -70,9 +70,9 @@ def checkReversed(data):
 def isMetldr2(data):
 	bytes = data[0x820:(0x820 + 0x8)]
 	if bytes == '\x6D\x65\x74\x6C\x64\x72\x00\x00':   # METLDR
-		return False
+		return "false"
 	elif bytes == '\x6D\x65\x74\x6C\x64\x72\x2E\x32':   # METLDR.2
-		return True
+		return "true"
 	sys.exit("ERROR: unable to determine if NAND or EMMC data! Too much curruptions.")
 
 def getDatas(file, offset, length):
@@ -140,7 +140,7 @@ def printrisklevel(risklevel):
 
 if __name__ == "__main__":
 
-	release = "v0.7.x"
+	release = "v0.8.x"
 
 	print
 	print
@@ -196,23 +196,26 @@ if __name__ == "__main__":
 		hashtree = ElementTree.parse(f)
 
 	# parse file type:
-	isReversed = False
+	isReversed = ""
 	fileSize = len(rawfiledata)
-	if fileSize == 16777216:
-		flashType = "NOR"
-		if checkReversed(rawfiledata) == True:
-			isReversed = True
-			rawfiledata = reverse(rawfiledata)
-	elif fileSize == 268435456:
-		flashType = "NAND"
-	elif fileSize == 250609664:
-		if isMetldr2(rawfiledata) == True:
-			flashType = "EMMC_PS3Xploit"
-		else:
-			flashType = "NAND_PS3Xploit"
-	else:
-		print
-		sys.exit("ERROR: unable to determine flash type! It doesn't seem to be a valid dump.")
+	flashType = ""
+	for dump_type in chktree.findall('.//dump_type'):
+		if fileSize == int(dump_type.attrib.get("size")):
+			if dump_type.attrib.get("metldr2") is not None:
+				if isMetldr2(rawfiledata) != dump_type.attrib.get("metldr2").lower():
+					continue
+			if dump_type.attrib.get("chk_rev") == "true":
+				if checkReversed(rawfiledata) == True:
+					isReversed = True
+					rawfiledata = reverse(rawfiledata)
+				else:
+					isReversed = False
+			flashType =  dump_type.attrib.get("name")
+			flashText = dump_type.text
+			break
+	if flashType == "":
+			print
+			sys.exit("ERROR: unable to determine flash type! It doesn't seem to be a valid dump.")
 
 	print " Done"
 
@@ -225,10 +228,10 @@ if __name__ == "__main__":
 	print
 	print
 	print "******* Getting flash type *******"
-	print "  Flash type :", flashType
-	if flashType == "NOR" and isReversed == True:
+	print "  Flash type :", flashText
+	if isReversed == True:
 		print "  Reversed : YES"
-	elif flashType == "NOR" and isReversed == False:
+	elif isReversed == False:
 		print "  Reversed : NO"
 
 

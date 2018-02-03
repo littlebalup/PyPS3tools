@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <root>
+  <dump_type name="NOR" size="16777216" chk_rev="true">NOR</dump_type>
+  <dump_type name="NAND" size="268435456">NAND (full dump, 256MB)</dump_type>
+  <dump_type name="NAND_PS3Xploit" size="250609664" metldr2="false">NAND (partial dump, 239MB)</dump_type>
+  <dump_type name="EMMC_PS3Xploit" size="250609664" metldr2="true">EMMC (partial dump, 239MB)</dump_type>
   <NAND>
     <sdk risklevel="WARNING">
       <sdk_version name="ROS0" offset="C0030"></sdk_version>
@@ -1190,6 +1194,7 @@
 		<entry>00000F971F954203BE63FFC47336E6BE</entry> <!-- from 4208C -->
 		<entry>00000F97A613A21F06BF3B13BD07E0C2</entry> <!-- from 4208A -->
 		<entry>00000F9718DD255BA4B844C383E6D3A6</entry> <!-- from 4212C -->
+		<entry>00000F973DEBAB70C657BB9A04A40837</entry> <!-- from 4214B -->
 	  </multibinentry>
       <multibinentry risklevel="DANGER" name="004.06   metldr Binary Size" offset="850" length="4">
 	    <entry>00000EDD</entry>
@@ -1352,6 +1357,7 @@
         <entry>019301930210</entry> <!-- from 4201A -->
 		<entry>019501950214</entry> <!-- from 4208C -->
 		<entry>020502050228</entry> <!-- from 4212C -->
+		<entry>020902090232</entry> <!-- from 4214B -->
 	  </multibinentry>
       <datafill risklevel="WARNING" name="006.09   cISD1 0xFF Filled Area 0" offset="508AC" size="4">FF</datafill>
       <binentry risklevel="DANGER" name="006.10   cISD1 Static" offset="508AA">0001</binentry>
@@ -1576,6 +1582,7 @@
 		<entry>00000F971F954203BE63FFC47336E6BE</entry> <!-- from 4208C -->
 		<entry>00000F97A613A21F06BF3B13BD07E0C2</entry> <!-- from 4208A -->
 		<entry>00000F9718DD255BA4B844C383E6D3A6</entry> <!-- from 4212C -->
+		<entry>00000F973DEBAB70C657BB9A04A40837</entry> <!-- from 4214B -->
 	  </multibinentry>
       <multibinentry risklevel="DANGER" name="004.06   metldr Binary Size" offset="850" length="4">
 	    <entry>00000E77</entry>
@@ -1731,6 +1738,7 @@
         <entry>019301930210</entry> <!-- from 4201A -->
 		<entry>019501950214</entry> <!-- from 4208C -->
 		<entry>020502050228</entry> <!-- from 4212C -->
+		<entry>020902090232</entry> <!-- from 4214B -->
 	  </multibinentry>
       <datafill risklevel="WARNING" name="006.09   cISD1 0xFF Filled Area 0" offset="3F0AC" size="4">FF</datafill>
       <binentry risklevel="DANGER" name="006.10   cISD1 Static" offset="3F0AA">0001</binentry>
@@ -1914,6 +1922,7 @@
         <entry>D385A08930F3652E3C16D5B5</entry> <!-- from 4006B -->
         <entry>4B3C0C95182D43E98D7BC286</entry> <!-- from 4208C -->
 		<entry>21A599A0B80D4DBE8D4D559A</entry> <!-- from 4212C -->
+		<entry>6EBCCF18F906399449E5CB06</entry> <!-- from 4214B -->
 	  </multibinentry>
       <datalist risklevel="DANGER" name="014.04   bootldr Statistics" offset="FC0000" ldrsize="FC0002">
         <datatreshold key="*">0,5</datatreshold>

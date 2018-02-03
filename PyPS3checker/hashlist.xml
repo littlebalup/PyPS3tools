@@ -14,6 +14,7 @@
 	<hash name="4.65">31779BE4E21C8C68D65CB9CE25533E7F</hash>
 	<hash name="4.60">3F33A1407E8885D8B6478FB89BED84E2</hash>
 	<hash name="4.55">7A53E676CD09AE28B3B86D386AB7BE0E</hash>
+	<hash name="4.55 (from factory)">7000CE416E668731F508BAEFF25F824D</hash> <!-- from a 4214B dump -->
 	<hash name="4.53">C5056C897D20629AB0B8B534D7DA848D</hash>
 	<hash name="4.53 (from factory)">5753FCC975C231320AE92E3931B75CF6</hash> <!-- from a 4212C dump -->
 	<hash name="4.50">75CD3A65FF2B5A39030E27CD2B1B689A</hash>
