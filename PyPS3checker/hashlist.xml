@@ -18,7 +18,6 @@
 	<hash name="4.53 (from PUP)">C5056C897D20629AB0B8B534D7DA848D</hash>
 	<hash name="4.53 (from factory)">5753FCC975C231320AE92E3931B75CF6</hash> <!-- from a 4212C dump -->
 	<hash name="4.50 (from PUP)">75CD3A65FF2B5A39030E27CD2B1B689A</hash>
-	<hash name="4.50 (from factory)">CA20C111440A170A78EFD3C61998DB03</hash>
 	<hash name="4.46 (from PUP)">246998D22C8813E6C8C5B6B95714CF38</hash>
 	<hash name="4.46 (from factory)">947314C585ADECF1E496FB425F9CB8F9</hash> <!-- from a 4208C dump -->
 	<hash name="4.45 (from PUP)">F83ACB044E546DCB867778BAF3FEBE4B</hash>
@@ -57,7 +56,7 @@
 	<hash name="3.56 (from factory)">4F4722505C10AD6B4FE4CEBFF3C8C80E</hash>
 	<hash name="3.55 (from PUP)">78629D24BD721488F3A1E846938F87DF</hash>
 	<hash name="3.50 (from PUP)">E537DE954DCF25D4DE961DF44549BAF7</hash>
-	<hash name="3.50 (from factory)">TBD</hash>
+	<hash name="3.50 (from factory)">CA20C111440A170A78EFD3C61998DB03</hash>
 	<hash name="3.42 (from PUP)">37DD8C18FE7FF39B983BC0EE907BE8A6</hash>
 	<hash name="3.41 (from PUP)">43D940901E9655AD502C12D990977811</hash>
 	<hash name="3.40 (from PUP)">811733A6FF2D307FBB3C234A5EC9EE2A</hash>
