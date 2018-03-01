@@ -93,7 +93,8 @@
 	<hash name="2.10 (from PUP)">723DCEE07331E3AD1A1FF45BE95D8B51</hash>
 	<hash name="2.01 (from PUP)">9FA77E8DDF5CD275B17372A7A891ED6B</hash>
 	<hash name="2.00 (from PUP)">5A45388C15A7B0AA8CFA2BBA97C9F557</hash>
-	<hash name="1.97 (from factory)">TBD</hash>
+	<hash name="1.97 (from factory)">F3B05E710B026177799E677ACE5F7DDA</hash> <!--  seen on a CECHG trvk_prg0 -->
+	<hash name="1.97 (from factory)">88A817FA588952A87F92E2AAB9550578</hash> <!--  seen on a CECHG trvk_prg1 -->
 	<hash name="1.94 (from PUP)">785C9AD2EB037CB6111AB8A6D6E8E7DA</hash>
 	<hash name="1.93 (from PUP)">273CDC8E9DBFB3BF5CF393258E279D3B</hash>
 	<hash name="1.92 (from PUP)">414F13590D89F358959B7136E1C0A153</hash>
