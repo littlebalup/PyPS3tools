@@ -2,6 +2,10 @@ PyPS3checker - Python checker script for PS3 flash memory dump files
 Copyright (C) 2015 littlebalup@gmail.com
 -------------------------------------------------------------------
 
+v0.9.0, (19 Jul 2018) :
+Added a drag and drop batch file for Windows (noob) users.
+Added checklog cleanup code to remove crappy colorama generated characters.
+
 v0.8.0, (03 feb 2018) :
 Changed the way to get and display flash type.
 Added more 3k/4k entries.

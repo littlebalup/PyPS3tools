@@ -140,7 +140,7 @@ def printrisklevel(risklevel):
 
 if __name__ == "__main__":
 
-	release = "v0.8.x"
+	release = "v0.9.x"
 
 	print
 	print
@@ -631,8 +631,16 @@ if __name__ == "__main__":
 It could return both false positive and false negative results. \
 Please, send me your checklog.txt via my github repository (https://github.com/littlebalup/PyPS3tools/issues) \
 or by mail at littlebalup@gmail.com. It will help me a lot to improve checks ;)")
-		
+	
+
 	cl.close()
+	with open('%s.checklog.txt'%inputFile) as f:
+		cleanlog = f.read().replace('\x1B\x5B\x33\x31\x6D\x1B\x5B\x32\x32\x6D', '')
+		cleanlog = cleanlog.replace('\x1B\x5B\x33\x32\x6D\x1B\x5B\x32\x32\x6D', '')
+		cleanlog = cleanlog.replace('\x1B\x5B\x33\x33\x6D\x1B\x5B\x32\x32\x6D', '')
+	with open('%s.checklog.txt'%inputFile, "w") as f:
+		f.write(cleanlog)
+	
 
 	if dangerCount > 0:
 		sys.exit(3)
