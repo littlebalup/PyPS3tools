@@ -67,6 +67,7 @@
 	<hash name="3.20 (from factory)">TBD</hash>
 	<hash name="3.16 (from PUP)">B440388DB664B73B3254D6EFFEC432FD</hash>
 	<hash name="3.15 (from PUP)">6866A7A6B69EE57FD4BC1EF95C5666A6</hash>
+	<hash name="3.15 (from factory)">4475FB96DD9DC1D23E26BC5040A0C9D2</hash>  <!-- from a 2011A dump -->
 	<hash name="3.10 (from PUP)">EC29ACF60C590DEEC075278FBEB887AB</hash>
 	<hash name="3.01 (from PUP)">F95C7FDE2917EDAB626F9D8906E8F4C1</hash>
 	<hash name="3.00 (from factory)">C4F3C06446D33D58EDCFA0BAD4233318</hash>  <!-- from a 2004x dump -->
