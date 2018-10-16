@@ -158,12 +158,12 @@ if __name__ == "__main__":
 	print
 	if len(sys.argv) == 1:
 		print "Usage:"
-		print "%s [input_file]"%(os.path.basename(__file__))
+		print "%s [input_file]"%os.path.basename(sys.argv[0])
 		print
 		print " [input_file]   Dump filename to check."
 		print
 		print " Examples:"
-		print "  %s mydump.bin"%(os.path.basename(__file__))
+		print "  %s mydump.bin"%os.path.basename(sys.argv[0])
 		sys.exit()
 
 

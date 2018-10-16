@@ -2,8 +2,8 @@
 
 <patches>
 	<nofsm>
-		<name>4.82 CEX Patched (FERROX based)</name>
-		<hash>32b8c0f25884933a00d1e924f84b2a68</hash>  <!-- always in lower case!! -->
+		<name>4.83 CEX Patched (FERROX based)</name>
+		<hash>2284cfdb950d14ca199ad9469aaa1ec4</hash>  <!-- always in lower case!! -->
 	</nofsm>
 	<fsm>
 		<hash>f162e0d72eba0f46b7fb36e6aab63958</hash>
