@@ -270,7 +270,7 @@ if __name__ == "__main__":
 			if node.attrib.get("warn") == "true":
 				warningCount += 1
 				warningList.append("SKU identification")
-				print " %s"%node.attrib.get("warnmsg")
+				print colored("yellow", " %s"%node.attrib.get("warnmsg"))
 			break
 	if ChkResult == False:
 		if risklevel == "DANGER":

@@ -89,6 +89,14 @@
         <entry>BBCCBF29ECD802844EB28AE6</entry>
         <entry>2E604104D943D1B534D4C5F5</entry>
         <entry>1FDC1E2DF00DA36701E2F8F6</entry>
+		<entry>6FC73326242465AE915F6ED9</entry> <!-- from 4001 -->
+		<entry>84D9145F3453E0F6B14D5F6E</entry> <!-- from 4001B -->
+		<entry>EFA7050FA2547E114FB2D5BC</entry> <!-- from 4001C -->
+        <entry>D385A08930F3652E3C16D5B5</entry> <!-- from 4006B -->
+        <entry>4B3C0C95182D43E98D7BC286</entry> <!-- from 4208C -->
+		<entry>21A599A0B80D4DBE8D4D559A</entry> <!-- from 4212C -->
+		<entry>6EBCCF18F906399449E5CB06</entry> <!-- from 4214B -->
+        <entry>C2088D623A38EFE1A58F0809</entry> <!-- from 4308C -->
 	  </multibinentry>
       <datalist risklevel="DANGER" name="001.04   bootldr Statistics (Top)" offset="0" ldrsize="2">
         <datatreshold key="*">0,5</datatreshold>
@@ -144,26 +152,36 @@
 	  </multibinentry>
       <binentry risklevel="DANGER" name="004.04   metldr Name" offset="40820" ascii="true">6D65746C64720000000000000000000000000000000000000000000000000000</binentry> <!-- METLDR -->
       <multibinentry risklevel="DANGER" name="004.05   metldr RevKey" offset="40840" length="10">
-	    <entry>00000EDD2F6C622ECA7FAE0D2F76B5D4</entry>
+        <entry>00000EDD2F6C622ECA7FAE0D2F76B5D4</entry>
         <entry>00000ED648F43FDE3EEE37119C673663</entry>
         <entry>00000EBB94C6A30BBF2F50752E8DC052</entry>
         <entry>00000EDA81CF2EF41A336897E0493CB8</entry>
         <entry>00000E771362F2C2E6835D6FC144F246</entry>
-      <!-- refurbished consoles? -->
+      <!-- for refurbished consoles -->
         <entry>00000E887822C41EB9F00FA4830A0B69</entry>
         <entry>00000E8A5E1F9CED758B6B94442BF031</entry>
         <entry>00000EA253E7EA237889AE20322A9708</entry>
         <entry>00000E8943B6EF4AE20F7400C8809E53</entry>
         <entry>00000E85BC78B8F02879A81184A0DA74</entry>
         <entry>00000E8E99873BC715F280809C302225</entry>
-        <entry>00000E92C3266E4BBB282E76B7677095</entry>
-        <entry>00000E92DBA53B0AB5181D971524615B</entry>
-        <entry>00000F8E6ED7BCD81F11EA34425F9B9D</entry>
-        <entry>00000F8E656EC1D96595F85C1F9C6196</entry>
-        <entry>00000F8E39ECF2D2ACC0E0752248A9F8</entry>
-        <entry>00000F97EA838371878EF0892A5EF6B6</entry>
-        <entry>00000F97C36C2E4300AACBE6F64FAD92</entry>
-        <entry>00000F97A2834B1DFD969CC1769517C6</entry>
+        <entry>00000E92C3266E4BBB282E76B7677095</entry> <!-- 2K5 minver 3.50 -->
+        <entry>00000E92DBA53B0AB5181D971524615B</entry> <!-- 2K5 minver 3.56 -->
+        <entry>00000F8E6ED7BCD81F11EA34425F9B9D</entry> <!-- 2K5 minver 3.60 -->
+        <entry>00000F8E656EC1D96595F85C1F9C6196</entry> <!-- 3K minver 3.65 -->
+        <entry>00000F8E39ECF2D2ACC0E0752248A9F8</entry> <!-- 3K minver 3.66 -->
+        <entry>00000F97C36C2E4300AACBE6F64FAD92</entry> <!-- 3K minver 3.72 -->
+        <entry>00000F97EA838371878EF0892A5EF6B6</entry> <!-- 3K minver 4.10 -->
+        <entry>00000F977645F763C4C419B9BD87BD59</entry> <!-- 4K minver 4.15 -->
+        <entry>00000F97A2834B1DFD969CC1769517C6</entry> <!-- 4K minver 4.20 -->
+        <entry>00000F97A613A21F06BF3B13BD07E0C2</entry> <!-- 4K minver 4.22 -->
+        <entry>00000F97ED4CF714FA8FDF7EF9239AD2</entry> <!-- 4K minver 4.25 -->
+        <entry>00000F97F3753DD3C934D609D3671E14</entry> <!-- 4K minver 4.31 -->
+        <entry>00000F97B233329B8D28B967C65E2097</entry> <!-- 4K/4K2 minver 4.40 -->
+        <entry>00000F971F954203BE63FFC47336E6BE</entry> <!-- 4K2 minver 4.46 -->
+        <entry>00000F975D9D01C2CFDAA4363C25668A</entry> <!-- 4K2 minver 4.50 -->
+        <entry>00000F9718DD255BA4B844C383E6D3A6</entry> <!-- 4K2 minver 4.53 -->
+        <entry>00000F973DEBAB70C657BB9A04A40837</entry> <!-- 4K2 minver 4.55 -->
+        <entry>00000F9716EB34DCDFC0625C34DB9920</entry> <!-- 4K3 minver 4.60 -->
 	  </multibinentry>
       <multibinentry risklevel="DANGER" name="004.06   metldr Binary Size" offset="40850" length="4">
 	    <entry>00000EDD</entry>
@@ -226,6 +244,11 @@
         <entry>000D</entry>
         <entry>000E</entry>
         <entry>000F</entry>
+        <entry>0010</entry> <!-- ??? -->
+		<entry>0011</entry> <!-- from 4208C -->
+		<entry>0012</entry> 
+		<entry>0013</entry>
+		<entry>0014</entry>
 	  </multibinentry>
       <binentry risklevel="DANGER" name="005.10   EID0 Static" offset="80880">0012000B</binentry>
       <binentry risklevel="DANGER" name="005.11   EID2 BlockSize/Padding" offset="81370">0080069000000000000000000000000000000000000000000000000000000000</binentry>
@@ -263,6 +286,11 @@
         <entry>000D</entry>
         <entry>000E</entry>
         <entry>000F</entry>
+        <entry>0010</entry> <!-- ??? -->
+		<entry>0011</entry> <!-- from 4208C -->
+		<entry>0012</entry> 
+		<entry>0013</entry>
+		<entry>0014</entry>
 	  </multibinentry>
       <binentry risklevel="DANGER" name="005.17   EID5 Static" offset="81BE0">00120730</binentry>
       <datafill risklevel="WARNING" name="005.18   eEID Region 0xFF Filled Area" offset="825D0" size="E230">FF</datafill>
@@ -282,7 +310,7 @@
       <binentry risklevel="DANGER" name="006.06   cISD1 IDLog Header" offset="90860" ascii="true">7F49444C</binentry>
       <multibinentry risklevel="DANGER" name="006.07   cISD1 Semistatic 1" offset="90864" length="6">
 	    <entry>000200600100</entry>
-	    <entry>000300680100</entry>
+	    <entry>000300680100</entry> <!-- only seen on refurbished console -->
 	  </multibinentry>
       <multibinentry risklevel="DANGER" name="006.08   cISD1 Semistatic 2" offset="908A4" length="6">
 	    <entry>001100110012</entry>
@@ -293,6 +321,7 @@
         <entry>002800280038</entry>
         <entry>003100310041</entry>
         <entry>003900390049</entry>
+        <entry>003900390051</entry>
         <entry>004500450067</entry>
         <entry>004700470071</entry>
         <entry>005200520071</entry>
@@ -319,7 +348,20 @@
         <entry>012301230152</entry>
         <entry>012901290158</entry>
         <entry>013101310160</entry>
+        <entry>013301330162</entry>
+        <entry>014501450170</entry>
+        <entry>016101610174</entry>
         <entry>016501650180</entry>
+        <entry>016901690184</entry>
+        <entry>017501750188</entry>
+        <entry>017901790194</entry>
+        <entry>019301930208</entry>
+        <entry>019301930210</entry>
+        <entry>019501950214</entry>
+        <entry>019701970218</entry>
+        <entry>020502050228</entry>
+        <entry>020902090232</entry>
+        <entry>021502150240</entry>
 	  </multibinentry>
       <datafill risklevel="WARNING" name="006.09   cISD1 0xFF Filled Area 0" offset="908AC" size="4">FF</datafill>
       <binentry risklevel="DANGER" name="006.10   cISD1 Static" offset="908AA">0001</binentry>
@@ -478,6 +520,14 @@
         <entry>BBCCBF29ECD802844EB28AE6</entry>
         <entry>2E604104D943D1B534D4C5F5</entry>
         <entry>1FDC1E2DF00DA36701E2F8F6</entry>
+		<entry>6FC73326242465AE915F6ED9</entry> <!-- from 4001 -->
+		<entry>84D9145F3453E0F6B14D5F6E</entry> <!-- from 4001B -->
+		<entry>EFA7050FA2547E114FB2D5BC</entry> <!-- from 4001C -->
+        <entry>D385A08930F3652E3C16D5B5</entry> <!-- from 4006B -->
+        <entry>4B3C0C95182D43E98D7BC286</entry> <!-- from 4208C -->
+		<entry>21A599A0B80D4DBE8D4D559A</entry> <!-- from 4212C -->
+		<entry>6EBCCF18F906399449E5CB06</entry> <!-- from 4214B -->
+        <entry>C2088D623A38EFE1A58F0809</entry> <!-- from 4308C -->
 	  </multibinentry>
       <datalist risklevel="DANGER" name="012.04   bootldr Statistics (Bottom)" offset="F000000" ldrsize="F000002">
         <datatreshold key="*">0,5</datatreshold>
@@ -734,26 +784,36 @@
 	  </multibinentry>
       <binentry risklevel="DANGER" name="004.04   metldr Name" offset="820" ascii="true">6D65746C64720000000000000000000000000000000000000000000000000000</binentry> <!-- METLDR -->
       <multibinentry risklevel="DANGER" name="004.05   metldr RevKey" offset="840" length="10">
-	    <entry>00000EDD2F6C622ECA7FAE0D2F76B5D4</entry>
+        <entry>00000EDD2F6C622ECA7FAE0D2F76B5D4</entry>
         <entry>00000ED648F43FDE3EEE37119C673663</entry>
         <entry>00000EBB94C6A30BBF2F50752E8DC052</entry>
         <entry>00000EDA81CF2EF41A336897E0493CB8</entry>
         <entry>00000E771362F2C2E6835D6FC144F246</entry>
-      <!-- refurbished consoles? -->
+      <!-- for refurbished consoles -->
         <entry>00000E887822C41EB9F00FA4830A0B69</entry>
         <entry>00000E8A5E1F9CED758B6B94442BF031</entry>
         <entry>00000EA253E7EA237889AE20322A9708</entry>
         <entry>00000E8943B6EF4AE20F7400C8809E53</entry>
         <entry>00000E85BC78B8F02879A81184A0DA74</entry>
         <entry>00000E8E99873BC715F280809C302225</entry>
-        <entry>00000E92C3266E4BBB282E76B7677095</entry>
-        <entry>00000E92DBA53B0AB5181D971524615B</entry>
-        <entry>00000F8E6ED7BCD81F11EA34425F9B9D</entry>
-        <entry>00000F8E656EC1D96595F85C1F9C6196</entry>
-        <entry>00000F8E39ECF2D2ACC0E0752248A9F8</entry>
-        <entry>00000F97EA838371878EF0892A5EF6B6</entry>
-        <entry>00000F97C36C2E4300AACBE6F64FAD92</entry>
-        <entry>00000F97A2834B1DFD969CC1769517C6</entry>
+        <entry>00000E92C3266E4BBB282E76B7677095</entry> <!-- 2K5 minver 3.50 -->
+        <entry>00000E92DBA53B0AB5181D971524615B</entry> <!-- 2K5 minver 3.56 -->
+        <entry>00000F8E6ED7BCD81F11EA34425F9B9D</entry> <!-- 2K5 minver 3.60 -->
+        <entry>00000F8E656EC1D96595F85C1F9C6196</entry> <!-- 3K minver 3.65 -->
+        <entry>00000F8E39ECF2D2ACC0E0752248A9F8</entry> <!-- 3K minver 3.66 -->
+        <entry>00000F97C36C2E4300AACBE6F64FAD92</entry> <!-- 3K minver 3.72 -->
+        <entry>00000F97EA838371878EF0892A5EF6B6</entry> <!-- 3K minver 4.10 -->
+        <entry>00000F977645F763C4C419B9BD87BD59</entry> <!-- 4K minver 4.15 -->
+        <entry>00000F97A2834B1DFD969CC1769517C6</entry> <!-- 4K minver 4.20 -->
+        <entry>00000F97A613A21F06BF3B13BD07E0C2</entry> <!-- 4K minver 4.22 -->
+        <entry>00000F97ED4CF714FA8FDF7EF9239AD2</entry> <!-- 4K minver 4.25 -->
+        <entry>00000F97F3753DD3C934D609D3671E14</entry> <!-- 4K minver 4.31 -->
+        <entry>00000F97B233329B8D28B967C65E2097</entry> <!-- 4K/4K2 minver 4.40 -->
+        <entry>00000F971F954203BE63FFC47336E6BE</entry> <!-- 4K2 minver 4.46 -->
+        <entry>00000F975D9D01C2CFDAA4363C25668A</entry> <!-- 4K2 minver 4.50 -->
+        <entry>00000F9718DD255BA4B844C383E6D3A6</entry> <!-- 4K2 minver 4.53 -->
+        <entry>00000F973DEBAB70C657BB9A04A40837</entry> <!-- 4K2 minver 4.55 -->
+        <entry>00000F9716EB34DCDFC0625C34DB9920</entry> <!-- 4K3 minver 4.60 -->
 	  </multibinentry>
       <multibinentry risklevel="DANGER" name="004.06   metldr Binary Size" offset="850" length="4">
 	    <entry>00000EDD</entry>
@@ -816,6 +876,11 @@
         <entry>000D</entry>
         <entry>000E</entry>
         <entry>000F</entry>
+        <entry>0010</entry> <!-- ??? -->
+		<entry>0011</entry> <!-- from 4208C -->
+		<entry>0012</entry> 
+		<entry>0013</entry>
+		<entry>0014</entry>
 	  </multibinentry>
       <binentry risklevel="DANGER" name="005.10   EID0 Static" offset="40880">0012000B</binentry>
       <binentry risklevel="DANGER" name="005.11   EID2 BlockSize/Padding" offset="41370">0080069000000000000000000000000000000000000000000000000000000000</binentry>
@@ -853,6 +918,11 @@
         <entry>000D</entry>
         <entry>000E</entry>
         <entry>000F</entry>
+        <entry>0010</entry> <!-- ??? -->
+		<entry>0011</entry> <!-- from 4208C -->
+		<entry>0012</entry> 
+		<entry>0013</entry>
+		<entry>0014</entry>
 	  </multibinentry>
       <binentry risklevel="DANGER" name="005.17   EID5 Static" offset="41BE0">00120730</binentry>
       <datafill risklevel="WARNING" name="005.18   eEID Region 0xFF Filled Area" offset="425D0" size="E230">FF</datafill>
@@ -872,7 +942,7 @@
       <binentry risklevel="DANGER" name="006.06   cISD1 IDLog Header" offset="50860" ascii="true">7F49444C</binentry>
       <multibinentry risklevel="DANGER" name="006.07   cISD1 Semistatic 1" offset="50864" length="6">
 	    <entry>000200600100</entry>
-	    <entry>000300680100</entry>
+	    <entry>000300680100</entry> <!-- only seen on refurbished console -->
 	  </multibinentry>
       <multibinentry risklevel="DANGER" name="006.08   cISD1 Semistatic 2" offset="508A4" length="6">
 	    <entry>001100110012</entry>
@@ -883,6 +953,7 @@
         <entry>002800280038</entry>
         <entry>003100310041</entry>
         <entry>003900390049</entry>
+        <entry>003900390051</entry>
         <entry>004500450067</entry>
         <entry>004700470071</entry>
         <entry>005200520071</entry>
@@ -909,7 +980,20 @@
         <entry>012301230152</entry>
         <entry>012901290158</entry>
         <entry>013101310160</entry>
+        <entry>013301330162</entry>
+        <entry>014501450170</entry>
+        <entry>016101610174</entry>
         <entry>016501650180</entry>
+        <entry>016901690184</entry>
+        <entry>017501750188</entry>
+        <entry>017901790194</entry>
+        <entry>019301930208</entry>
+        <entry>019301930210</entry>
+        <entry>019501950214</entry>
+        <entry>019701970218</entry>
+        <entry>020502050228</entry>
+        <entry>020902090232</entry>
+        <entry>021502150240</entry>
 	  </multibinentry>
       <datafill risklevel="WARNING" name="006.09   cISD1 0xFF Filled Area 0" offset="508AC" size="4">FF</datafill>
       <binentry risklevel="DANGER" name="006.10   cISD1 Static" offset="508AA">0001</binentry>
@@ -1148,71 +1232,24 @@
       <binentry risklevel="DANGER" name="004.01   asecure_loader Header" offset="800">00000001000000010000000000040000</binentry>
       <binentry risklevel="DANGER" name="004.02   metldr Offset" offset="810">0000000000000040</binentry>
       <multibinentry risklevel="DANGER" name="004.03   metldr Length" offset="818" length="8">
-	    <entry>000000000000EE10</entry>
-        <entry>000000000000EDA0</entry>
-        <entry>000000000000EBF0</entry>
-        <entry>000000000000EDE0</entry>
-        <entry>000000000000E7B0</entry>
-      <!-- refurbished consoles? -->
-        <entry>000000000000E8C0</entry>
-        <entry>000000000000E8E0</entry>
-        <entry>000000000000EA60</entry>
-        <entry>000000000000E8D0</entry>
-        <entry>000000000000E890</entry>
-        <entry>000000000000E920</entry>
-        <entry>000000000000E960</entry>
-        <entry>000000000000F920</entry>
         <entry>000000000000F9B0</entry>
 	  </multibinentry>
       <binentry risklevel="DANGER" name="004.04   metldr Name" offset="820" ascii="true">6D65746C64722E32000000000000000000000000000000000000000000000000</binentry> <!-- METLDR.2 -->
       <multibinentry risklevel="DANGER" name="004.05   metldr RevKey" offset="840" length="10">
-	    <entry>00000EDD2F6C622ECA7FAE0D2F76B5D4</entry>
-        <entry>00000ED648F43FDE3EEE37119C673663</entry>
-        <entry>00000EBB94C6A30BBF2F50752E8DC052</entry>
-        <entry>00000EDA81CF2EF41A336897E0493CB8</entry>
-        <entry>00000E771362F2C2E6835D6FC144F246</entry>
-      <!-- refurbished consoles? -->
-        <entry>00000E887822C41EB9F00FA4830A0B69</entry>
-        <entry>00000E8A5E1F9CED758B6B94442BF031</entry>
-        <entry>00000EA253E7EA237889AE20322A9708</entry>
-        <entry>00000E8943B6EF4AE20F7400C8809E53</entry>
-        <entry>00000E85BC78B8F02879A81184A0DA74</entry>
-        <entry>00000E8E99873BC715F280809C302225</entry>
-        <entry>00000E92C3266E4BBB282E76B7677095</entry>
-        <entry>00000E92DBA53B0AB5181D971524615B</entry>
-        <entry>00000F8E6ED7BCD81F11EA34425F9B9D</entry>
-        <entry>00000F8E656EC1D96595F85C1F9C6196</entry>
-        <entry>00000F8E39ECF2D2ACC0E0752248A9F8</entry>
-        <entry>00000F97EA838371878EF0892A5EF6B6</entry>
-        <entry>00000F97C36C2E4300AACBE6F64FAD92</entry>
-        <entry>00000F97A2834B1DFD969CC1769517C6</entry>
-      <!-- 4k -->
-        <entry>00000F97B233329B8D28B967C65E2097</entry>
-		<entry>00000F977645F763C4C419B9BD87BD59</entry> <!-- from 4001 -->
-		<entry>00000F97ED4CF714FA8FDF7EF9239AD2</entry> <!-- from 4001C -->
-		<entry>00000F97F3753DD3C934D609D3671E14</entry> <!-- from 4001B -->
-		<entry>00000F971F954203BE63FFC47336E6BE</entry> <!-- from 4208C -->
-		<entry>00000F975D9D01C2CFDAA4363C25668A</entry> <!-- from 4204A -->
-		<entry>00000F97A613A21F06BF3B13BD07E0C2</entry> <!-- from 4208A -->
-		<entry>00000F9718DD255BA4B844C383E6D3A6</entry> <!-- from 4212C -->
-		<entry>00000F973DEBAB70C657BB9A04A40837</entry> <!-- from 4214B -->
-		<entry>00000F9716EB34DCDFC0625C34DB9920</entry> <!-- from 4304A -->
+        <entry>00000F97EA838371878EF0892A5EF6B6</entry> <!-- 3K minver 4.10 -->
+        <entry>00000F977645F763C4C419B9BD87BD59</entry> <!-- 4K minver 4.15 -->
+        <entry>00000F97A2834B1DFD969CC1769517C6</entry> <!-- 4K minver 4.20 -->
+        <entry>00000F97A613A21F06BF3B13BD07E0C2</entry> <!-- 4K minver 4.22 -->
+        <entry>00000F97ED4CF714FA8FDF7EF9239AD2</entry> <!-- 4K minver 4.25 -->
+        <entry>00000F97F3753DD3C934D609D3671E14</entry> <!-- 4K minver 4.31 -->
+        <entry>00000F97B233329B8D28B967C65E2097</entry> <!-- 4K/4K2 minver 4.40 -->
+        <entry>00000F971F954203BE63FFC47336E6BE</entry> <!-- 4K2 minver 4.46 -->
+        <entry>00000F975D9D01C2CFDAA4363C25668A</entry> <!-- 4K2 minver 4.50 -->
+        <entry>00000F9718DD255BA4B844C383E6D3A6</entry> <!-- 4K2 minver 4.53 -->
+        <entry>00000F973DEBAB70C657BB9A04A40837</entry> <!-- 4K2 minver 4.55 -->
+        <entry>00000F9716EB34DCDFC0625C34DB9920</entry> <!-- 4K3 minver 4.60 -->
 	  </multibinentry>
       <multibinentry risklevel="DANGER" name="004.06   metldr Binary Size" offset="850" length="4">
-	    <entry>00000EDD</entry>
-        <entry>00000ED6</entry>
-        <entry>00000EBB</entry>
-        <entry>00000EDA</entry>
-        <entry>00000E77</entry>
-      <!-- refurbished consoles? -->
-        <entry>00000E88</entry>
-        <entry>00000E8A</entry>
-        <entry>00000EA2</entry>
-        <entry>00000E89</entry>
-        <entry>00000E85</entry>
-        <entry>00000E8E</entry>
-        <entry>00000E92</entry>
-        <entry>00000F8E</entry>
         <entry>00000F97</entry>
 	  </multibinentry>
       <datalist risklevel="DANGER" name="004.07   metldr Statistics" offset="840" ldrsize="842">
@@ -1244,24 +1281,10 @@
         <entry>00000001008F</entry>
 	  </multibinentry>
       <multibinentry risklevel="DANGER" name="005.09   EID0 IDPS1" offset="40876" length="2">
-	    <entry>0001</entry>
-        <entry>0002</entry>
-        <entry>0003</entry>
-        <entry>0004</entry>
-        <entry>0005</entry>
-        <entry>0006</entry>
-        <entry>0007</entry>
-        <entry>0008</entry>
-        <entry>0009</entry>
-        <entry>000A</entry>
-        <entry>000B</entry>
-        <entry>000C</entry>
-        <entry>000D</entry>
-        <entry>000E</entry>
-        <entry>000F</entry>
-      <!-- 4k -->
-        <entry>0012</entry>
-        <entry>0014</entry>
+        <entry>000E</entry> <!-- 4K A -->
+        <entry>0010</entry> <!-- 4K A rev2 ? -->
+        <entry>0012</entry> <!-- 4K2 A -->
+        <entry>0014</entry> <!-- 4K2 A -->
 	  </multibinentry>
       <binentry risklevel="DANGER" name="005.10   EID0 Static" offset="40880">0012000B</binentry>
       <binentry risklevel="DANGER" name="005.11   EID2 BlockSize/Padding" offset="41370">0080069000000000000000000000000000000000000000000000000000000000</binentry>
@@ -1284,24 +1307,10 @@
         <entry>00000001008F</entry>
 	  </multibinentry>
       <multibinentry risklevel="DANGER" name="005.16   EID5 IDPS1" offset="41BD6" length="2">
-	    <entry>0001</entry>
-        <entry>0002</entry>
-        <entry>0003</entry>
-        <entry>0004</entry>
-        <entry>0005</entry>
-        <entry>0006</entry>
-        <entry>0007</entry>
-        <entry>0008</entry>
-        <entry>0009</entry>
-        <entry>000A</entry>
-        <entry>000B</entry>
-        <entry>000C</entry>
-        <entry>000D</entry>
-        <entry>000E</entry>
-        <entry>000F</entry>
-      <!-- 4k -->
-        <entry>0012</entry>
-        <entry>0014</entry>
+        <entry>000E</entry> <!-- 4K A -->
+        <entry>0010</entry> <!-- 4K A rev2 ? -->
+        <entry>0012</entry> <!-- 4K2 A -->
+        <entry>0014</entry> <!-- 4K2 A -->
 	  </multibinentry>
       <binentry risklevel="DANGER" name="005.17   EID5 Static" offset="41BE0">00120730</binentry>
       <datafill risklevel="WARNING" name="005.18   eEID Region 0xFF Filled Area" offset="425D0" size="E230">FF</datafill>
@@ -1324,33 +1333,6 @@
 	    <entry>000300680100</entry>
 	  </multibinentry>
       <multibinentry risklevel="DANGER" name="006.08   cISD1 Semistatic 2" offset="508A4" length="6">
-	    <entry>004500450067</entry>
-        <entry>004700470071</entry>
-        <entry>005200520071</entry>
-        <entry>005400540080</entry>
-        <entry>005600560086</entry>
-        <entry>006200620090</entry>
-        <entry>006200620092</entry>
-        <entry>006600660096</entry>
-        <entry>007300730096</entry>
-        <entry>007900790106</entry>
-        <entry>008500850106</entry>
-        <entry>008500850114</entry>
-        <entry>008700870114</entry>
-        <entry>009100910114</entry>
-        <entry>009900990118</entry>
-        <entry>010101010124</entry>
-        <entry>010101010128</entry>
-        <entry>010701070128</entry>
-        <entry>010701070134</entry>
-        <entry>011101110138</entry>
-        <entry>011101110140</entry>
-        <entry>011301130142</entry>
-        <entry>012101210150</entry>
-        <entry>012301230152</entry>
-        <entry>012901290158</entry>
-        <entry>013101310160</entry>
-		<entry>013301330162</entry> <!-- from 3000A -->
 		<entry>014501450170</entry> <!-- from 3004A -->
 		<entry>016101610174</entry> <!-- from 4001 -->
         <entry>016501650180</entry>
@@ -1368,12 +1350,9 @@
       <datafill risklevel="WARNING" name="006.09   cISD1 0xFF Filled Area 0" offset="508AC" size="4">FF</datafill>
       <binentry risklevel="DANGER" name="006.10   cISD1 Static" offset="508AA">0001</binentry>
       <multibinentry risklevel="DANGER" name="006.11   cISD1 Semistatic 3" offset="508B0" length="8">
-	    <entry>0001001100020012</entry>
-        <entry>0001001200020012</entry>
-        <entry>0002001100020012</entry>
+	    <entry>0002001100020012</entry>
         <entry>0002001200020012</entry>
-      <!-- 4k -->
-        <entry>0002001100040012</entry>
+		<entry>0002001100040012</entry> <!-- from 4208C -->
         <entry>0002001200040012</entry>
 	  </multibinentry>
       <datafill risklevel="WARNING" name="006.12   cISD1 0xFF Filled Area 1" offset="508C8" size="198">FF</datafill>
@@ -1484,25 +1463,19 @@
       <skudataentry offset="842" size="2">metldr1</skudataentry>
     </skulistdata>
     <skumodels risklevel="WARNING">
-      <skulist id="01" name="CECH-40xxA (MSX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.22">
-        <skuentry type="idps">002C</skuentry>
-        <skuentry type="metldr0">F9B0</skuentry>
-        <skuentry type="metldr1">0F97</skuentry>
-      </skulist>
-      <skulist id="02" name="CECH-42xxA (NPX-001 or PQX-001)" warn="true"
+      <skulist id="02" name="CECH-40xxA" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.22">
         <skuentry type="idps">000E</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
       </skulist>
-      <skulist id="03" name="CECH-4xxxA" warn="true"
+      <skulist id="03" name="CECH-42xxA" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.40">
         <skuentry type="idps">0012</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
       </skulist>
-      <skulist id="04" name="CECH-4xxxA" warn="true"
+      <skulist id="04" name="CECH-43xxA" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.40">
         <skuentry type="idps">0014</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
@@ -1571,32 +1544,31 @@
         <entry>6D65746C64722E32000000000000000000000000000000000000000000000000</entry>   <!-- METLDR2-->
 	  </multibinentry>
       <multibinentry risklevel="DANGER" name="004.05   metldr RevKey" offset="840" length="10">
-	    <entry>00000E771362F2C2E6835D6FC144F246</entry>
+        <entry>00000E771362F2C2E6835D6FC144F246</entry>
         <entry>00000E887822C41EB9F00FA4830A0B69</entry>
         <entry>00000E8A5E1F9CED758B6B94442BF031</entry>
         <entry>00000EA253E7EA237889AE20322A9708</entry>
         <entry>00000E8943B6EF4AE20F7400C8809E53</entry>
         <entry>00000E85BC78B8F02879A81184A0DA74</entry>
         <entry>00000E8E99873BC715F280809C302225</entry>
-        <entry>00000E92C3266E4BBB282E76B7677095</entry>
-        <entry>00000E92DBA53B0AB5181D971524615B</entry>
-        <entry>00000F8E6ED7BCD81F11EA34425F9B9D</entry>
-        <entry>00000F8E656EC1D96595F85C1F9C6196</entry>
-        <entry>00000F8E39ECF2D2ACC0E0752248A9F8</entry>
-        <entry>00000F97EA838371878EF0892A5EF6B6</entry>
-        <entry>00000F97C36C2E4300AACBE6F64FAD92</entry>
-        <entry>00000F97A2834B1DFD969CC1769517C6</entry>
-      <!-- 4k -->
-        <entry>00000F97B233329B8D28B967C65E2097</entry>
-		<entry>00000F977645F763C4C419B9BD87BD59</entry> <!-- from 4001 -->
-		<entry>00000F97ED4CF714FA8FDF7EF9239AD2</entry> <!-- from 4001C -->
-		<entry>00000F97F3753DD3C934D609D3671E14</entry> <!-- from 4001B -->
-		<entry>00000F971F954203BE63FFC47336E6BE</entry> <!-- from 4208C -->
-		<entry>00000F975D9D01C2CFDAA4363C25668A</entry> <!-- from 4204A -->
-		<entry>00000F97A613A21F06BF3B13BD07E0C2</entry> <!-- from 4208A -->
-		<entry>00000F9718DD255BA4B844C383E6D3A6</entry> <!-- from 4212C -->
-		<entry>00000F973DEBAB70C657BB9A04A40837</entry> <!-- from 4214B -->
-		<entry>00000F9716EB34DCDFC0625C34DB9920</entry> <!-- from 4???A -->
+        <entry>00000E92C3266E4BBB282E76B7677095</entry> <!-- 2K5 minver 3.50 -->
+        <entry>00000E92DBA53B0AB5181D971524615B</entry> <!-- 2K5 minver 3.56 -->
+        <entry>00000F8E6ED7BCD81F11EA34425F9B9D</entry> <!-- 2K5 minver 3.60 -->
+        <entry>00000F8E656EC1D96595F85C1F9C6196</entry> <!-- 3K minver 3.65 -->
+        <entry>00000F8E39ECF2D2ACC0E0752248A9F8</entry> <!-- 3K minver 3.66 -->
+        <entry>00000F97C36C2E4300AACBE6F64FAD92</entry> <!-- 3K minver 3.72 -->
+        <entry>00000F97EA838371878EF0892A5EF6B6</entry> <!-- 3K minver 4.10 -->
+        <entry>00000F977645F763C4C419B9BD87BD59</entry> <!-- 4K minver 4.15 -->
+        <entry>00000F97A2834B1DFD969CC1769517C6</entry> <!-- 4K minver 4.20 -->
+        <entry>00000F97A613A21F06BF3B13BD07E0C2</entry> <!-- 4K minver 4.22 -->
+        <entry>00000F97ED4CF714FA8FDF7EF9239AD2</entry> <!-- 4K minver 4.25 -->
+        <entry>00000F97F3753DD3C934D609D3671E14</entry> <!-- 4K minver 4.31 -->
+        <entry>00000F97B233329B8D28B967C65E2097</entry> <!-- 4K/4K2 minver 4.40 -->
+        <entry>00000F971F954203BE63FFC47336E6BE</entry> <!-- 4K2 minver 4.46 -->
+        <entry>00000F975D9D01C2CFDAA4363C25668A</entry> <!-- 4K2 minver 4.50 -->
+        <entry>00000F9718DD255BA4B844C383E6D3A6</entry> <!-- 4K2 minver 4.53 -->
+        <entry>00000F973DEBAB70C657BB9A04A40837</entry> <!-- 4K2 minver 4.55 -->
+        <entry>00000F9716EB34DCDFC0625C34DB9920</entry> <!-- 4K3 minver 4.60 -->
 	  </multibinentry>
       <multibinentry risklevel="DANGER" name="004.06   metldr Binary Size" offset="850" length="4">
 	    <entry>00000E77</entry>
@@ -1654,7 +1626,11 @@
         <entry>000D</entry>
         <entry>000E</entry>
         <entry>000F</entry>
+        <entry>0010</entry> <!-- ??? -->
 		<entry>0011</entry> <!-- from 4208C -->
+		<entry>0012</entry> 
+		<entry>0013</entry>
+		<entry>0014</entry>
 	  </multibinentry>
       <binentry risklevel="DANGER" name="005.10   EID0 Static" offset="2F080">0012000B</binentry>
       <binentry risklevel="DANGER" name="005.11   EID2 BlockSize/Padding" offset="2FB70">0080069000000000000000000000000000000000000000000000000000000000</binentry>
@@ -1692,7 +1668,11 @@
         <entry>000D</entry>
         <entry>000E</entry>
         <entry>000F</entry>
+        <entry>0010</entry> <!-- ??? -->
 		<entry>0011</entry> <!-- from 4208C -->
+		<entry>0012</entry> 
+		<entry>0013</entry>
+		<entry>0014</entry>
 	  </multibinentry>
       <binentry risklevel="DANGER" name="005.17   EID5 Static" offset="303E0">00120730</binentry>
       <datafill risklevel="WARNING" name="005.18   eEID Region 0xFF Filled Area" offset="30DD0" size="E230">FF</datafill>
@@ -1939,6 +1919,7 @@
         <entry>4B3C0C95182D43E98D7BC286</entry> <!-- from 4208C -->
 		<entry>21A599A0B80D4DBE8D4D559A</entry> <!-- from 4212C -->
 		<entry>6EBCCF18F906399449E5CB06</entry> <!-- from 4214B -->
+        <entry>C2088D623A38EFE1A58F0809</entry> <!-- from 4308C -->
 	  </multibinentry>
       <datalist risklevel="DANGER" name="014.04   bootldr Statistics" offset="FC0000" ldrsize="FC0002">
         <datatreshold key="*">0,5</datatreshold>
@@ -2006,23 +1987,27 @@
       <skudataentry offset="2F076" size="2">idps</skudataentry>
       <skudataentry offset="81E" size="2">metldr0</skudataentry>
       <skudataentry offset="842" size="2">metldr1</skudataentry>
+      <skudataentry offset="844" size="C">metldrkey</skudataentry>
       <skudataentry offset="FC0002" size="2">bootldr0</skudataentry>
       <skudataentry offset="FC0012" size="2">bootldr1</skudataentry>
       <skudataentry offset="FC0002" size="2">bootldrsize</skudataentry>
     </skulistdata>
     <skumodels risklevel="WARNING">
-      <skulist id="01" name="CECHHxx (DIA-001)" minver="2.30">
+	  <!-- 0006 -->
+      <skulist id="01" name="CECHHxx (DIA-001)" minver="1.97">
         <skuentry type="idps">0006</skuentry>
         <skuentry type="metldr0">E7B0</skuentry>
         <skuentry type="metldr1">0E77</skuentry>
+        <skuentry type="metldrkey">1362F2C2E6835D6FC144F246</skuentry>
         <skuentry type="bootldr0">2F1C</skuentry>
         <skuentry type="bootldr1">2F1C</skuentry>
         <skuentry type="bootldrsize">2F200</skuentry>
       </skulist>
-      <skulist id="02" name="CECHHxx or CECHMxx (DIA-001)" minver="2.30">
+      <skulist id="02" name="CECHHxx (DIA-001)" minver="1.97">
         <skuentry type="idps">0006</skuentry>
         <skuentry type="metldr0">E8C0</skuentry>
         <skuentry type="metldr1">0E88</skuentry>
+        <skuentry type="metldrkey">7822C41EB9F00FA4830A0B69</skuentry>
         <skuentry type="bootldr0">2EF4</skuentry>
         <skuentry type="bootldr1">2EF4</skuentry>
         <skuentry type="bootldrsize">2EF80</skuentry>
@@ -2031,196 +2016,299 @@
         <skuentry type="idps">0006</skuentry>
         <skuentry type="metldr0">E8E0</skuentry>
         <skuentry type="metldr1">0E8A</skuentry>
+        <skuentry type="metldrkey">5E1F9CED758B6B94442BF031</skuentry>
         <skuentry type="bootldr0">2EF4</skuentry>
         <skuentry type="bootldr1">2EF4</skuentry>
         <skuentry type="bootldrsize">2EF80</skuentry>
       </skulist>
-      <skulist id="04" name="CECHJxx datecode:8B (DIA-002)" minver="2.30">
-        <skuentry type="idps">0007</skuentry>
-        <skuentry type="metldr0">E8E0</skuentry>
-        <skuentry type="metldr1">0E8A</skuentry>
-        <skuentry type="bootldr0">2EF4</skuentry>
-        <skuentry type="bootldr1">2EF4</skuentry>
-        <skuentry type="bootldrsize">2EF80</skuentry>
-      </skulist>
-      <skulist id="05" name="CECHHxx or CECHMxx (DIA-001)" minver="1.97">
+      <skulist id="04" name="CECHHxx (DIA-001)" minver="1.97">
         <skuentry type="idps">0006</skuentry>
         <skuentry type="metldr0">EA60</skuentry>
         <skuentry type="metldr1">0EA2</skuentry>
+        <skuentry type="metldrkey">53E7EA237889AE20322A9708</skuentry>
         <skuentry type="bootldr0">2EE3</skuentry>
         <skuentry type="bootldr1">2EE3</skuentry>
         <skuentry type="bootldrsize">2EE70</skuentry>
       </skulist>
-      <skulist id="06" name="CECHJxx or CECHKxx datecode:8C (DIA-002)" minver="2.30">
+	  <!-- 0007 -->
+      <skulist id="05" name="CECHJxx or CECHKxx (DIA-002)" minver="2.16">
+        <skuentry type="idps">0007</skuentry>
+        <skuentry type="metldr0">E8E0</skuentry>
+        <skuentry type="metldr1">0E8A</skuentry>
+        <skuentry type="metldrkey">5E1F9CED758B6B94442BF031</skuentry>
+        <skuentry type="bootldr0">2EF4</skuentry>
+        <skuentry type="bootldr1">2EF4</skuentry>
+        <skuentry type="bootldrsize">2EF80</skuentry>
+      </skulist>
+      <skulist id="06" name="CECHJxx or CECHKxx (DIA-002)" minver="2.16">
         <skuentry type="idps">0007</skuentry>
         <skuentry type="metldr0">EA60</skuentry>
         <skuentry type="metldr1">0EA2</skuentry>
+        <skuentry type="metldrkey">53E7EA237889AE20322A9708</skuentry>
         <skuentry type="bootldr0">2EE3</skuentry>
         <skuentry type="bootldr1">2EE3</skuentry>
         <skuentry type="bootldrsize">2EE70</skuentry>
       </skulist>
+	  <!-- 0008 -->
       <skulist id="07" name="CECHLxx or CECHPxx (VER-001)" minver="2.45">
         <skuentry type="idps">0008</skuentry>
         <skuentry type="metldr0">E8D0</skuentry>
         <skuentry type="metldr1">0E89</skuentry>
+        <skuentry type="metldrkey">43B6EF4AE20F7400C8809E53</skuentry>
         <skuentry type="bootldr0">2EAB</skuentry>
         <skuentry type="bootldr1">2EAB</skuentry>
         <skuentry type="bootldrsize">2EAF0</skuentry>
       </skulist>
-      <skulist id="08" name="CECHLxx (VER-001)" minver="2.45">
+      <skulist id="08" name="CECHLxx or CECHPxx (VER-001)" minver="2.45">
         <skuentry type="idps">0008</skuentry>
         <skuentry type="metldr0">E8D0</skuentry>
         <skuentry type="metldr1">0E89</skuentry>
+        <skuentry type="metldrkey">43B6EF4AE20F7400C8809E53</skuentry>
         <skuentry type="bootldr0">2EB3</skuentry>
         <skuentry type="bootldr1">2EB3</skuentry>
         <skuentry type="bootldrsize">2EB70</skuentry>
       </skulist>
-      <skulist id="09" name="CECHLxx (VER-001)" minver="2.30">
+      <skulist id="09" name="CECHLxx or CECHPxx (VER-001)" minver="2.45">
         <skuentry type="idps">0008</skuentry>
         <skuentry type="metldr0">E890</skuentry>
         <skuentry type="metldr1">0E85</skuentry>
+        <skuentry type="metldrkey">BC78B8F02879A81184A0DA74</skuentry>
         <skuentry type="bootldr0">2F13</skuentry>
         <skuentry type="bootldr1">2F13</skuentry>
         <skuentry type="bootldrsize">2F170</skuentry>
       </skulist>
-      <skulist id="10" name="CECH-20xx (DYN-001)" minver="2.70">
+	  <!-- 0009 -->
+      <skulist id="10" name="CECH-20xxx (DYN-001)" minver="2.70">
         <skuentry type="idps">0009</skuentry>
         <skuentry type="metldr0">E890</skuentry>
         <skuentry type="metldr1">0E85</skuentry>
+        <skuentry type="metldrkey">BC78B8F02879A81184A0DA74</skuentry>
         <skuentry type="bootldr0">2F13</skuentry>
         <skuentry type="bootldr1">2F13</skuentry>
         <skuentry type="bootldrsize">2F170</skuentry>
       </skulist>
-      <skulist id="11" name="CECH-20xx (DYN-001)" minver="2.70">
+      <skulist id="11" name="CECH-20xxx (DYN-001)" minver="2.70">
         <skuentry type="idps">0009</skuentry>
         <skuentry type="metldr0">E920</skuentry>
         <skuentry type="metldr1">0E8E</skuentry>
+        <skuentry type="metldrkey">99873BC715F280809C302225</skuentry>
         <skuentry type="bootldr0">2F3B</skuentry>
         <skuentry type="bootldr1">2F3B</skuentry>
         <skuentry type="bootldrsize">2F3F0</skuentry>
       </skulist>
-      <skulist id="12" name="CECH-20xx (DYN-001)" minver="3.40">
+      <skulist id="12" name="CECH-20xxx (DYN-001)" minver="2.70">
         <skuentry type="idps">0009</skuentry>
         <skuentry type="metldr0">E920</skuentry>
         <skuentry type="metldr1">0E8E</skuentry>
+        <skuentry type="metldrkey">99873BC715F280809C302225</skuentry>
         <skuentry type="bootldr0">2F4B</skuentry>
         <skuentry type="bootldr1">2F4B</skuentry>
         <skuentry type="bootldrsize">2F4F0</skuentry>
       </skulist>
-      <skulist id="13" name="CECH-21xx (SUR-001)" minver="3.20">
+	  <!-- 000A -->
+      <skulist id="13" name="CECH-21xxx (SUR-001)" minver="3.20">
         <skuentry type="idps">000A</skuentry>
         <skuentry type="metldr0">E920</skuentry>
         <skuentry type="metldr1">0E8E</skuentry>
+        <skuentry type="metldrkey">99873BC715F280809C302225</skuentry>
         <skuentry type="bootldr0">2F4B</skuentry>
         <skuentry type="bootldr1">2F4B</skuentry>
         <skuentry type="bootldrsize">2F4F0</skuentry>
       </skulist>
-      <skulist id="14" name="CECH-25xx datecode:0C (JSD-001 or JTP-001)" minver="3.40">
+	  <!-- 000B -->
+      <skulist id="14" name="CECH-25xxx (JSD-001 or JTP-001)" minver="3.40">
         <skuentry type="idps">000B</skuentry>
         <skuentry type="metldr0">E920</skuentry>
         <skuentry type="metldr1">0E8E</skuentry>
+        <skuentry type="metldrkey">99873BC715F280809C302225</skuentry>
         <skuentry type="bootldr0">2F4B</skuentry>
         <skuentry type="bootldr1">2F4B</skuentry>
         <skuentry type="bootldrsize">2F4F0</skuentry>
       </skulist>
-      <skulist id="15" name="CECH-25xx datecode:0D or 1A (JSD-001 or JTP-001)" minver="3.50">
+      <skulist id="15" name="CECH-25xxx (JSD-001 or JTP-001)" minver="3.50">
         <skuentry type="idps">000B</skuentry>
         <skuentry type="metldr0">E960</skuentry>
         <skuentry type="metldr1">0E92</skuentry>
+        <skuentry type="metldrkey">C3266E4BBB282E76B7677095</skuentry>
         <skuentry type="bootldr0">2F53</skuentry>
         <skuentry type="bootldr1">2F53</skuentry>
         <skuentry type="bootldrsize">2F570</skuentry>
       </skulist>
       <skulist
 	    id="16"
-        name="CECH-25xx datecode:1A or 1B (JSD-001 or JTP-001)"
+        name="CECH-25xxx (JSD-001 or JTP-001)"
         warn="true" warnmsg="WARNING: NOR dump must be patched with 4.xx Patchset to install CFW on this machine!"
         minver="3.56">
         <skuentry type="idps">000B</skuentry>
         <skuentry type="metldr0">E960</skuentry>
         <skuentry type="metldr1">0E92</skuentry>
+        <skuentry type="metldrkey">DBA53B0AB5181D971524615B</skuentry>
         <skuentry type="bootldr0">2F5B</skuentry>
         <skuentry type="bootldr1">2F5B</skuentry>
         <skuentry type="bootldrsize">2F5F0</skuentry>
       </skulist>
-      <!-- NON-Downgradeable dumps -->
-      <skulist id="17" name="CECH-25xx datecode:1B or none (JSD-001 or JTP-001)" warn="true"
+    <!-- NON-Downgradeable dumps -->
+      <skulist id="17" name="CECH-25xxx (JSD-001 or JTP-001)" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="3.60">
         <skuentry type="idps">000B</skuentry>
         <skuentry type="metldr0">F920</skuentry>
         <skuentry type="metldr1">0F8E</skuentry>
+        <skuentry type="metldrkey">6ED7BCD81F11EA34425F9B9D</skuentry>
         <skuentry type="bootldr0">2FFB</skuentry>
         <skuentry type="bootldr1">2FFB</skuentry>
         <skuentry type="bootldrsize">2FFF0</skuentry>
       </skulist>
-      <skulist id="18" name="CECH-30xx (KTE-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="3.60">
+	  <!-- 000C -->
+      <skulist id="18" name="CECH-30xxx (KTE-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="3.65">
         <skuentry type="idps">000C</skuentry>
         <skuentry type="metldr0">F920</skuentry>
         <skuentry type="metldr1">0F8E</skuentry>
+        <skuentry type="metldrkey">656EC1D96595F85C1F9C6196</skuentry>
         <skuentry type="bootldr0">2FFB</skuentry>
         <skuentry type="bootldr1">2FFB</skuentry>
         <skuentry type="bootldrsize">2FFF0</skuentry>
       </skulist>
-      <skulist id="19" name="CECH-30xx (KTE-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="3.65">
+      <skulist id="19" name="CECH-30xxx (KTE-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="3.66">
         <skuentry type="idps">000C</skuentry>
-        <skuentry type="metldr0">F9B0</skuentry>
-        <skuentry type="metldr1">0F97</skuentry>
-        <skuentry type="bootldr0">3003</skuentry>
-        <skuentry type="bootldr1">3003</skuentry>
-        <skuentry type="bootldrsize">30070</skuentry>
+        <skuentry type="metldr0">F920</skuentry>
+        <skuentry type="metldr1">0F8E</skuentry>
+        <skuentry type="metldrkey">39ECF2D2ACC0E0752248A9F8</skuentry>
+        <skuentry type="bootldr0">2FFB</skuentry>
+        <skuentry type="bootldr1">2FFB</skuentry>
+        <skuentry type="bootldrsize">2FFF0</skuentry>
       </skulist>
-      <skulist id="20" name="CECH-30xx datecode:1C (KTE-001)" warn="true"
+      <skulist id="20" name="CECH-30xxx (KTE-001)" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="3.72">
         <skuentry type="idps">000C</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="metldrkey">C36C2E4300AACBE6F64FAD92</skuentry>
         <skuentry type="bootldr0">300B</skuentry>
         <skuentry type="bootldr1">300B</skuentry>
         <skuentry type="bootldrsize">300F0</skuentry>
       </skulist>
-      <skulist id="21" name="CECH-40xx (MSX-001 or MPX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.15">
-        <skuentry type="idps">000D</skuentry>
+      <skulist id="21" name="CECH-30xxx (KTE-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.10">
+        <skuentry type="idps">000C</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="metldrkey">EA838371878EF0892A5EF6B6</skuentry>
         <skuentry type="bootldr0">3003</skuentry>
         <skuentry type="bootldr1">3003</skuentry>
         <skuentry type="bootldrsize">30070</skuentry>
       </skulist>
-      <skulist id="22" name="CECH-40xx (MSX-001 or MPX-001)" warn="true"
+	  <!-- 000D -->
+      <skulist id="22" name="CECH-40xxB/C (MSX-001 or MPX-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.15">
+        <skuentry type="idps">000D</skuentry>
+        <skuentry type="metldr0">F9B0</skuentry>
+        <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="metldrkey">7645F763C4C419B9BD87BD59</skuentry>
+        <skuentry type="bootldr0">3003</skuentry>
+        <skuentry type="bootldr1">3003</skuentry>
+        <skuentry type="bootldrsize">30070</skuentry>
+      </skulist>
+      <skulist id="23" name="CECH-40xxB/C (MSX-001 or MPX-001)" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.20">
         <skuentry type="idps">000D</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="metldrkey">A2834B1DFD969CC1769517C6</skuentry>
         <skuentry type="bootldr0">301B</skuentry>
         <skuentry type="bootldr1">301B</skuentry>
         <skuentry type="bootldrsize">301F0</skuentry>
       </skulist>
-      <skulist id="23" name="CECH-40xx (MSX-001 or MPX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.20">
+      <skulist id="24" name="CECH-40xxB/C (MSX-001 or MPX-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.25">
+        <skuentry type="idps">000D</skuentry>
+        <skuentry type="metldr0">F9B0</skuentry>
+        <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="metldrkey">ED4CF714FA8FDF7EF9239AD2</skuentry>
+        <skuentry type="bootldr0">301B</skuentry>
+        <skuentry type="bootldr1">301B</skuentry>
+        <skuentry type="bootldrsize">301F0</skuentry>
+      </skulist>
+      <skulist id="25" name="CECH-40xxB/C (MSX-001 or MPX-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.31">
+        <skuentry type="idps">000D</skuentry>
+        <skuentry type="metldr0">F9B0</skuentry>
+        <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="metldrkey">F3753DD3C934D609D3671E14</skuentry>
+        <skuentry type="bootldr0">301B</skuentry>
+        <skuentry type="bootldr1">301B</skuentry>
+        <skuentry type="bootldrsize">301F0</skuentry>
+      </skulist>
+	  <!-- 000F -->
+      <skulist id="26" name="CECH-40xxB/C (NPX-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.31">
         <skuentry type="idps">000F</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="metldrkey">F3753DD3C934D609D3671E14</skuentry>
         <skuentry type="bootldr0">301B</skuentry>
         <skuentry type="bootldr1">301B</skuentry>
         <skuentry type="bootldrsize">301F0</skuentry>
       </skulist>
-      <skulist id="24" name="CECH-40xx 12GB (MSX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.22">
-        <skuentry type="idps">002C</skuentry>
+      <skulist id="27" name="CECH-40xxB/C (NPX-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.40">
+        <skuentry type="idps">000F</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="metldrkey">B233329B8D28B967C65E2097</skuentry>
         <skuentry type="bootldr0">301B</skuentry>
         <skuentry type="bootldr1">301B</skuentry>
         <skuentry type="bootldrsize">301F0</skuentry>
       </skulist>
-      <skulist id="25" name="CECH-42xxx (NPX-001 or PQX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.40"> <!-- from 4208C -->
+	  <!-- 0011 -->
+      <skulist id="28" name="CECH-42xxB/C (PPX-001 or PQX-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.40">
         <skuentry type="idps">0011</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="metldrkey">B233329B8D28B967C65E2097</skuentry>
+        <skuentry type="bootldr0">301B</skuentry>
+        <skuentry type="bootldr1">301B</skuentry>
+        <skuentry type="bootldrsize">301F0</skuentry>
+      </skulist>
+      <skulist id="29" name="CECH-42xxB/C (PPX-001 or PQX-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.46">
+        <skuentry type="idps">0011</skuentry>
+        <skuentry type="metldr0">F9B0</skuentry>
+        <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="metldrkey">1F954203BE63FFC47336E6BE</skuentry>
+        <skuentry type="bootldr0">301B</skuentry>
+        <skuentry type="bootldr1">301B</skuentry>
+        <skuentry type="bootldrsize">301F0</skuentry>
+      </skulist>
+      <skulist id="30" name="CECH-42xxB/C (PPX-001 or PQX-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.53">
+        <skuentry type="idps">0011</skuentry>
+        <skuentry type="metldr0">F9B0</skuentry>
+        <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="metldrkey">18DD255BA4B844C383E6D3A6</skuentry>
+        <skuentry type="bootldr0">301B</skuentry>
+        <skuentry type="bootldr1">301B</skuentry>
+        <skuentry type="bootldrsize">301F0</skuentry>
+      </skulist>
+      <skulist id="31" name="CECH-42xxB/C (PPX-001 or PQX-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.55">
+        <skuentry type="idps">0011</skuentry>
+        <skuentry type="metldr0">F9B0</skuentry>
+        <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="metldrkey">3DEBAB70C657BB9A04A40837</skuentry>
+        <skuentry type="bootldr0">301B</skuentry>
+        <skuentry type="bootldr1">301B</skuentry>
+        <skuentry type="bootldrsize">301F0</skuentry>
+      </skulist>
+	  <!-- 0013 -->
+      <skulist id="32" name="CECH-43xxB/C (RTX-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.60">
+        <skuentry type="idps">0013</skuentry>
+        <skuentry type="metldr0">F9B0</skuentry>
+        <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="metldrkey">16EB34DCDFC0625C34DB9920</skuentry>
         <skuentry type="bootldr0">301B</skuentry>
         <skuentry type="bootldr1">301B</skuentry>
         <skuentry type="bootldrsize">301F0</skuentry>

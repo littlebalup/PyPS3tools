@@ -2,6 +2,10 @@ PyPS3checker - Python checker script for PS3 flash memory dump files
 Copyright (C) 2015 littlebalup@gmail.com
 -------------------------------------------------------------------
 
+v0.9.2, (19 Dec 2018) :
+Added metldr rev key as parameter for a better SKU detection (minver vs metldr version enforced).
+Checklist overal cleaning.
+
 v0.9.1, (16 Oct 2018) :
 Added 4.83 hashs
 Created a "Standalone Package" edition bypassing python installation need for Windows users.
