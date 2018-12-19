@@ -1461,25 +1461,47 @@
       <skudataentry offset="40876" size="2">idps</skudataentry>
       <skudataentry offset="81E" size="2">metldr0</skudataentry>
       <skudataentry offset="842" size="2">metldr1</skudataentry>
+      <skudataentry offset="844" size="C">metldrkey</skudataentry>
     </skulistdata>
     <skumodels risklevel="WARNING">
-      <skulist id="02" name="CECH-40xxA" warn="true"
+	  <!-- 000E -->
+      <skulist id="22" name="CECH-40xxA (MSX-001 or MPX-001)" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.22">
         <skuentry type="idps">000E</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="metldrkey">A613A21F06BF3B13BD07E0C2</skuentry>
       </skulist>
-      <skulist id="03" name="CECH-42xxA" warn="true"
+	  <!-- 0010 ?? -->
+	  <!-- 0012 -->
+      <skulist id="22" name="CECH-42xxA (PPX-001 or PQX-001)" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.40">
         <skuentry type="idps">0012</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="metldrkey">B233329B8D28B967C65E2097</skuentry>
       </skulist>
-      <skulist id="04" name="CECH-43xxA" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.40">
+      <skulist id="22" name="CECH-42xxA (PPX-001 or PQX-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.46">
+        <skuentry type="idps">0012</skuentry>
+        <skuentry type="metldr0">F9B0</skuentry>
+        <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="metldrkey">1F954203BE63FFC47336E6BE</skuentry>
+      </skulist>
+      <skulist id="22" name="CECH-42xxA (PPX-001 or PQX-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.50">
+        <skuentry type="idps">0012</skuentry>
+        <skuentry type="metldr0">F9B0</skuentry>
+        <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="metldrkey">5D9D01C2CFDAA4363C25668A</skuentry>
+      </skulist>
+	  <!-- 0014 -->
+      <skulist id="32" name="CECH-43xxA (RTX-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.60">
         <skuentry type="idps">0014</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="metldrkey">16EB34DCDFC0625C34DB9920</skuentry>
       </skulist>
     </skumodels>
   </EMMC_PS3Xploit>
