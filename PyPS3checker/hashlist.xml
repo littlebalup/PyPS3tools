@@ -2,6 +2,7 @@
 
 <root>
   <type name="TRVK_PRG"> <!-- Matches RL_FOR_PROGRAM.img -->
+	<hash name="4.83 (from PUP)">55AC16DFD019EA0DDC56CD9DEE30D03C</hash>
 	<hash name="4.82 (from PUP)">5F9C0818D7AD2D65B2962587CCD2B0DA</hash>
 	<hash name="4.81 (from PUP)">E453631D23286055D9C98604ABA2A855</hash>
 	<hash name="4.80 (from PUP)">FE24749700E82FCBBF998FAE5CCFBDA4</hash>
