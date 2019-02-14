@@ -2,6 +2,7 @@
 
 <root>
   <type name="TRVK_PRG"> <!-- Matches RL_FOR_PROGRAM.img -->
+	<hash name="4.84 (from PUP)">B3AE128DF872F57BC6979E4E6F1B2195</hash>
 	<hash name="4.83 (from PUP)">55AC16DFD019EA0DDC56CD9DEE30D03C</hash>
 	<hash name="4.82 (from PUP)">5F9C0818D7AD2D65B2962587CCD2B0DA</hash>
 	<hash name="4.81 (from PUP)">E453631D23286055D9C98604ABA2A855</hash>
@@ -195,6 +196,7 @@
     <hash name="3.55 CEX Patched">F162E0D72EBA0F46B7FB36E6AAB63958</hash>
   <!-- OFW -->
    <!-- common CEX/DEX/SEX -->
+    <hash name="4.84 CEX/SEX OFW">E2396DD395E095128BCB69AABA2D1978</hash>
     <hash name="4.83 CEX/SEX OFW">13446A57ADA4A8EA0A9A88F1173C5735</hash>
     <hash name="4.82 CEX/SEX OFW">DBCE1CCF7E8A64DC2A6C7019E1C03749</hash>
     <hash name="4.81 CEX/SEX OFW">6C2E0FEAA5C9C7D7C0450E8BC131ABA2</hash>
@@ -349,6 +351,7 @@
   <!-- MISC -->
     <hash name="2.43 Leaked JIG">4C503EC4737A08F79FD8B4A4DFE0F31F</hash>
   <!-- CFW/MFW -->
+    <hash name="4.84v1 Overflow Std">00A3639FB1AF676852391A00BA5609CC</hash>
     <hash name="4.83 Littlebalup Dual Boot">8765640854BC33C4573B3F97EA0615B9</hash>
     <hash name="4.83v8 Overflow Cobra 7.55">7D44517BC90A292433C49DDF049C9064</hash>
     <hash name="4.83v6 Overflow Cobra noBD">B0DCD816F84D1350A2D7061CDCF2693C</hash>
