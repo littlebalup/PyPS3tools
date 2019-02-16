@@ -351,7 +351,11 @@
   <!-- MISC -->
     <hash name="2.43 Leaked JIG">4C503EC4737A08F79FD8B4A4DFE0F31F</hash>
   <!-- CFW/MFW -->
-    <hash name="4.84v1 Overflow Std">00A3639FB1AF676852391A00BA5609CC</hash>
+    <hash name="4.84v6 Overflow Cobra noBD">0052363E9866DCDA0B1D4E179083C8E4</hash>
+    <hash name="4.84v5/v7 Overflow Cobra/Cobra noBT">A46331DF8DE2F85262706F12DED4D130</hash>
+    <hash name="4.84v3 Overflow Std noBD">F14086CDC47EE4C5483770B7A6D220DF</hash>
+    <hash name="4.84v2 Overflow Dual Boot">823810F59D502C573458AE9C757C1C20</hash>
+    <hash name="4.84v1/v4 Overflow Std/Std noBT">00A3639FB1AF676852391A00BA5609CC</hash>
     <hash name="4.84 Littlebalup Dual Boot">14BC76629248B04FF712EDADD0EBF968</hash>
     <hash name="4.83 Littlebalup Dual Boot">8765640854BC33C4573B3F97EA0615B9</hash>
     <hash name="4.83v8 Overflow Cobra 7.55">7D44517BC90A292433C49DDF049C9064</hash>
