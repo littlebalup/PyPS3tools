@@ -1402,6 +1402,7 @@
     </CoreOS_region>
     <cvtrm_region>
       <multibinentry risklevel="DANGER" name="010.02   cvtrm0 Header" offset="E80000" length="10">
+	    <entry>53434549FFFDFFFFFFFFFFFFFFFFFFFF</entry>
 	    <entry>53434549FFFFFFFFFFFFFFFFFFFFFFFF</entry>
         <entry>00000000FFFDFFFFFFFFFFFFFFFFFFFF</entry>
         <entry>00000000FFFFFFFFFFFFFFFFFFFFFFFF</entry>
@@ -1412,6 +1413,7 @@
       <!-- Some consoles do not follow next rule -->
  <!-- <datafill risklevel="WARNING" name="010.06   vtrm0 0xFF Filled Area" vtrmentrycount_offset="EC403E" regionstart="EC5088" regionsize="186C0">FF</datafill> -->
       <multibinentry risklevel="DANGER" name="010.07   cvtrm1 Header" offset="EA0000" length="10">
+	    <entry>53434549FFFDFFFFFFFFFFFFFFFFFFFF</entry>
 	    <entry>53434549FFFFFFFFFFFFFFFFFFFFFFFF</entry>
         <entry>00000000FFFDFFFFFFFFFFFFFFFFFFFF</entry>
         <entry>00000000FFFFFFFFFFFFFFFFFFFFFFFF</entry>
@@ -1828,6 +1830,7 @@
     <cvtrm_region>
       <datafill risklevel="WARNING" name="010.01   Pre cvtrm 0xFF Filled Area" offset="EBFFF0" size="10">FF</datafill>
       <multibinentry risklevel="DANGER" name="010.02   cvtrm0 Header" offset="EC0000" length="10">
+	    <entry>53434549FFFDFFFFFFFFFFFFFFFFFFFF</entry>
 	    <entry>53434549FFFFFFFFFFFFFFFFFFFFFFFF</entry>
         <entry>00000000FFFDFFFFFFFFFFFFFFFFFFFF</entry>
         <entry>00000000FFFFFFFFFFFFFFFFFFFFFFFF</entry>
@@ -1838,6 +1841,7 @@
       <!-- Some consoles do not follow next rule -->
  <!-- <datafill risklevel="WARNING" name="010.06   vtrm0 0xFF Filled Area" vtrmentrycount_offset="EC403E" regionstart="EC5088" regionsize="186C0">FF</datafill> -->
       <multibinentry risklevel="DANGER" name="010.07   cvtrm1 Header" offset="EE0000" length="10">
+	    <entry>53434549FFFDFFFFFFFFFFFFFFFFFFFF</entry>
 	    <entry>53434549FFFFFFFFFFFFFFFFFFFFFFFF</entry>
         <entry>00000000FFFDFFFFFFFFFFFFFFFFFFFF</entry>
         <entry>00000000FFFFFFFFFFFFFFFFFFFFFFFF</entry>
