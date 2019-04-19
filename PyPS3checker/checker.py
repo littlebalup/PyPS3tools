@@ -140,7 +140,7 @@ def printrisklevel(risklevel):
 
 if __name__ == "__main__":
 
-	release = "v0.9.x"
+	release = "v0.10.x"
 
 	print
 	print
@@ -627,10 +627,15 @@ if __name__ == "__main__":
 	print "All checks done in %.2f seconds."%(time.time() - startTime)
 	
 	if flashType in ['NOR', 'EMMC_PS3Xploit'] :
-		print colored("red", "\nIMPORTANT NOTICE:\nChecks of late CECH-25xxx, CECH-3xxxx and CECH-4xxxx consoles dumps still under development! \
-It could return both false positive and false negative results. \
-Please, send me your checklog.txt via my github repository (https://github.com/littlebalup/PyPS3tools/issues) \
-or by mail at littlebalup@gmail.com. It will help me a lot to improve checks ;)")
+		print colored("MAGENTA", "\n\n\
+ ---------------------------------------------------------------------------- \n\
+| IMPORTANT NOTICE !                                                         |\n\
+| Checks of late CECH-25xxx, CECH-3xxxx and CECH-4xxxx consoles dumps still  |\n\
+| under development and may return false results. If you feel it's the case, |\n\
+| please post your *.checklog.txt in a new issue on my github repository:    |\n\
+|   https://github.com/littlebalup/PyPS3tools/issues                         |\n\
+| Thanks! It will help me a lot to improve that tool ;)                      |\n\
+ ---------------------------------------------------------------------------- ")
 	
 
 	cl.close()

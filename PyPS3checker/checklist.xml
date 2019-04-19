@@ -1467,38 +1467,80 @@
     </skulistdata>
     <skumodels risklevel="WARNING">
 	  <!-- 000E -->
-      <skulist id="22" name="CECH-40xxA (MSX-001 or MPX-001)" warn="true"
+      <skulist id="01" name="CECH-40xxA (MSX-001 or MPX-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.15">
+        <skuentry type="idps">000E</skuentry>
+        <skuentry type="metldr0">F9B0</skuentry>
+        <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="metldrkey">7645F763C4C419B9BD87BD59</skuentry>
+      </skulist>
+      <skulist id="02" name="CECH-40xxA (MSX-001 or MPX-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.20">
+        <skuentry type="idps">000E</skuentry>
+        <skuentry type="metldr0">F9B0</skuentry>
+        <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="metldrkey">A2834B1DFD969CC1769517C6</skuentry>
+      </skulist>
+      <skulist id="03" name="CECH-40xxA (MSX-001 or MPX-001)" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.22">
         <skuentry type="idps">000E</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
         <skuentry type="metldrkey">A613A21F06BF3B13BD07E0C2</skuentry>
       </skulist>
+      <skulist id="04" name="CECH-40xxA (MSX-001 or MPX-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.25">
+        <skuentry type="idps">000E</skuentry>
+        <skuentry type="metldr0">F9B0</skuentry>
+        <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="metldrkey">ED4CF714FA8FDF7EF9239AD2</skuentry>
+      </skulist>
+      <skulist id="05" name="CECH-40xxA (MSX-001 or MPX-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.31">
+        <skuentry type="idps">000E</skuentry>
+        <skuentry type="metldr0">F9B0</skuentry>
+        <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="metldrkey">F3753DD3C934D609D3671E14</skuentry>
+      </skulist>
 	  <!-- 0010 ?? -->
 	  <!-- 0012 -->
-      <skulist id="22" name="CECH-42xxA (PPX-001 or PQX-001)" warn="true"
+      <skulist id="06" name="CECH-42xxA (PPX-001 or PQX-001)" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.40">
         <skuentry type="idps">0012</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
         <skuentry type="metldrkey">B233329B8D28B967C65E2097</skuentry>
       </skulist>
-      <skulist id="22" name="CECH-42xxA (PPX-001 or PQX-001)" warn="true"
+      <skulist id="07" name="CECH-42xxA (PPX-001 or PQX-001)" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.46">
         <skuentry type="idps">0012</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
         <skuentry type="metldrkey">1F954203BE63FFC47336E6BE</skuentry>
       </skulist>
-      <skulist id="22" name="CECH-42xxA (PPX-001 or PQX-001)" warn="true"
+      <skulist id="08" name="CECH-42xxA (PPX-001 or PQX-001)" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.50">
         <skuentry type="idps">0012</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
         <skuentry type="metldrkey">5D9D01C2CFDAA4363C25668A</skuentry>
       </skulist>
+      <skulist id="09" name="CECH-42xxA (PPX-001 or PQX-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.53">
+        <skuentry type="idps">0012</skuentry>
+        <skuentry type="metldr0">F9B0</skuentry>
+        <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="metldrkey">18DD255BA4B844C383E6D3A6</skuentry>
+      </skulist>
+      <skulist id="10" name="CECH-42xxA (PPX-001 or PQX-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.55">
+        <skuentry type="idps">0012</skuentry>
+        <skuentry type="metldr0">F9B0</skuentry>
+        <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="metldrkey">3DEBAB70C657BB9A04A40837</skuentry>
+      </skulist>
 	  <!-- 0014 -->
-      <skulist id="32" name="CECH-43xxA (RTX-001)" warn="true"
+      <skulist id="11" name="CECH-43xxA (RTX-001)" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.60">
         <skuentry type="idps">0014</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
@@ -2247,6 +2289,16 @@
         <skuentry type="bootldrsize">301F0</skuentry>
       </skulist>
       <skulist id="24" name="CECH-40xxB/C (MSX-001 or MPX-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.22">
+        <skuentry type="idps">000D</skuentry>
+        <skuentry type="metldr0">F9B0</skuentry>
+        <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="metldrkey">A613A21F06BF3B13BD07E0C2</skuentry>
+        <skuentry type="bootldr0">301B</skuentry>
+        <skuentry type="bootldr1">301B</skuentry>
+        <skuentry type="bootldrsize">301F0</skuentry>
+      </skulist>
+      <skulist id="25" name="CECH-40xxB/C (MSX-001 or MPX-001)" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.25">
         <skuentry type="idps">000D</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
@@ -2256,7 +2308,7 @@
         <skuentry type="bootldr1">301B</skuentry>
         <skuentry type="bootldrsize">301F0</skuentry>
       </skulist>
-      <skulist id="25" name="CECH-40xxB/C (MSX-001 or MPX-001)" warn="true"
+      <skulist id="26" name="CECH-40xxB/C (MSX-001 or MPX-001)" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.31">
         <skuentry type="idps">000D</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
@@ -2267,7 +2319,7 @@
         <skuentry type="bootldrsize">301F0</skuentry>
       </skulist>
 	  <!-- 000F -->
-      <skulist id="26" name="CECH-40xxB/C (NPX-001)" warn="true"
+      <skulist id="27" name="CECH-40xxB/C (NPX-001)" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.31">
         <skuentry type="idps">000F</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
@@ -2277,7 +2329,7 @@
         <skuentry type="bootldr1">301B</skuentry>
         <skuentry type="bootldrsize">301F0</skuentry>
       </skulist>
-      <skulist id="27" name="CECH-40xxB/C (NPX-001)" warn="true"
+      <skulist id="28" name="CECH-40xxB/C (NPX-001)" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.40">
         <skuentry type="idps">000F</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
@@ -2288,7 +2340,7 @@
         <skuentry type="bootldrsize">301F0</skuentry>
       </skulist>
 	  <!-- 0011 -->
-      <skulist id="28" name="CECH-42xxB/C (PPX-001 or PQX-001)" warn="true"
+      <skulist id="29" name="CECH-42xxB/C (PPX-001 or PQX-001)" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.40">
         <skuentry type="idps">0011</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
@@ -2298,7 +2350,7 @@
         <skuentry type="bootldr1">301B</skuentry>
         <skuentry type="bootldrsize">301F0</skuentry>
       </skulist>
-      <skulist id="29" name="CECH-42xxB/C (PPX-001 or PQX-001)" warn="true"
+      <skulist id="30" name="CECH-42xxB/C (PPX-001 or PQX-001)" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.46">
         <skuentry type="idps">0011</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
@@ -2308,7 +2360,17 @@
         <skuentry type="bootldr1">301B</skuentry>
         <skuentry type="bootldrsize">301F0</skuentry>
       </skulist>
-      <skulist id="30" name="CECH-42xxB/C (PPX-001 or PQX-001)" warn="true"
+      <skulist id="31" name="CECH-42xxB/C (PPX-001 or PQX-001)" warn="true"
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.50">
+        <skuentry type="idps">0011</skuentry>
+        <skuentry type="metldr0">F9B0</skuentry>
+        <skuentry type="metldr1">0F97</skuentry>
+        <skuentry type="metldrkey">5D9D01C2CFDAA4363C25668A</skuentry>
+        <skuentry type="bootldr0">301B</skuentry>
+        <skuentry type="bootldr1">301B</skuentry>
+        <skuentry type="bootldrsize">301F0</skuentry>
+      </skulist>
+      <skulist id="32" name="CECH-42xxB/C (PPX-001 or PQX-001)" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.53">
         <skuentry type="idps">0011</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
@@ -2318,7 +2380,7 @@
         <skuentry type="bootldr1">301B</skuentry>
         <skuentry type="bootldrsize">301F0</skuentry>
       </skulist>
-      <skulist id="31" name="CECH-42xxB/C (PPX-001 or PQX-001)" warn="true"
+      <skulist id="33" name="CECH-42xxB/C (PPX-001 or PQX-001)" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.55">
         <skuentry type="idps">0011</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
