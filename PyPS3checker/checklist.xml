@@ -2041,7 +2041,7 @@
     </datamatches>
     <repetitions>
       <repcheck risklevel="DANGER" name="Header Magic0 Repetitions" offset="10">000000000FACE0FF00000000DEADBEEF</repcheck>
-<!--  <repcheck risklevel="DANGER" name="Header Magic1 Repetitions" offset="F00010">000000000FACE0FF00000000DEADFACE</repcheck>  <!-- repeated at 0xF00810 on some DIA-001 -->
+<!--  <repcheck risklevel="DANGER" name="Header Magic1 Repetitions" offset="F00010">000000000FACE0FF00000000DEADFACE</repcheck> --> <!-- repeated at 0xF00810 on some DIA-001 -->
       <repcheck risklevel="DANGER" name="asecure_loader Repetitions" offset="420">617365637572655F6C6F616465720000</repcheck>
       <repcheck risklevel="DANGER" name="eEID Repetitions" offset="450">65454944000000000000000000000000</repcheck>
       <repcheck risklevel="DANGER" name="cISD Repetitions" offset="480">63495344000000000000000000000000</repcheck>
