@@ -326,6 +326,7 @@
         <entry>004500450067</entry>
         <entry>004700470071</entry>
         <entry>005200520071</entry>
+		<entry>005200520082</entry>
         <entry>005400540080</entry>
         <entry>005600560086</entry>
         <entry>006200620090</entry>
@@ -394,20 +395,20 @@
 	    <entry>0000000000000020000000000000002000000000000020000000000000000000</entry>
 	    <entry>0000000000001010000000000000101000000000000020000000000000000000</entry>
 	  </multibinentry>
-      <binentry risklevel="DANGER" name="008.01   trvk_prg0 SCE" offset="91830" ascii="true">53434500</binentry>
+      <binentry risklevel="WARNING" name="008.01   trvk_prg0 SCE" offset="91830" ascii="true">53434500</binentry>
 	  <hash risklevel="WARNING" name="008.02   trvk_prg0 Hash" type="TRVK_PRG" offset="91830" sizeoffset="9182E" sizelength="2"></hash>
 	  <!-- <datafill risklevel="WARNING" name="008.02   trvk_prg0 0x00 filled area" regionstart="91830" regionsize="FE0" sizefrom="9182E">00</datafill> -->
-      <binentry risklevel="DANGER" name="008.03   trvk_prg1 SCE" offset="92820" ascii="true">53434500</binentry>
+      <binentry risklevel="WARNING" name="008.03   trvk_prg1 SCE" offset="92820" ascii="true">53434500</binentry>
 	  <hash risklevel="WARNING" name="008.04   trvk_prg1 Hash" type="TRVK_PRG" offset="92820" sizeoffset="9281E" sizelength="2"></hash>
 	  <!-- <datafill risklevel="WARNING" name="008.04   trvk_prg1 0xFF filled area" regionstart="92820" regionsize="FE0" sizefrom="9281E">FF</datafill> -->
       <multibinentry risklevel="DANGER" name="008.00   trvk_pkg Region Header" offset="93800" length="20">
 	    <entry>0000000000000020000000000000002000000000000020000000000000000000</entry>
 	    <entry>0000000000001010000000000000101000000000000020000000000000000000</entry>
 	  </multibinentry>
-      <binentry risklevel="DANGER" name="008.05   trvk_pkg0 SCE" offset="93830" ascii="true">53434500</binentry>
+      <binentry risklevel="WARNING" name="008.05   trvk_pkg0 SCE" offset="93830" ascii="true">53434500</binentry>
  <!-- <hash risklevel="WARNING" name="008.06   trvk_pkg0 Hash" type="TRVK_PKG" offset="93830" sizeoffset="9382E" sizelength="2"></hash> -->
 	  <!-- <datafill risklevel="WARNING" name="008.05   trvk_pkg0 0x00 filled area" regionstart="93830" regionsize="FE0" sizefrom="9382E">00</datafill> -->
-      <binentry risklevel="DANGER" name="008.07   trvk_pkg1 SCE" offset="94820" ascii="true">53434500</binentry>
+      <binentry risklevel="WARNING" name="008.07   trvk_pkg1 SCE" offset="94820" ascii="true">53434500</binentry>
  <!-- <hash risklevel="WARNING" name="008.08   trvk_pkg1 Hash" type="TRVK_PKG" offset="94820" sizeoffset="9481E" sizelength="2"></hash> -->
 	  <!-- <datafill risklevel="WARNING" name="008.07   trvk_pkg1 0xFF filled area" regionstart="94820" regionsize="FE0" sizefrom="9481E">FF</datafill> -->
 	</Revokation_region>
@@ -706,7 +707,7 @@
         <skuentry type="bootldr1">2EF4</skuentry>
         <skuentry type="bootldrsize">2EF80</skuentry>
       </skulist>
-      <skulist id="15" name="CECHExx (COK-002)" minver="N/A">
+      <skulist id="15" name="CECHExx (COK-002)" minver="1.00"> <!-- (MGS4 pack?) late production  -->
         <skuentry type="idps">0003</skuentry>
         <skuentry type="metldr0">EA60</skuentry>
         <skuentry type="metldr1">0EA2</skuentry>
@@ -729,6 +730,14 @@
         <skuentry type="bootldr0">2F4B</skuentry>
         <skuentry type="bootldr1">2F4B</skuentry>
         <skuentry type="bootldrsize">2F4F0</skuentry>
+      </skulist>
+      <skulist id="18" name="CECHE01 MG (COK-002)" minver="1.00"> <!-- (MGS4 pack) late production  -->
+        <skuentry type="idps">0003</skuentry>
+        <skuentry type="metldr0">E8E0</skuentry>
+        <skuentry type="metldr1">0E8A</skuentry>
+        <skuentry type="bootldr0">2EF4</skuentry>
+        <skuentry type="bootldr1">2EF4</skuentry>
+        <skuentry type="bootldrsize">2EF80</skuentry>
       </skulist>
     </skumodels>
   </NAND>
@@ -959,6 +968,7 @@
         <entry>004500450067</entry>
         <entry>004700470071</entry>
         <entry>005200520071</entry>
+		<entry>005200520082</entry>
         <entry>005400540080</entry>
         <entry>005600560086</entry>
         <entry>006200620090</entry>
@@ -1027,20 +1037,20 @@
 	    <entry>0000000000000020000000000000002000000000000020000000000000000000</entry>
 	    <entry>0000000000001010000000000000101000000000000020000000000000000000</entry>
 	  </multibinentry>
-      <binentry risklevel="DANGER" name="008.01   trvk_prg0 SCE" offset="51830" ascii="true">53434500</binentry>
+      <binentry risklevel="WARNING" name="008.01   trvk_prg0 SCE" offset="51830" ascii="true">53434500</binentry>
 	  <hash risklevel="WARNING" name="008.02   trvk_prg0 Hash" type="TRVK_PRG" offset="51830" sizeoffset="5182E" sizelength="2"></hash>
 	  <!-- <datafill risklevel="WARNING" name="008.02   trvk_prg0 0x00 filled area" regionstart="91830" regionsize="FE0" sizefrom="9182E">00</datafill> -->
-      <binentry risklevel="DANGER" name="008.03   trvk_prg1 SCE" offset="52820" ascii="true">53434500</binentry>
+      <binentry risklevel="WARNING" name="008.03   trvk_prg1 SCE" offset="52820" ascii="true">53434500</binentry>
 	  <hash risklevel="WARNING" name="008.04   trvk_prg1 Hash" type="TRVK_PRG" offset="52820" sizeoffset="5281E" sizelength="2"></hash>
 	  <!-- <datafill risklevel="WARNING" name="008.04   trvk_prg1 0xFF filled area" regionstart="92820" regionsize="FE0" sizefrom="9281E">FF</datafill> -->
       <multibinentry risklevel="DANGER" name="008.00   trvk_pkg Region Header" offset="53800" length="20">
 	    <entry>0000000000000020000000000000002000000000000020000000000000000000</entry>
 	    <entry>0000000000001010000000000000101000000000000020000000000000000000</entry>
 	  </multibinentry>
-      <binentry risklevel="DANGER" name="008.05   trvk_pkg0 SCE" offset="53830" ascii="true">53434500</binentry>
+      <binentry risklevel="WARNING" name="008.05   trvk_pkg0 SCE" offset="53830" ascii="true">53434500</binentry>
  <!-- <hash risklevel="WARNING" name="008.06   trvk_pkg0 Hash" type="TRVK_PKG" offset="93830" sizeoffset="9382E" sizelength="2"></hash> -->
 	  <!-- <datafill risklevel="WARNING" name="008.05   trvk_pkg0 0x00 filled area" regionstart="93830" regionsize="FE0" sizefrom="9382E">00</datafill> -->
-      <binentry risklevel="DANGER" name="008.07   trvk_pkg1 SCE" offset="54820" ascii="true">53434500</binentry>
+      <binentry risklevel="WARNING" name="008.07   trvk_pkg1 SCE" offset="54820" ascii="true">53434500</binentry>
  <!-- <hash risklevel="WARNING" name="008.08   trvk_pkg1 Hash" type="TRVK_PKG" offset="94820" sizeoffset="9481E" sizelength="2"></hash> -->
 	  <!-- <datafill risklevel="WARNING" name="008.07   trvk_pkg1 0xFF filled area" regionstart="94820" regionsize="FE0" sizefrom="9481E">FF</datafill> -->
 	</Revokation_region>
@@ -1181,7 +1191,7 @@
         <skuentry type="metldr0">E8C0</skuentry>
         <skuentry type="metldr1">0E88</skuentry>
       </skulist>
-      <skulist id="15" name="CECHExx (COK-002)" minver="N/A">
+      <skulist id="15" name="CECHExx (COK-002)" minver="1.00"> <!-- (MGS4 pack?) late production  -->
         <skuentry type="idps">0003</skuentry>
         <skuentry type="metldr0">EA60</skuentry>
         <skuentry type="metldr1">0EA2</skuentry>
@@ -1195,6 +1205,11 @@
         <skuentry type="idps">0005</skuentry>
         <skuentry type="metldr0">E920</skuentry>
         <skuentry type="metldr1">0E8E</skuentry>
+      </skulist>
+      <skulist id="18" name="CECHE01 MG (COK-002)" minver="1.00"> <!-- (MGS4 pack) late production  -->
+        <skuentry type="idps">0003</skuentry>
+        <skuentry type="metldr0">E8E0</skuentry>
+        <skuentry type="metldr1">0E8A</skuentry>
       </skulist>
     </skumodels>
   </NAND_PS3Xploit>
