@@ -76,7 +76,8 @@
 	<hash name="3.01 (from PUP)">F95C7FDE2917EDAB626F9D8906E8F4C1</hash>
 	<hash name="3.00 (from factory)">C4F3C06446D33D58EDCFA0BAD4233318</hash>  <!-- from a 2004x dump -->
 	<hash name="3.00 (from PUP)">47C12C2D4CA124DE7CAC9E18FB7CF71E</hash>
-	<hash name="2.85 (from factory)">AE01F57AC2F55453D4030BDCCB1534FF</hash>
+	<hash name="2.85 (from factory)">AE01F57AC2F55453D4030BDCCB1534FF</hash>  <!--  seen on a 2K trvk_prg0 -->
+	<hash name="2.85 (from factory)">647309C958E755CEF7144B94CFEF9FCA</hash>  <!--  seen on a 2K trvk_prg1, with 3.01 in trvk_prg0 and in syscon -->
 	<hash name="2.80 (from PUP)">9C3A02E2A8067B0B4200B0F195236F74</hash>
 	<hash name="2.76 (from PUP)">C9015BA8AFDDDDBF88856F4EF3AE9A3D</hash>
 	<hash name="2.70 (from PUP)">47638E79D0A1CA68663DBF67C3B9585B</hash>
