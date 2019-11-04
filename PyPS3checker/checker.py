@@ -295,8 +295,8 @@ if __name__ == "__main__":
 		addressPos = index - 0xc
 		address = int(sdk.attrib.get("offset"), 16) + int(string2hex(getDatas(rawfiledata, addressPos, 0x4)), 16)
 		ver = getDatas(rawfiledata, address, 0x8)
-		ver = ver[:-1]                       #remove useless last char   
-		r = re.compile('\d{3}\.000')         #def format 
+		ver = ver[:-1]                       #remove useless last 0x0A char   
+		r = re.compile('\d{3}\.\d{3}')         #def format 
 		if r.match(ver) is not None:
 			print "  %s : %s"%(sdk.attrib.get("name"), ver)
 		else:
