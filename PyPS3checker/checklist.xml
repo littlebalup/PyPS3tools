@@ -296,7 +296,7 @@
       <binentry risklevel="DANGER" name="005.17   EID5 Static" offset="81BE0">00120730</binentry>
       <datafill risklevel="WARNING" name="005.18   eEID Region 0xFF Filled Area" offset="825D0" size="E230">FF</datafill>
       <datalist risklevel="DANGER" name="005.19   eEID Statistics0" offset="80880" size="AF0">
-        <datatreshold key="*">1,1</datatreshold>
+        <datatreshold key="*">1,2</datatreshold>
       </datalist>
       <datalist risklevel="DANGER" name="005.20   eEID Statistics1" offset="81390" size="1240">
         <datatreshold key="*">1,1</datatreshold>
@@ -939,7 +939,7 @@
       <binentry risklevel="DANGER" name="005.17   EID5 Static" offset="41BE0">00120730</binentry>
       <datafill risklevel="WARNING" name="005.18   eEID Region 0xFF Filled Area" offset="425D0" size="E230">FF</datafill>
       <datalist risklevel="DANGER" name="005.19   eEID Statistics0" offset="40880" size="AF0">
-        <datatreshold key="*">1,1</datatreshold>
+        <datatreshold key="*">1,2</datatreshold>
       </datalist>
       <datalist risklevel="DANGER" name="005.20   eEID Statistics1" offset="41390" size="1240">
         <datatreshold key="*">1,1</datatreshold>
@@ -1334,7 +1334,7 @@
       <binentry risklevel="DANGER" name="005.17   EID5 Static" offset="41BE0">00120730</binentry>
       <datafill risklevel="WARNING" name="005.18   eEID Region 0xFF Filled Area" offset="425D0" size="E230">FF</datafill>
       <datalist risklevel="DANGER" name="005.19   eEID Statistics0" offset="40880" size="AF0">
-        <datatreshold key="*">1,1</datatreshold>
+        <datatreshold key="*">1,2</datatreshold>
       </datalist>
       <datalist risklevel="DANGER" name="005.20   eEID Statistics1" offset="41390" size="1240">
         <datatreshold key="*">1,1</datatreshold>
@@ -1762,7 +1762,7 @@
       <binentry risklevel="DANGER" name="005.17   EID5 Static" offset="303E0">00120730</binentry>
       <datafill risklevel="WARNING" name="005.18   eEID Region 0xFF Filled Area" offset="30DD0" size="E230">FF</datafill>
       <datalist risklevel="DANGER" name="005.19   eEID Statistics0" offset="2F080" size="AF0">
-        <datatreshold key="*">1,1</datatreshold>
+        <datatreshold key="*">1,2</datatreshold>
       </datalist>
       <datalist risklevel="DANGER" name="005.20   eEID Statistics1" offset="2FB90" size="1240">
         <datatreshold key="*">1,1</datatreshold>
