@@ -2,7 +2,7 @@ PyPS3checker - Python checker script for PS3 flash memory dump files
 Copyright (C) 2015 littlebalup@gmail.com
 -------------------------------------------------------------------
 
-v0.10.2, (01 Apr 2019) :
+v0.10.2, (02 Apr 2020) :
 Added 4.86 hashes.
 Some improvements in check entries.
 
