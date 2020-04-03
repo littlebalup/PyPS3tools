@@ -175,7 +175,8 @@
 
   <type name="ROS"> <!-- Matches Raw COS -->
   <!-- PATCHES -->
-    <hash name="4.86 CEX Patched (Rebug based)">96D30F4EDBA00DDA9FA87F8FC580AD8A</hash>
+    <hash name="4.86 CEX Patched (Rebug based v2)">0669179877AE23F5C918E6E62E930BAC</hash>
+    <hash name="4.86 CEX Patched (Rebug based v1)">96D30F4EDBA00DDA9FA87F8FC580AD8A</hash>
     <hash name="4.85 CEX Patched (Overflow based)">99FFE0A761BEE3E0668BA919CBFE4CF4</hash>
     <hash name="4.85 CEX Patched (PS3Xploit v2.0.2)">EA4EB0D1E6E4FEF266357C92AC3D893F</hash>
     <hash name="4.84 CEX Patched (PS3Xploit v2.0.1)">62D189F5A918B5E24A976948B2F4BC50</hash>
