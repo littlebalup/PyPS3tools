@@ -176,6 +176,7 @@
 
   <type name="ROS"> <!-- Matches Raw COS -->
   <!-- PATCHES -->
+    <hash name="4.87 CEX Patched (Evilnat based)">1EFB54B005B09A10E436F9C76E51D870</hash>
     <hash name="4.86 CEX Patched (Rebug based v2)">0669179877AE23F5C918E6E62E930BAC</hash>
     <hash name="4.86 CEX Patched (Rebug based v1)">96D30F4EDBA00DDA9FA87F8FC580AD8A</hash>
     <hash name="4.85 CEX Patched (Overflow based)">99FFE0A761BEE3E0668BA919CBFE4CF4</hash>
@@ -366,6 +367,7 @@
   <!-- MISC -->
     <hash name="2.43 Leaked JIG">4C503EC4737A08F79FD8B4A4DFE0F31F</hash>
   <!-- CFW/MFW -->
+    <hash name="4.87 Littlebalup Dual Boot">156E1FD120E2FDBA28A2F2A6D4EA8704</hash>
     <hash name="4.87.2 Evilnat Cobra">01F89BA1F108452AAA44300C26C16C70</hash>
     <hash name="4.86 LOUAY Anonymous Cobra">B0E5496055CD61F7C0565B41D5933427</hash>
     <hash name="4.86 Littlebalup Dual Boot">9DEA89ACC57381E768FF71D1F4A385DF</hash>
