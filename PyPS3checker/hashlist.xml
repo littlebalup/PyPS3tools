@@ -78,6 +78,7 @@
 	<hash name="3.01 (from PUP)">F95C7FDE2917EDAB626F9D8906E8F4C1</hash>
 	<hash name="3.00 (from factory)">C4F3C06446D33D58EDCFA0BAD4233318</hash>  <!-- from a 2004x dump -->
 	<hash name="3.00 (from PUP)">47C12C2D4CA124DE7CAC9E18FB7CF71E</hash>
+	<hash name="2.85 (from PUP)">1482B9DEF059783AEC762C3E353EA29B</hash>  <!-- from DECR PUP --> 
 	<hash name="2.85 (from factory)">AE01F57AC2F55453D4030BDCCB1534FF</hash>  <!--  seen on a 2K trvk_prg0 -->
 	<hash name="2.85 (from factory)">647309C958E755CEF7144B94CFEF9FCA</hash>  <!--  seen on a 2K trvk_prg1, with 3.01 in trvk_prg0 and in syscon -->
 	<hash name="2.80 (from PUP)">9C3A02E2A8067B0B4200B0F195236F74</hash>
@@ -111,20 +112,22 @@
 	<hash name="1.92 (from PUP)">414F13590D89F358959B7136E1C0A153</hash>
 	<hash name="1.90 (from PUP)">15377779EDEF03A72A8DC0A43098B652</hash>
 	<hash name="1.90 (from factory)">TBD</hash>
-	<hash name="1.82 (from PUP)">C389ADC6D25FDB0DF7EBC8D653319DF1</hash>
-	<hash name="1.81 (from PUP)">850C0BAAD05E2A94B93F94AA0A15FF68</hash>
-	<hash name="1.80 (from PUP)">63758ED35584B097E4B2729C392839F3</hash>
-	<hash name="1.70 (from PUP)">03C43AEA1CEC2EBECD89F8F9F770AB5F</hash>
-	<hash name="1.60 (from PUP)">32B3C24A1A291C6315E778E458CDCEEE</hash>
-	<hash name="1.54 (from PUP)">B738B4938ED414EDF4538CAB818C6F87</hash>
-	<hash name="1.51 (from PUP)">4313B27016A3AF1506827FBFE5B74D79</hash>
-	<hash name="1.50 (from PUP)">45FD8BC3758EF97A44F5E99B6D50CBC1</hash>
-	<hash name="1.31/1.32 (from PUP)">FE4395A6F83ABBF17B398F69B78D6A38</hash>
-	<hash name="1.30 (from PUP)">C300EF6316D4CEBD360E325E30829DAA</hash>
-	<hash name="1.11 (from PUP)">90B33C50EA952A9491B7A3A5C2DC276F</hash>
-	<hash name="1.10 (from PUP)">8A8059B3609E5058280B2E371B46DC9A</hash>
-	<hash name="1.02 (from PUP)">BCDBB121C0C3F6320C85E37E82672BEF</hash>
-	<hash name="1.00 (from factory)">TBD</hash>
+	<hash name="1.82 (from PUP)">C389ADC6D25FDB0DF7EBC8D653319DF1</hash> <!--  0x010000 version -->
+	<hash name="1.81 (from PUP)">850C0BAAD05E2A94B93F94AA0A15FF68</hash> <!--  0x010000 version -->
+	<hash name="1.80 (from PUP)">63758ED35584B097E4B2729C392839F3</hash> <!--  0x010000 version -->
+	<hash name="1.70 (from PUP)">03C43AEA1CEC2EBECD89F8F9F770AB5F</hash> <!--  0x010000 version -->
+	<hash name="1.60 (from PUP)">32B3C24A1A291C6315E778E458CDCEEE</hash> <!--  0x010000 version -->
+	<hash name="1.54 (from PUP)">B738B4938ED414EDF4538CAB818C6F87</hash> <!--  0x010000 version -->
+	<hash name="1.51 (from PUP)">4313B27016A3AF1506827FBFE5B74D79</hash> <!--  0x010000 version -->
+	<hash name="1.50 (from PUP)">45FD8BC3758EF97A44F5E99B6D50CBC1</hash> <!--  0x010000 version -->
+	<hash name="1.31/1.32 (from PUP)">FE4395A6F83ABBF17B398F69B78D6A38</hash> <!--  0x010000 version -->
+	<hash name="1.30 (from PUP)">C300EF6316D4CEBD360E325E30829DAA</hash> <!--  0x010000 version -->
+	<hash name="1.11 (from PUP)">90B33C50EA952A9491B7A3A5C2DC276F</hash> <!--  0x010000 version -->
+	<hash name="1.10 (from PUP)">8A8059B3609E5058280B2E371B46DC9A</hash> <!--  0x010000 version -->
+	<hash name="1.02 (from PUP)">BCDBB121C0C3F6320C85E37E82672BEF</hash> <!--  0x010000 version -->
+	<hash name="1.00/1.01 (from PUP)">F293627FA76F65D84B67C56D8894A7D3</hash> <!--  from DEX pup -->
+	<hash name="lower than 1.90 (from factory)">BFA8C1AFA964D5829E94A3BD427037AD</hash> <!--  0x010000 version | seen on a CECHA01 trvk_prg1 -->
+	<hash name="lower than 1.90 (from factory)">BCF342A43E74A8FB1484F71077E24AAE</hash> <!--  0x010000 version | seen on a CECHCxx trvk_prg0 -->
   </type>
 
   <type name="TRVK_PKG"> <!-- Crappy... doesn't match RL_FOR_PACKAGE.img -->
