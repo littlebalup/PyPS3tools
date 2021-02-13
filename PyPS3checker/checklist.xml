@@ -299,7 +299,7 @@
         <datatreshold key="*">1,2</datatreshold>
       </datalist>
       <datalist risklevel="DANGER" name="005.20   eEID Statistics1" offset="81390" size="1240">
-        <datatreshold key="*">1,1</datatreshold>
+        <datatreshold key="*">1,2</datatreshold>
       </datalist>
     </eEID_region>
     <cISD_region>
@@ -943,7 +943,7 @@
         <datatreshold key="*">1,2</datatreshold>
       </datalist>
       <datalist risklevel="DANGER" name="005.20   eEID Statistics1" offset="41390" size="1240">
-        <datatreshold key="*">1,1</datatreshold>
+        <datatreshold key="*">1,2</datatreshold>
       </datalist>
     </eEID_region>
     <cISD_region>
@@ -1339,7 +1339,7 @@
         <datatreshold key="*">1,2</datatreshold>
       </datalist>
       <datalist risklevel="DANGER" name="005.20   eEID Statistics1" offset="41390" size="1240">
-        <datatreshold key="*">1,1</datatreshold>
+        <datatreshold key="*">1,2</datatreshold>
       </datalist>
     </eEID_region>
     <cISD_region>
@@ -1767,7 +1767,7 @@
         <datatreshold key="*">1,2</datatreshold>
       </datalist>
       <datalist risklevel="DANGER" name="005.20   eEID Statistics1" offset="2FB90" size="1240">
-        <datatreshold key="*">1,1</datatreshold>
+        <datatreshold key="*">1,2</datatreshold>
       </datalist>
     </eEID_region>
     <cISD_region>
