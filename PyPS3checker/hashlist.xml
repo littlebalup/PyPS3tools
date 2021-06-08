@@ -2,6 +2,7 @@
 
 <root>
   <type name="TRVK_PRG"> <!-- Matches RL_FOR_PROGRAM.img -->
+	<hash name="4.88 (from PUP)">01C48606D51F8D57446095E0B5B40C97</hash>
 	<hash name="4.87 (from PUP)">42477002E8E276ABD52EFF9E9365C55C</hash>
 	<hash name="4.86 (from PUP)">38BD20933734A1C5C20AE4B4CD367CB2</hash>
 	<hash name="4.85 (from PUP)">FADA6C315224A66D52C46E5D34AF8867</hash>
@@ -179,6 +180,7 @@
 
   <type name="ROS"> <!-- Matches Raw COS -->
   <!-- PATCHES -->
+    <hash name="4.88 CEX Patched (Evilnat based)">EA9F81A031A7B6701560B3501712DF1A</hash>
     <hash name="4.87 CEX Patched (Evilnat based)">1EFB54B005B09A10E436F9C76E51D870</hash>
     <hash name="4.86 CEX Patched (Rebug based v2)">0669179877AE23F5C918E6E62E930BAC</hash>
     <hash name="4.86 CEX Patched (Rebug based v1)">96D30F4EDBA00DDA9FA87F8FC580AD8A</hash>
@@ -212,6 +214,7 @@
     <hash name="3.55 CEX Patched">F162E0D72EBA0F46B7FB36E6AAB63958</hash>
   <!-- OFW -->
    <!-- common CEX/DEX/SEX -->
+    <hash name="4.88 CEX/SEX OFW/HFW">36A0D80FB18E9D6FD7635217D59FA726</hash>
     <hash name="4.87 CEX/SEX OFW/HFW">8F4A63DC20F1EB54168478C814DF80C1</hash>
     <hash name="4.86 CEX/SEX OFW/HFW">78A3FBB16D79CC96BD38D62967A85567</hash>
     <hash name="4.85 CEX/SEX OFW/HFW">B833A708108360FC7913986E29C29B3E</hash>
@@ -370,6 +373,7 @@
   <!-- MISC -->
     <hash name="2.43 Leaked JIG">4C503EC4737A08F79FD8B4A4DFE0F31F</hash>
   <!-- CFW/MFW -->
+    <hash name="4.88 Littlebalup Dual Boot">2859CDE1EBD924A50E7D56A0284DDFF2</hash>
     <hash name="4.87 FERROX Cobra">5E109523BD55801FE52959317308B67A</hash>
     <hash name="4.87 Littlebalup Dual Boot">156E1FD120E2FDBA28A2F2A6D4EA8704</hash>
     <hash name="4.87.2 Evilnat Cobra noBD">BAAEFFD1B81782EFB8407D171ADF7290</hash>
