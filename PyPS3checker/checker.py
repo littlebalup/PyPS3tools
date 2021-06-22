@@ -322,8 +322,8 @@ if __name__ == "__main__":
 			if subnode.attrib.get("risklevel") is not None:
 				risklevel = subnode.attrib.get("risklevel").upper()
 
-		 	if subnode.tag == "binentry":
-		 		checkCount += 1
+			if subnode.tag == "binentry":
+				checkCount += 1
 				filedata = string2hex(getDatas(rawfiledata, int(subnode.attrib.get("offset"), 16), len(subnode.text)/2))
 				print "%s :"%subnode.attrib.get("name"),
 				if filedata.lower() == subnode.text.lower():
@@ -433,7 +433,7 @@ if __name__ == "__main__":
 						print "  MD5 =", hashdata.upper()
 						print "  Version =", hash.attrib.get("name")
 						break
-				if 	ChkResult == False:
+				if ChkResult == False:
 					if risklevel == "DANGER":
 						dangerCount += 1
 						dangerList.append(subnode.attrib.get("name"))
