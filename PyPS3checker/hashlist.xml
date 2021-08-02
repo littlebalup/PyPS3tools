@@ -129,6 +129,7 @@
 	<hash name="1.00/1.01 (from PUP)">F293627FA76F65D84B67C56D8894A7D3</hash> <!--  from DEX pup -->
 	<hash name="lower than 1.90 (from factory)">BFA8C1AFA964D5829E94A3BD427037AD</hash> <!--  0x010000 version | seen on a CECHA01 trvk_prg1 -->
 	<hash name="lower than 1.90 (from factory)">BCF342A43E74A8FB1484F71077E24AAE</hash> <!--  0x010000 version | seen on a CECHCxx trvk_prg0 -->
+	<hash name="lower than 1.90 (from factory)">A83E82081087D3690BB920763912A22B</hash> <!--  0x010000 version | seen on a CECHA01 trvk_prg0 -->
   </type>
 
   <type name="TRVK_PKG"> <!-- Crappy... doesn't match RL_FOR_PACKAGE.img -->
