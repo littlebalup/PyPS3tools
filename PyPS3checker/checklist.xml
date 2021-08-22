@@ -400,7 +400,10 @@
       <binentry risklevel="WARNING" name="008.01   trvk_prg0 SCE" offset="91830" ascii="true">53434500</binentry>
 	  <hash risklevel="WARNING" name="008.02   trvk_prg0 Hash" type="TRVK_PRG" offset="91830" sizeoffset="9182E" sizelength="2"></hash>
 	  <!-- <datafill risklevel="WARNING" name="008.02   trvk_prg0 0x00 filled area" regionstart="91830" regionsize="FE0" sizefrom="9182E">00</datafill> -->
-      <binentry risklevel="WARNING" name="008.03   trvk_prg1 SCE" offset="92820" ascii="true">53434500</binentry>
+      <multibinentry risklevel="WARNING" name="008.03   trvk_prg1 SCE" offset="92820" length="4" ascii="true">
+        <entry>53434500</entry>
+        <entry>FFFFFFFF</entry> <!-- blank -->
+      </multibinentry>
 	  <hash risklevel="WARNING" name="008.04   trvk_prg1 Hash" type="TRVK_PRG" offset="92820" sizeoffset="9281E" sizelength="2"></hash>
 	  <!-- <datafill risklevel="WARNING" name="008.04   trvk_prg1 0xFF filled area" regionstart="92820" regionsize="FE0" sizefrom="9281E">FF</datafill> -->
       <multibinentry risklevel="DANGER" name="008.00   trvk_pkg Region Header" offset="93800" length="20">
@@ -410,7 +413,10 @@
       <binentry risklevel="WARNING" name="008.05   trvk_pkg0 SCE" offset="93830" ascii="true">53434500</binentry>
  <!-- <hash risklevel="WARNING" name="008.06   trvk_pkg0 Hash" type="TRVK_PKG" offset="93830" sizeoffset="9382E" sizelength="2"></hash> -->
 	  <!-- <datafill risklevel="WARNING" name="008.05   trvk_pkg0 0x00 filled area" regionstart="93830" regionsize="FE0" sizefrom="9382E">00</datafill> -->
-      <binentry risklevel="WARNING" name="008.07   trvk_pkg1 SCE" offset="94820" ascii="true">53434500</binentry>
+      <multibinentry risklevel="WARNING" name="008.07   trvk_pkg1 SCE" offset="94820" length="4" ascii="true">
+        <entry>53434500</entry>
+        <entry>FFFFFFFF</entry> <!-- blank -->
+      </multibinentry>
  <!-- <hash risklevel="WARNING" name="008.08   trvk_pkg1 Hash" type="TRVK_PKG" offset="94820" sizeoffset="9481E" sizelength="2"></hash> -->
 	  <!-- <datafill risklevel="WARNING" name="008.07   trvk_pkg1 0xFF filled area" regionstart="94820" regionsize="FE0" sizefrom="9481E">FF</datafill> -->
 	</Revokation_region>
@@ -741,6 +747,22 @@
         <skuentry type="bootldr1">2EF4</skuentry>
         <skuentry type="bootldrsize">2EF80</skuentry>
       </skulist>
+      <skulist id="19" name="CECHAxx (COK-001)" minver="1.00"> <!-- Refurbished -->
+        <skuentry type="idps">0001</skuentry>
+        <skuentry type="metldr0">E920</skuentry>
+        <skuentry type="metldr1">0E8E</skuentry>
+        <skuentry type="bootldr0">2F4B</skuentry>
+        <skuentry type="bootldr1">2F4B</skuentry>
+        <skuentry type="bootldrsize">2F4F0</skuentry>
+      </skulist>
+      <skulist id="20" name="CECHAxx (COK-001)" minver="1.00"> <!-- Refurbished -->
+        <skuentry type="idps">0001</skuentry>
+        <skuentry type="metldr0">E7B0</skuentry>
+        <skuentry type="metldr1">0E77</skuentry>
+        <skuentry type="bootldr0">2E8C</skuentry>
+        <skuentry type="bootldr1">2E8C</skuentry>
+        <skuentry type="bootldrsize">2E900</skuentry>
+      </skulist>
     </skumodels>
   </NAND>
   <NAND_PS3Xploit>
@@ -1044,7 +1066,10 @@
       <binentry risklevel="WARNING" name="008.01   trvk_prg0 SCE" offset="51830" ascii="true">53434500</binentry>
 	  <hash risklevel="WARNING" name="008.02   trvk_prg0 Hash" type="TRVK_PRG" offset="51830" sizeoffset="5182E" sizelength="2"></hash>
 	  <!-- <datafill risklevel="WARNING" name="008.02   trvk_prg0 0x00 filled area" regionstart="91830" regionsize="FE0" sizefrom="9182E">00</datafill> -->
-      <binentry risklevel="WARNING" name="008.03   trvk_prg1 SCE" offset="52820" ascii="true">53434500</binentry>
+      <multibinentry risklevel="WARNING" name="008.03   trvk_prg1 SCE" offset="52820" length="4" ascii="true">
+        <entry>53434500</entry>
+        <entry>FFFFFFFF</entry> <!-- blank -->
+      </multibinentry>
 	  <hash risklevel="WARNING" name="008.04   trvk_prg1 Hash" type="TRVK_PRG" offset="52820" sizeoffset="5281E" sizelength="2"></hash>
 	  <!-- <datafill risklevel="WARNING" name="008.04   trvk_prg1 0xFF filled area" regionstart="92820" regionsize="FE0" sizefrom="9281E">FF</datafill> -->
       <multibinentry risklevel="DANGER" name="008.00   trvk_pkg Region Header" offset="53800" length="20">
@@ -1054,7 +1079,10 @@
       <binentry risklevel="WARNING" name="008.05   trvk_pkg0 SCE" offset="53830" ascii="true">53434500</binentry>
  <!-- <hash risklevel="WARNING" name="008.06   trvk_pkg0 Hash" type="TRVK_PKG" offset="93830" sizeoffset="9382E" sizelength="2"></hash> -->
 	  <!-- <datafill risklevel="WARNING" name="008.05   trvk_pkg0 0x00 filled area" regionstart="93830" regionsize="FE0" sizefrom="9382E">00</datafill> -->
-      <binentry risklevel="WARNING" name="008.07   trvk_pkg1 SCE" offset="54820" ascii="true">53434500</binentry>
+      <multibinentry risklevel="WARNING" name="008.07   trvk_pkg1 SCE" offset="54820" length="4" ascii="true">
+        <entry>53434500</entry>
+        <entry>FFFFFFFF</entry> <!-- blank -->
+      </multibinentry>
  <!-- <hash risklevel="WARNING" name="008.08   trvk_pkg1 Hash" type="TRVK_PKG" offset="94820" sizeoffset="9481E" sizelength="2"></hash> -->
 	  <!-- <datafill risklevel="WARNING" name="008.07   trvk_pkg1 0xFF filled area" regionstart="94820" regionsize="FE0" sizefrom="9481E">FF</datafill> -->
 	</Revokation_region>
@@ -1214,6 +1242,16 @@
         <skuentry type="idps">0003</skuentry>
         <skuentry type="metldr0">E8E0</skuentry>
         <skuentry type="metldr1">0E8A</skuentry>
+      </skulist>
+      <skulist id="19" name="CECHAxx (COK-001)" minver="1.00"> <!-- Refurbished -->
+        <skuentry type="idps">0001</skuentry>
+        <skuentry type="metldr0">E920</skuentry>
+        <skuentry type="metldr1">0E8E</skuentry>
+      </skulist>
+      <skulist id="20" name="CECHAxx (COK-001)" minver="1.00"> <!-- Refurbished -->
+        <skuentry type="idps">0001</skuentry>
+        <skuentry type="metldr0">E7B0</skuentry>
+        <skuentry type="metldr1">0E77</skuentry>
       </skulist>
     </skumodels>
   </NAND_PS3Xploit>
@@ -1489,35 +1527,35 @@
     <skumodels risklevel="WARNING">
 	  <!-- 000E -->
       <skulist id="01" name="CECH-40xxA (MSX-001 or MPX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.15">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="4.15">
         <skuentry type="idps">000E</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
         <skuentry type="metldrkey">7645F763C4C419B9BD87BD59</skuentry>
       </skulist>
       <skulist id="02" name="CECH-40xxA (MSX-001 or MPX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.20">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="4.20">
         <skuentry type="idps">000E</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
         <skuentry type="metldrkey">A2834B1DFD969CC1769517C6</skuentry>
       </skulist>
       <skulist id="03" name="CECH-40xxA (MSX-001 or MPX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.22">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="4.22">
         <skuentry type="idps">000E</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
         <skuentry type="metldrkey">A613A21F06BF3B13BD07E0C2</skuentry>
       </skulist>
       <skulist id="04" name="CECH-40xxA (MSX-001 or MPX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.25">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="4.25">
         <skuentry type="idps">000E</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
         <skuentry type="metldrkey">ED4CF714FA8FDF7EF9239AD2</skuentry>
       </skulist>
       <skulist id="05" name="CECH-40xxA (MSX-001 or MPX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.31">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="4.31">
         <skuentry type="idps">000E</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
@@ -1526,35 +1564,35 @@
 	  <!-- 0010 ?? -->
 	  <!-- 0012 -->
       <skulist id="06" name="CECH-42xxA (PPX-001 or PQX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.40">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="4.40">
         <skuentry type="idps">0012</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
         <skuentry type="metldrkey">B233329B8D28B967C65E2097</skuentry>
       </skulist>
       <skulist id="07" name="CECH-42xxA (PPX-001 or PQX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.46">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="4.46">
         <skuentry type="idps">0012</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
         <skuentry type="metldrkey">1F954203BE63FFC47336E6BE</skuentry>
       </skulist>
       <skulist id="08" name="CECH-42xxA (PPX-001 or PQX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.50">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="4.50">
         <skuentry type="idps">0012</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
         <skuentry type="metldrkey">5D9D01C2CFDAA4363C25668A</skuentry>
       </skulist>
       <skulist id="09" name="CECH-42xxA (PPX-001 or PQX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.53">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="4.53">
         <skuentry type="idps">0012</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
         <skuentry type="metldrkey">18DD255BA4B844C383E6D3A6</skuentry>
       </skulist>
       <skulist id="10" name="CECH-42xxA (PPX-001 or PQX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.55">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="4.55">
         <skuentry type="idps">0012</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
@@ -1562,7 +1600,7 @@
       </skulist>
 	  <!-- 0014 -->
       <skulist id="11" name="CECH-43xxA (RTX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.60">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="4.60">
         <skuentry type="idps">0014</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
@@ -2229,7 +2267,7 @@
       <skulist
 	    id="16"
         name="CECH-25xxx (JSD-001 or JTP-001)"
-        warn="true" warnmsg="WARNING: NOR dump must be patched with 4.xx Patchset to install CFW on this machine!"
+        warn="true" warnmsg="WARNING: Not downgradable to 3.55. NOR must only be patched 4.xx noFSM Patches to install CFW on this machine!"
         minver="3.56">
         <skuentry type="idps">000B</skuentry>
         <skuentry type="metldr0">E960</skuentry>
@@ -2239,9 +2277,9 @@
         <skuentry type="bootldr1">2F5B</skuentry>
         <skuentry type="bootldrsize">2F5F0</skuentry>
       </skulist>
-    <!-- NON-Downgradeable dumps -->
+    <!-- NON-downgradable dumps -->
       <skulist id="17" name="CECH-25xxx (JSD-001 or JTP-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="3.60">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="3.60">
         <skuentry type="idps">000B</skuentry>
         <skuentry type="metldr0">F920</skuentry>
         <skuentry type="metldr1">0F8E</skuentry>
@@ -2252,7 +2290,7 @@
       </skulist>
 	  <!-- 000C -->
       <skulist id="18" name="CECH-30xxx (KTE-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="3.65">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="3.65">
         <skuentry type="idps">000C</skuentry>
         <skuentry type="metldr0">F920</skuentry>
         <skuentry type="metldr1">0F8E</skuentry>
@@ -2262,7 +2300,7 @@
         <skuentry type="bootldrsize">2FFF0</skuentry>
       </skulist>
       <skulist id="19" name="CECH-30xxx (KTE-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="3.66">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="3.66">
         <skuentry type="idps">000C</skuentry>
         <skuentry type="metldr0">F920</skuentry>
         <skuentry type="metldr1">0F8E</skuentry>
@@ -2272,7 +2310,7 @@
         <skuentry type="bootldrsize">2FFF0</skuentry>
       </skulist>
       <skulist id="20" name="CECH-30xxx (KTE-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="3.72">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="3.72">
         <skuentry type="idps">000C</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
@@ -2282,7 +2320,7 @@
         <skuentry type="bootldrsize">300F0</skuentry>
       </skulist>
       <skulist id="21" name="CECH-30xxx (KTE-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.10">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="4.10">
         <skuentry type="idps">000C</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
@@ -2293,7 +2331,7 @@
       </skulist>
 	  <!-- 000D -->
       <skulist id="22" name="CECH-40xxB/C (MSX-001 or MPX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.15">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="4.15">
         <skuentry type="idps">000D</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
@@ -2303,7 +2341,7 @@
         <skuentry type="bootldrsize">30070</skuentry>
       </skulist>
       <skulist id="23" name="CECH-40xxB/C (MSX-001 or MPX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.20">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="4.20">
         <skuentry type="idps">000D</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
@@ -2313,7 +2351,7 @@
         <skuentry type="bootldrsize">301F0</skuentry>
       </skulist>
       <skulist id="24" name="CECH-40xxB/C (MSX-001 or MPX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.22">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="4.22">
         <skuentry type="idps">000D</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
@@ -2323,7 +2361,7 @@
         <skuentry type="bootldrsize">301F0</skuentry>
       </skulist>
       <skulist id="25" name="CECH-40xxB/C (MSX-001 or MPX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.25">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="4.25">
         <skuentry type="idps">000D</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
@@ -2333,7 +2371,7 @@
         <skuentry type="bootldrsize">301F0</skuentry>
       </skulist>
       <skulist id="26" name="CECH-40xxB/C (MSX-001 or MPX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.31">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="4.31">
         <skuentry type="idps">000D</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
@@ -2344,7 +2382,7 @@
       </skulist>
 	  <!-- 000F -->
       <skulist id="27" name="CECH-40xxB/C (NPX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.31">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="4.31">
         <skuentry type="idps">000F</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
@@ -2354,7 +2392,7 @@
         <skuentry type="bootldrsize">301F0</skuentry>
       </skulist>
       <skulist id="28" name="CECH-40xxB/C (NPX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.40">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="4.40">
         <skuentry type="idps">000F</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
@@ -2365,7 +2403,7 @@
       </skulist>
 	  <!-- 0011 -->
       <skulist id="29" name="CECH-42xxB/C (PPX-001 or PQX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.40">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="4.40">
         <skuentry type="idps">0011</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
@@ -2375,7 +2413,7 @@
         <skuentry type="bootldrsize">301F0</skuentry>
       </skulist>
       <skulist id="30" name="CECH-42xxB/C (PPX-001 or PQX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.46">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="4.46">
         <skuentry type="idps">0011</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
@@ -2385,7 +2423,7 @@
         <skuentry type="bootldrsize">301F0</skuentry>
       </skulist>
       <skulist id="31" name="CECH-42xxB/C (PPX-001 or PQX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.50">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="4.50">
         <skuentry type="idps">0011</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
@@ -2395,7 +2433,7 @@
         <skuentry type="bootldrsize">301F0</skuentry>
       </skulist>
       <skulist id="32" name="CECH-42xxB/C (PPX-001 or PQX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.53">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="4.53">
         <skuentry type="idps">0011</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
@@ -2405,7 +2443,7 @@
         <skuentry type="bootldrsize">301F0</skuentry>
       </skulist>
       <skulist id="33" name="CECH-42xxB/C (PPX-001 or PQX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.55">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="4.55">
         <skuentry type="idps">0011</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>
@@ -2416,7 +2454,7 @@
       </skulist>
 	  <!-- 0013 -->
       <skulist id="32" name="CECH-43xxB/C (RTX-001)" warn="true"
-               warnmsg="WARNING: The machine this dump belongs to is currently not downgradeable!" minver="4.60">
+               warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="4.60">
         <skuentry type="idps">0013</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
         <skuentry type="metldr1">0F97</skuentry>

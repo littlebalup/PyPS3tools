@@ -140,7 +140,7 @@ def printrisklevel(risklevel):
 
 if __name__ == "__main__":
 
-	release = "v0.10.x"
+	release = "v0.11.x"
 
 	print
 	print
@@ -179,6 +179,8 @@ if __name__ == "__main__":
 	checkCount = 0
 	dangerCount = 0
 	warningCount = 0
+	
+	skipHash = False
 
 	# parse file
 	print "Loading file \"%s\" to memory..."%inputFile,
@@ -353,7 +355,13 @@ if __name__ == "__main__":
 				print "%s :"%subnode.attrib.get("name"),
 				for entry in chktree.findall(".//%s/%s/%s[@name='%s']/"%(flashType, node.tag, subnode.tag, subnode.attrib.get("name"))):
 					if filedata.lower() == entry.text.lower():
-						printok()
+						if subnode.attrib.get("name").endswith("trvk_prg1 SCE") and entry.text == "FFFFFFFF" :
+							print "Blank"
+							skipHash = True
+						elif subnode.attrib.get("name").endswith("trvk_pkg1 SCE") and entry.text == "FFFFFFFF" :
+							print "Blank"
+						else:
+							printok()
 						ChkResult = True
 						break
 				if ChkResult == False:
@@ -420,6 +428,10 @@ if __name__ == "__main__":
 				checkCount += 1
 				ChkResult = False
 				print "%s :"%subnode.attrib.get("name"),
+				if subnode.attrib.get("name").endswith("trvk_prg1 Hash") and skipHash:
+					checkCount -= 1
+					print "Skipped"
+					continue
 				if subnode.attrib.get("sizeoffset") is not None:
 					size = int(string2hex(getDatas(rawfiledata, int(subnode.attrib.get("sizeoffset"), 16), int(subnode.attrib.get("sizelength"), 16))), 16)
 				else:
@@ -597,7 +609,9 @@ if __name__ == "__main__":
 	print "eCID : %s"%eCID
 	print "board_id (part of console S/N) : %s"%board_id
 	print "kiban_id (board barcode) : %s"%kiban_id
-
+	
+	if CID.startswith("0FFF"): print colored("cyan", "This is a refurbished console!")
+	
 	print
 	print
 	print
