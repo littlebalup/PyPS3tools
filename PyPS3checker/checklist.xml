@@ -154,6 +154,7 @@
       <binentry risklevel="DANGER" name="004.04   metldr Name" offset="40820" ascii="true">6D65746C64720000000000000000000000000000000000000000000000000000</binentry> <!-- METLDR -->
       <multibinentry risklevel="DANGER" name="004.05   metldr RevKey" offset="40840" length="10">
         <entry>00000EDD2F6C622ECA7FAE0D2F76B5D4</entry>
+        <entry>00000ED6B516452512ADC0CA4E3176B4</entry>
         <entry>00000ED648F43FDE3EEE37119C673663</entry>
         <entry>00000EBB94C6A30BBF2F50752E8DC052</entry>
         <entry>00000EDA81CF2EF41A336897E0493CB8</entry>
@@ -820,6 +821,7 @@
       <binentry risklevel="DANGER" name="004.04   metldr Name" offset="820" ascii="true">6D65746C64720000000000000000000000000000000000000000000000000000</binentry> <!-- METLDR -->
       <multibinentry risklevel="DANGER" name="004.05   metldr RevKey" offset="840" length="10">
         <entry>00000EDD2F6C622ECA7FAE0D2F76B5D4</entry>
+        <entry>00000ED6B516452512ADC0CA4E3176B4</entry>
         <entry>00000ED648F43FDE3EEE37119C673663</entry>
         <entry>00000EBB94C6A30BBF2F50752E8DC052</entry>
         <entry>00000EDA81CF2EF41A336897E0493CB8</entry>
