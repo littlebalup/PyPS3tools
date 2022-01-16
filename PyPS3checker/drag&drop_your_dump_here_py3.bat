@@ -5,7 +5,7 @@ if [%1]==[] goto usage
 
 cd /D "%~dp0"
 
-"python" checker.py %1
+"python" checker_py3.py %1
 echo.
 echo.
 Choice /M "This window will be closed. Do you want to open log file?"
