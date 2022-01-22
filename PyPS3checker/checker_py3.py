@@ -304,13 +304,13 @@ if __name__ == "__main__":
 	for node in chktree.findall('.//%s/sdk' % flashType):
 		risklevel = node.attrib.get("risklevel").upper()
 	for sdk in chktree.findall('.//%s/sdk/sdk_version' % flashType):
-		index = rawfiledata.find(hex2string("73646B5F76657273696F6E").encode('utf-8'), int(sdk.attrib.get("offset"), 16), int(sdk.attrib.get("offset"), 16) + 0x4f0)
+		index = rawfiledata.find(hex2string("73646B5F76657273696F6E").encode('latin'), int(sdk.attrib.get("offset"), 16), int(sdk.attrib.get("offset"), 16) + 0x4f0)
 		addressPos = index - 0xc
 		address = int(sdk.attrib.get("offset"), 16) + int(string2hex(getDatas(rawfiledata, addressPos, 0x4)), 16)
 		ver = getDatas(rawfiledata, address, 0x8)
 		ver = ver[:-1]                       #remove useless last 0x0A char   
 		r = re.compile('\d{3}\.\d{3}')         #def format 
-		ver = ver.decode('utf-8')
+		ver = ver.decode('latin')
 		if r.match(ver) is not None:
 			print("  %s : %s" % (sdk.attrib.get("name"), ver))
 		else:
@@ -490,7 +490,7 @@ if __name__ == "__main__":
 								tag = string2hex([k] if isinstance(k, int) else k).upper()
 								r[tag] = c
 					else:
-						_filedata = filedata.decode('utf-8')
+						_filedata = filedata.decode('latin')
 						c = float(_filedata.count(chr(int(datatreshold.attrib.get("key"), 16)))) / size * 100
 						if c > float(datatreshold.text.replace(',', '.')):
 							tag = datatreshold.attrib.get("key").upper()
@@ -604,7 +604,8 @@ if __name__ == "__main__":
 		eCID = getDatas(rawfiledata, 0x3F070, 0x20)
 		board_id = getDatas(rawfiledata, 0x3F090, 0x8)
 		kiban_id = getDatas(rawfiledata, 0x3F098, 0xC)
-		print("HDD :", " ".join(HDD.split()))
+		hdd_split = [i.decode('latin') for i in HDD.split()]
+		print("HDD :", *hdd_split)
 	if flashType == "NAND":
 		MAC = string2hex(getDatas(rawfiledata, 0x90840, 0x6)).upper()
 		CID = string2hex(getDatas(rawfiledata, 0x9086A, 0x6)).upper()
@@ -619,9 +620,9 @@ if __name__ == "__main__":
 		kiban_id = getDatas(rawfiledata, 0x90898-0x40000, 0xC)
 	print("MAC address :", ":".join(a+b for a,b in zip(MAC[::2], MAC[1::2])))
 	print("CID : 0x%s" % CID)
-	print("eCID : %s" % eCID.decode('utf-8'))
-	print("board_id (part of console S/N) : %s" % board_id.decode('utf-8'))
-	print("kiban_id (board barcode) : %s" % kiban_id.decode('utf-8'))
+	print("eCID : %s" % eCID.decode('latin'))
+	print("board_id (part of console S/N) : %s" % board_id.decode('latin'))
+	print("kiban_id (board barcode) : %s" % kiban_id.decode('latin'))
 	
 	if CID.startswith("0FFF"): printcolored("cyan", "This is a refurbished console!")
 	
