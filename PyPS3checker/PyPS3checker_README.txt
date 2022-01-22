@@ -11,6 +11,12 @@ responsibility for the consequences of your use of it.
 
 System requirements:
 -------------------
+Using checker.py:
+ - Any system able to run Python 2.7.x (Windows, Linux, MAC... )
+ - Python 2.7.2 or any upper Python 2 version : https://www.python.org
+ - (optional to display colored text) Colorama python module
+
+Using checker_py3.py:
  - Any system able to run Python 3.x (Windows, Linux, MAC... )
  - Python 3.5 or any upper Python 3 version : https://www.python.org
  - (optional to display colored text) Colorama python module
