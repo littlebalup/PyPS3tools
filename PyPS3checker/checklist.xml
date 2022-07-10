@@ -1601,7 +1601,7 @@
         <skuentry type="metldrkey">3DEBAB70C657BB9A04A40837</skuentry>
       </skulist>
 	  <!-- 0014 -->
-      <skulist id="11" name="CECH-43xxA (RTX-001)" warn="true"
+      <skulist id="11" name="CECH-43xxA (RTX-001 or REX-001)" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="4.60">
         <skuentry type="idps">0014</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
@@ -2455,7 +2455,7 @@
         <skuentry type="bootldrsize">301F0</skuentry>
       </skulist>
 	  <!-- 0013 -->
-      <skulist id="32" name="CECH-43xxB/C (RTX-001)" warn="true"
+      <skulist id="34" name="CECH-43xxB/C (RTX-001 or REX-001)" warn="true"
                warnmsg="WARNING: The machine this dump belongs to is currently not downgradable!" minver="4.60">
         <skuentry type="idps">0013</skuentry>
         <skuentry type="metldr0">F9B0</skuentry>
