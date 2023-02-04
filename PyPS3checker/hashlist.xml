@@ -378,6 +378,18 @@
   <!-- MISC -->
     <hash name="2.43 Leaked JIG">4C503EC4737A08F79FD8B4A4DFE0F31F</hash>
   <!-- CFW/MFW -->
+    <hash name="4.89.3 Evilnat Cobra PEX">3E0D0696771806CE39FE6BEC4C4B986C</hash>
+    <hash name="4.89.3 Evilnat Cobra PEX noBD">B72CCCFD47C30EA71400D7DF04DDC237</hash>
+    <hash name="4.89.3 Evilnat Cobra PEX OC">1814ADE1CB3069DF848C937F9058C326</hash>
+    <hash name="4.89.3 Evilnat Cobra D-PEX">7BE971EA17F71FE7B559BE49F7F1A562</hash>
+    <hash name="4.89.3 Evilnat Cobra D-PEX noBD">9E03DA37431BABDB6A17B3FAA13F8C7A</hash>
+    <hash name="4.89.3 Evilnat Cobra D-PEX OC">638A95ED074ECF304BDB6B4A8BA0DCFB</hash>
+    <hash name="4.89.3 Evilnat Cobra CEX">29CC176BB8395B18561CDE6B5551B3E2</hash>
+    <hash name="4.89.3 Evilnat Cobra CEX noBD">E7D8D6BDF0546D118A8B1902C4825FCD</hash>
+    <hash name="4.89.3 Evilnat Cobra CEX OC">4A274EB26999D3AD7D7860799F7D1ECB</hash>
+    <hash name="4.89.3 Evilnat Cobra DEX">23FC4701F3CA616E8D6FE82C3093C4C7</hash>
+    <hash name="4.89.3 Evilnat Cobra DEX noBD">416BC514D11D6AE1FB6298E6B3CC57DE</hash>
+    <hash name="4.89.3 Evilnat Cobra DEX OC">FF73EA186D851B39E055078115C56144</hash>
     <hash name="4.89 Evilnat Cobra noBD">E6211BFC83B75E58BD32520664C53987</hash>
     <hash name="4.89 Evilnat Cobra">50F75486F8C99B66ED4A3B9B5F3FF946</hash>
     <hash name="4.89 Littlebalup Dual Boot">9203539C56E49EB5D987F73C33658255</hash>
