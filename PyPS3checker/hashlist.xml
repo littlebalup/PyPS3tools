@@ -184,6 +184,7 @@
 
   <type name="ROS"> <!-- Matches Raw COS -->
   <!-- PATCHES -->
+    <hash name="4.90 CEX Patched (Evilnat based)">8CF9701297129151E22EDA39C1D2670F</hash>
     <hash name="4.89 CEX Patched (Evilnat based)">B9FEB4432ADB086D890472AB29B663A9</hash>
     <hash name="4.88 CEX Patched (Evilnat based)">EA9F81A031A7B6701560B3501712DF1A</hash>
     <hash name="4.87 CEX Patched (Evilnat based)">1EFB54B005B09A10E436F9C76E51D870</hash>
