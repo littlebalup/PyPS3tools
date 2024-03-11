@@ -2,8 +2,8 @@
 
 <patches>
 	<nofsm>
-		<name>4.90 CEX Patched (Evilnat based)</name>
-		<hash>8cf9701297129151e22eda39c1d2670f</hash>  <!-- always in lower case!! -->
+		<name>4.91 CEX Patched (Evilnat based)</name>
+		<hash>3c19a6855490b5ed471764962e9fcd83</hash>  <!-- always in lower case!! -->
 	</nofsm>
 	<fsm>
 		<hash>f162e0d72eba0f46b7fb36e6aab63958</hash>

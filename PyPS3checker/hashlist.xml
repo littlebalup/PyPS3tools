@@ -2,6 +2,7 @@
 
 <root>
   <type name="TRVK_PRG"> <!-- Matches RL_FOR_PROGRAM.img -->
+    <hash name="4.91 (from PUP)">D71D052CC0F640869F91D6D859E45CA0</hash>
     <hash name="4.90 (from PUP)">A25E30004F3AC8F531E962F8F7D855E9</hash>
 	<hash name="4.89 (from PUP)">16A7AED1625F92298C81557E50E5D1F9</hash>
 	<hash name="4.88 (from PUP)">01C48606D51F8D57446095E0B5B40C97</hash>
@@ -184,6 +185,7 @@
 
   <type name="ROS"> <!-- Matches Raw COS -->
   <!-- PATCHES -->
+    <hash name="4.91 CEX Patched (Evilnat based)">3C19A6855490B5ED471764962E9FCD83</hash>
     <hash name="4.90 CEX Patched (Evilnat based)">8CF9701297129151E22EDA39C1D2670F</hash>
     <hash name="4.89 CEX Patched (Evilnat based)">B9FEB4432ADB086D890472AB29B663A9</hash>
     <hash name="4.88 CEX Patched (Evilnat based)">EA9F81A031A7B6701560B3501712DF1A</hash>
@@ -220,6 +222,7 @@
     <hash name="3.55 CEX Patched">F162E0D72EBA0F46B7FB36E6AAB63958</hash>
   <!-- OFW -->
    <!-- common CEX/DEX/SEX -->
+    <hash name="4.91 CEX/SEX OFW/HFW">AFA10D61A1156CF56A994CA85E3B4777</hash>
     <hash name="4.90 CEX/SEX OFW/HFW">AB9C9700445CCD1AB9215AF8C28EE0F9</hash>
     <hash name="4.89 CEX/SEX OFW/HFW">2C6791BAC0978B921CACAEBB1E827743</hash>
     <hash name="4.88 CEX/SEX OFW/HFW">36A0D80FB18E9D6FD7635217D59FA726</hash>
@@ -381,6 +384,11 @@
   <!-- MISC -->
     <hash name="2.43 Leaked JIG">4C503EC4737A08F79FD8B4A4DFE0F31F</hash>
   <!-- CFW/MFW -->
+    <hash name="4.91 Evilnat Cobra CEX">0A4632FF4F8127EBD39C7BD92C6E23B1</hash>
+    <hash name="4.91 Evilnat Cobra D-PEX">5CF158034A0AC4EB00730F674C914820</hash>
+    <hash name="4.91 Evilnat Cobra DEX">A37F5F16CA08417F385DDF8E4868F75F</hash>
+    <hash name="4.91 Evilnat Cobra PEX">C2362B79B0128FD4BF3DD74FA167A5CF</hash>
+    <hash name="4.91 Littlebalup Dual Boot">38F5ADE1EC66092089FE061D2A6C4778</hash>
     <hash name="4.90 Evilnat Cobra CEX noBD">3BAA413CE37340E705B42BA23F9754E6</hash>
     <hash name="4.90 Evilnat Cobra CEX OC">5F150293339431AFFCB3473460E24DAA</hash>
     <hash name="4.90 Evilnat Cobra CEX">9FB65467869A27D9BC78C5400BF8A7E4</hash>
