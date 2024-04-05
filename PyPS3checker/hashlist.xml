@@ -101,6 +101,7 @@
 	<hash name="2.40 (from PUP)">0DC1B3A20642B9987CDF9260328965D6</hash>
 	<hash name="2.36 (from PUP)">EC6A460A9265B6A418C5FE287859F43A</hash>
 	<hash name="2.35 (from PUP)">02AEEBC058B53653B0D9F96E61BB8F70</hash>
+	<hash name="2.35 (from factory)">56D024373C0C0D4FB924B2DC982FD2AD</hash>  <!-- from a DIA-002 dump -->
 	<hash name="2.30 (from PUP)">890B6D745A1080FB87DB01101735E577</hash>
 	<hash name="2.30 (from factory)">TBD</hash>
 	<hash name="2.20 (from PUP)">125594F5F519E9C96040D73D2A48F1E1</hash>
