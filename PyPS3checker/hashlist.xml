@@ -385,6 +385,14 @@
   <!-- MISC -->
     <hash name="2.43 Leaked JIG">4C503EC4737A08F79FD8B4A4DFE0F31F</hash>
   <!-- CFW/MFW -->
+    <hash name="4.91.2 Evilnat Cobra CEX (BETA 8)">AD5355C05D90C1F086B7967632561AB6</hash>
+    <hash name="4.91.2 Evilnat Cobra D-PEX (BETA 8)">7E44D35FB93BC81C7A89F36A97F0E083</hash>
+    <hash name="4.91.2 Evilnat Cobra DEX (BETA 8)">593EFB7E157854E2F11E7765C300C84B</hash>
+    <hash name="4.91.2 Evilnat Cobra PEX (BETA 8)">8C7195470A26EB3FDE9752BD10F44D80</hash>
+    <hash name="4.91.2 Evilnat Cobra CEX (BETA 7)">03305819ACEB48898DA212594C9225DE</hash>
+    <hash name="4.91.2 Evilnat Cobra D-PEX (BETA 7)">B9990409BD1A3F1EE687D86FA013AB06</hash>
+    <hash name="4.91.2 Evilnat Cobra DEX (BETA 7)">B1B441787F3056D16DD964F127496BA3</hash>
+    <hash name="4.91.2 Evilnat Cobra PEX (BETA 7)">C3CB6949529D548322A3A3E7FE22B068</hash>
     <hash name="4.91.2 Evilnat Cobra CEX (BETA 6)">6DDD88246A26436E8E11FC8EA64F5333</hash>
     <hash name="4.91.2 Evilnat Cobra CEX noBD (BETA 6)">9829D1F97F4B5326F402F81B8A227772</hash>
     <hash name="4.91.2 Evilnat Cobra CEX OC (BETA 6)">8BA23B5F070ECA50DD9BEFCBBBF44F44</hash>
