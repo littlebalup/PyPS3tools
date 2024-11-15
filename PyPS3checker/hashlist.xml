@@ -385,10 +385,18 @@
   <!-- MISC -->
     <hash name="2.43 Leaked JIG">4C503EC4737A08F79FD8B4A4DFE0F31F</hash>
   <!-- CFW/MFW -->
-    <hash name="4.91.2 Evilnat Cobra CEX (BETA 8)">AD5355C05D90C1F086B7967632561AB6</hash>
-    <hash name="4.91.2 Evilnat Cobra D-PEX (BETA 8)">7E44D35FB93BC81C7A89F36A97F0E083</hash>
-    <hash name="4.91.2 Evilnat Cobra DEX (BETA 8)">593EFB7E157854E2F11E7765C300C84B</hash>
-    <hash name="4.91.2 Evilnat Cobra PEX (BETA 8)">8C7195470A26EB3FDE9752BD10F44D80</hash>
+    <hash name="4.91.2 Evilnat Cobra PEX noBD (BETA 13)">7628E897F167FD4353AA8DFC7C517A36</hash>
+    <hash name="4.91.2 Evilnat Cobra PEX OC (BETA 13)">B6F0520D68D46E5D82E778FD6850644A</hash>
+    <hash name="4.91.2 Evilnat Cobra DEX noBD (BETA 13)">0D8B35C8AE097A5DFA5E2EF46FE4C12C</hash>
+    <hash name="4.91.2 Evilnat Cobra DEX OC (BETA 13)">7E5244644BDD2FBC731F79D369B4A1EA</hash>
+    <hash name="4.91.2 Evilnat Cobra D-PEX noBD (BETA 13)">E0A2845B53FDB1B9CDE41E89925B8C08</hash>
+    <hash name="4.91.2 Evilnat Cobra D-PEX OC (BETA 13)">3BDD0EB23E1894510BE5C95CFAEE4F4C</hash>
+    <hash name="4.91.2 Evilnat Cobra CEX noBD (BETA 13)">03DD7410B0AFC5870357EC120A0F70BB</hash>
+    <hash name="4.91.2 Evilnat Cobra CEX OC (BETA 13)">CF8C86EFCDFCC6D430459285A6D0048E</hash>
+    <hash name="4.91.2 Evilnat Cobra CEX (BETA 8, 9 or 13)">AD5355C05D90C1F086B7967632561AB6</hash>
+    <hash name="4.91.2 Evilnat Cobra D-PEX (BETA 8, 9, 10, 12 or 13)">7E44D35FB93BC81C7A89F36A97F0E083</hash>
+    <hash name="4.91.2 Evilnat Cobra DEX (BETA 8, 9 or 13)">593EFB7E157854E2F11E7765C300C84B</hash>
+    <hash name="4.91.2 Evilnat Cobra PEX (BETA 8, 9, 10, 12 or 13)">8C7195470A26EB3FDE9752BD10F44D80</hash>
     <hash name="4.91.2 Evilnat Cobra CEX (BETA 7)">03305819ACEB48898DA212594C9225DE</hash>
     <hash name="4.91.2 Evilnat Cobra D-PEX (BETA 7)">B9990409BD1A3F1EE687D86FA013AB06</hash>
     <hash name="4.91.2 Evilnat Cobra DEX (BETA 7)">B1B441787F3056D16DD964F127496BA3</hash>
@@ -404,14 +412,14 @@
     <hash name="4.91.2 Evilnat Cobra PEX noBD (BETA 6)">516F37E9E6488FCCE96AADE1A97857C1</hash>
     <hash name="4.91.2 Evilnat Cobra PEX OC (BETA 6)">309B9654B04916ED25E5F34AF05B0F65</hash>
     <hash name="4.91.2 Evilnat Cobra CEX (BETA 5)">333C817F9B40DB59F80148BB292992F1</hash>
-    <hash name="4.91.2 Evilnat Cobra D-PEX (BETA 5 &amp; 6)">348F48EA0D75EFB3ADF3BDC9C622F674</hash>
-    <hash name="4.91.2 Evilnat Cobra PEX (BETA 5 &amp; 6)">536DE6DE97F7776806F64FC6CEC53A4F</hash>
-    <hash name="4.91.2 Evilnat Cobra D-PEX (BETA 3 &amp; 4)">4BD225F356B906D45984A93DA0B418AA</hash>
-    <hash name="4.91.2 Evilnat Cobra PEX (BETA 3 &amp; 4)">14C62C0F2425EF584096E77A613B7F30</hash>
+    <hash name="4.91.2 Evilnat Cobra D-PEX (BETA 5 or 6)">348F48EA0D75EFB3ADF3BDC9C622F674</hash>
+    <hash name="4.91.2 Evilnat Cobra PEX (BETA 5 or 6)">536DE6DE97F7776806F64FC6CEC53A4F</hash>
+    <hash name="4.91.2 Evilnat Cobra D-PEX (BETA 3 or 4)">4BD225F356B906D45984A93DA0B418AA</hash>
+    <hash name="4.91.2 Evilnat Cobra PEX (BETA 3 or 4)">14C62C0F2425EF584096E77A613B7F30</hash>
     <hash name="4.91.2 Evilnat Cobra D-PEX noBD (BETA 2)">E146228429FD09043CA12F68EE5F6CC5</hash>
     <hash name="4.91.2 Evilnat Cobra PEX noBD (BETA 2)">10D9CC374B6181BB04AD581A46B39410</hash>
-    <hash name="4.91.2 Evilnat Cobra D-PEX (BETA 1 &amp; 2)">2A22C6A85DDC0F34993D74FC5BE33633</hash>
-    <hash name="4.91.2 Evilnat Cobra PEX (BETA 1 &amp; 2)">35EFCC01267C7BCA510217A3193DF4F2</hash>
+    <hash name="4.91.2 Evilnat Cobra D-PEX (BETA 1 or 2)">2A22C6A85DDC0F34993D74FC5BE33633</hash>
+    <hash name="4.91.2 Evilnat Cobra PEX (BETA 1 or 2)">35EFCC01267C7BCA510217A3193DF4F2</hash>
     <hash name="4.91 Evilnat Cobra CEX (updated 03.12.24)">57389F217AEDFD7A30D7ED448BD16FA8</hash>
     <hash name="4.91 Evilnat Cobra D-PEX (updated 03.12.24)">2F3B720302A6913B4B2595CC6511170D</hash>
     <hash name="4.91 Evilnat Cobra DEX (updated 03.12.24)">6FE868970D76430FB514A3D150DB4D5D</hash>
