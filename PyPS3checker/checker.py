@@ -658,6 +658,7 @@ if __name__ == "__main__":
 		cleanlog = cleanlog.replace('\x1B\x5B\x33\x32\x6D\x1B\x5B\x32\x32\x6D', '')
 		cleanlog = cleanlog.replace('\x1B\x5B\x33\x33\x6D\x1B\x5B\x32\x32\x6D', '')
 		cleanlog = cleanlog.replace('\x1B\x5B\x33\x35\x6D\x1B\x5B\x32\x32\x6D', '')
+        cleanlog = cleanlog.replace('\x1B\x5B\x33\x36\x6D\x1B\x5B\x32\x32\x6D', '')
 	with open('%s.checklog.txt'%inputFile, "w") as f:
 		f.write(cleanlog)
 	
