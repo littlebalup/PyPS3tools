@@ -113,6 +113,7 @@ def chunks(s, n):
     for start in range(0, len(s), n):
         yield s[start:start+n]
 
+
 def print_formatedlines(s, n):
     c = 0
     for chunk in chunks(s, n):
@@ -182,52 +183,51 @@ if __name__ == "__main__":
 
         %s
         %s
-        """ % (
-                release,
-                colored("white", "Python checker script for PS3 flash memory dump files"),
-                colored("cyan", "Copyright (C) 2015 littlebalup@gmail.com"),
-              ),
-        )
+        """
+        % (
+            release,
+            colored("white", "Python checker script for PS3 flash memory dump files"),
+            colored("cyan", "Copyright (C) 2015 littlebalup@gmail.com"),
+        ),
+    )
 
     if len(sys.argv) == 1:
-        print(textwrap.dedent(
-            """
+        print(
+            textwrap.dedent(
+                """
             Usage:
                 python %s [input_file]
 
                 [input_file] - Dump filename to check (default: dump.bin)
-			
+            
             Examples:
                 python %s dump.bin
 
-            """ % (
-                    os.path.basename(sys.argv[0]),
-                    os.path.basename(sys.argv[0])
-                )
+            """
+                % (os.path.basename(sys.argv[0]), os.path.basename(sys.argv[0]))
             )
         )
 
         sys.exit()
-
 
     startTime = time.time()
 
     # get args and set recording lists and counts
     inputFile = sys.argv[1]
     if not os.path.isfile(inputFile):
-        sys.exit("ERROR: input file \"%s\" not found!" % inputFile)
+        sys.exit('ERROR: input file "%s" not found!' % inputFile)
 
     dangerList = []
     warningList = []
     checkCount = 0
     dangerCount = 0
     warningCount = 0
-    
+
     skipHash = False
 
     # parse file
-    print("Loading file \"%s\" to memory..." % inputFile)
-    with open(inputFile,"rb") as f:
+    print('Loading file "%s" to memory...' % inputFile)
+    with open(inputFile, "rb") as f:
         rawfiledata = f.read()
 
     # parse xml
@@ -260,13 +260,17 @@ if __name__ == "__main__":
             break
     if flashType == "":
         print()
-        sys.exit("ERROR: unable to determine flash type! It doesn't seem to be a valid dump.")
+        sys.exit(
+            "ERROR: unable to determine flash type! It doesn't seem to be a valid dump."
+        )
 
     print(" Done")
 
     # create and start log
-    cl = open('%s.checklog.txt' % inputFile, 'w')
-    cl.write("PyPS3checker %s. Check log.\n\n" % release + "Checked file : %s\n" % inputFile)
+    cl = open("%s.checklog.txt" % inputFile, "w")
+    cl.write(
+        "PyPS3checker %s. Check log.\n\n" % release + "Checked file : %s\n" % inputFile
+    )
     # original = sys.stdout
     sys.stdout = Tee(sys.stdout, cl)
 
@@ -278,7 +282,6 @@ if __name__ == "__main__":
         print("  Reversed : YES")
     elif isReversed == False:
         print("  Reversed : NO")
-
 
     # SKU identification
     print()
@@ -299,7 +302,9 @@ if __name__ == "__main__":
             filedata = "%X" % calc
         skufiledata[tag] = filedata.lower()
         if tag == "idps":
-            print("  %s = 0x%s" % (tag, filedata[-2:].upper()))  #print only last 2 digits
+            print(
+                "  %s = 0x%s" % (tag, filedata[-2:].upper())
+            )  # print only last 2 digits
         else:
             print("  %s = 0x%s" % (tag, filedata.upper()))
     print()
@@ -355,9 +360,9 @@ if __name__ == "__main__":
             string2hex(getDatas(rawfiledata, addressPos, 0x4)), 16
         )
         ver = getDatas(rawfiledata, address, 0x8)
-        ver = ver[:-1]                       #remove useless last 0x0A char   
-        r = re.compile('\\d{3}\\.\\d{3}')         #def format 
-        ver = ver.decode('latin')
+        ver = ver[:-1]  # remove useless last 0x0A char
+        r = re.compile("\\d{3}\\.\\d{3}")  # def format
+        ver = ver.decode("latin")
         if r.match(ver) is not None:
             print("  %s : %s" % (sdk.attrib.get("name"), ver))
         else:
@@ -464,18 +469,39 @@ if __name__ == "__main__":
                         % (flashType, node.tag, subnode.tag, subnode.attrib.get("name"))
                     ):
                         print_formatedlines(entry.text.upper(), 32)
-                    print
+                    print()
 
             if subnode.tag == "datafill":
                 checkCount += 1
                 ChkResult = True
                 print("%s :" % subnode.attrib.get("name"), end=" ")
                 if subnode.attrib.get("ldrsize") is not None:
-                    ldrsize = (int(string2hex(getDatas(rawfiledata, int(subnode.attrib.get("ldrsize"), 16), 0x2)), 16) * 0x10) + 0x40
+                    ldrsize = (
+                        int(
+                            string2hex(
+                                getDatas(
+                                    rawfiledata,
+                                    int(subnode.attrib.get("ldrsize"), 16),
+                                    0x2,
+                                )
+                            ),
+                            16,
+                        )
+                        * 0x10
+                    ) + 0x40
                     start = int(subnode.attrib.get("regionstart"), 16) + ldrsize
                     length = int(subnode.attrib.get("regionsize"), 16) - ldrsize
                 elif subnode.attrib.get("sizefrom") is not None:
-                    datasize = int(string2hex(getDatas(rawfiledata, int(subnode.attrib.get("sizefrom"), 16), 0x2)), 16)
+                    datasize = int(
+                        string2hex(
+                            getDatas(
+                                rawfiledata,
+                                int(subnode.attrib.get("sizefrom"), 16),
+                                0x2,
+                            )
+                        ),
+                        16,
+                    )
                     start = int(subnode.attrib.get("regionstart"), 16) + datasize
                     length = int(subnode.attrib.get("regionsize"), 16) - datasize
                 else:
@@ -502,8 +528,14 @@ if __name__ == "__main__":
                         warningCount += 1
                         warningList.append(subnode.attrib.get("name"))
                     printrisklevel(risklevel)
-                    print("  All bytes from offset 0x%X to offset 0x%X should be 0x%s." % (start, start + length, subnode.text.upper()))
-                    print("  Byte at offset 0x%X has value : 0x%s"%(FalseOffset, FalseValue.upper()))
+                    print(
+                        "  All bytes from offset 0x%X to offset 0x%X should be 0x%s."
+                        % (start, start + length, subnode.text.upper())
+                    )
+                    print(
+                        "  Byte at offset 0x%X has value : 0x%s"
+                        % (FalseOffset, FalseValue.upper())
+                    )
                     print("  Subsequent bytes in the range may be wrong as well.")
                     print()
 
@@ -511,10 +543,12 @@ if __name__ == "__main__":
                 checkCount += 1
                 ChkResult = False
                 print("%s :" % subnode.attrib.get("name"), end=" ")
+
                 if subnode.attrib.get("name").endswith("trvk_prg1 Hash") and skipHash:
                     checkCount -= 1
                     print("Skipped")
                     continue
+
                 if subnode.attrib.get("sizeoffset") is not None:
                     size = int(
                         string2hex(
@@ -526,10 +560,17 @@ if __name__ == "__main__":
                         ),
                         16,
                     )
+
                 else:
                     size = int(subnode.attrib.get("size"), 16)
-                hashdata = getMD5(rawfiledata, int(subnode.attrib.get("offset"), 16), size)
-                for hash in hashtree.findall(".//type[@name='%s']/"%(subnode.attrib.get("type"))):
+
+                hashdata = getMD5(
+                    rawfiledata, int(subnode.attrib.get("offset"), 16), size
+                )
+
+                for hash in hashtree.findall(
+                    ".//type[@name='%s']/" % (subnode.attrib.get("type"))
+                ):
                     if hashdata.lower() == hash.text.lower():
                         printok()
                         ChkResult = True
@@ -537,57 +578,99 @@ if __name__ == "__main__":
                         print("  MD5 =", hashdata.upper())
                         print("  Version =", hash.attrib.get("name"))
                         break
+
                 if ChkResult == False:
+
                     if risklevel == "DANGER":
                         dangerCount += 1
                         dangerList.append(subnode.attrib.get("name"))
+
                     elif risklevel == "WARNING":
                         warningCount += 1
                         warningList.append(subnode.attrib.get("name"))
+
                     printrisklevel(risklevel)
                     print("  Size = 0x%X" % size)
                     print("  MD5 =", hashdata.upper())
                     print("  Version = (unknown)")
+
                 print()
 
             if subnode.tag == "datalist":
                 print("%s :" % subnode.attrib.get("name"), end=" ")
                 if subnode.attrib.get("ldrsize") is not None:
-                    d = string2hex(getDatas(rawfiledata, int(subnode.attrib.get("ldrsize"), 16), 0x2))
+                    d = string2hex(
+                        getDatas(
+                            rawfiledata, int(subnode.attrib.get("ldrsize"), 16), 0x2
+                        )
+                    )
                     size = (int(d, 16) * 0x10) + 0x40
+
                 else:
                     size = int(subnode.attrib.get("size"), 16)
-                filedata = getDatas(rawfiledata, int(subnode.attrib.get("offset"), 16), size)
-                for datatreshold in chktree.findall(".//%s/%s/%s[@name='%s']/" % (flashType, node.tag, subnode.tag, subnode.attrib.get("name"))):
+
+                filedata = getDatas(
+                    rawfiledata, int(subnode.attrib.get("offset"), 16), size
+                )
+
+                for datatreshold in chktree.findall(
+                    ".//%s/%s/%s[@name='%s']/"
+                    % (flashType, node.tag, subnode.tag, subnode.attrib.get("name"))
+                ):
                     checkCount += 1
                     ChkResult = True
                     r = {}
+
                     if datatreshold.attrib.get("key") == "*":
+
                         for k, v in Counter(filedata).items():
                             c = float(v) / size * 100
+
                             if c > float(datatreshold.text.replace(",", ".")):
                                 ChkResult = False
-                                tag = string2hex([k] if isinstance(k, int) else k).upper()
+                                tag = string2hex(
+                                    [k] if isinstance(k, int) else k
+                                ).upper()
                                 r[tag] = c
                     else:
-                        _filedata = filedata.decode('latin')
-                        c = float(_filedata.count(chr(int(datatreshold.attrib.get("key"), 16)))) / size * 100
-                        if c > float(datatreshold.text.replace(',', '.')):
+                        _filedata = filedata.decode("latin")
+                        c = (
+                            float(
+                                _filedata.count(
+                                    chr(int(datatreshold.attrib.get("key"), 16))
+                                )
+                            )
+                            / size
+                            * 100
+                        )
+
+                        if c > float(datatreshold.text.replace(",", ".")):
                             tag = datatreshold.attrib.get("key").upper()
+
                             r[tag] = c
+
                     if ChkResult:
                         printok()
+
                     else:
                         if risklevel == "DANGER":
                             dangerCount += 1
                             dangerList.append(subnode.attrib.get("name"))
+
                         elif risklevel == "WARNING":
                             warningCount += 1
                             warningList.append(subnode.attrib.get("name"))
+
                         printrisklevel(risklevel)
+
                         if datatreshold.attrib.get("key") == "*":
                             print("  Any bytes")
+
                         else:
+                            print(
+                                "  0x%s bytes" % datatreshold.attrib.get("key").upper()
+                            )
+
                         print(
                             "from offset 0x%s to offset 0x%X should be less than %s%%."
                             % (
@@ -596,17 +679,23 @@ if __name__ == "__main__":
                                 datatreshold.text.replace(",", "."),
                             )
                         )
-                            print("  0x%s bytes" % datatreshold.attrib.get("key").upper())
+
                         for x in sorted(r.keys()):
                             print("    0x%s is %.2f%%" % ((x), r[x]))
 
             if subnode.tag == "datamatchid":
                 print(subnode.text, ":", end=" ")
                 d = {}
-                for id in chktree.findall(".//%s/%s//datamatch[@id='%s']" % (flashType, node.tag, subnode.attrib.get("id"))):
+
+                for id in chktree.findall(
+                    ".//%s/%s//datamatch[@id='%s']"
+                    % (flashType, node.tag, subnode.attrib.get("id"))
+                ):
                     checkCount += 1
+
                     if id.attrib.get("seqrep") is not None:
                         c = 0
+
                         while c != int(id.attrib.get("seqrep"), 16):
                             filedata = string2hex(
                                 getDatas(
@@ -623,67 +712,127 @@ if __name__ == "__main__":
                             )
                             d[tag] = filedata.upper()
                             c += 1
+
                     else:
-                        filedata = string2hex(getDatas(rawfiledata, int(id.attrib.get("offset"), 16), int(id.attrib.get("length"), 16)))
+                        filedata = string2hex(
+                            getDatas(
+                                rawfiledata,
+                                int(id.attrib.get("offset"), 16),
+                                int(id.attrib.get("length"), 16),
+                            )
+                        )
                         tag = id.text
                         d[tag] = filedata.upper()
+
                 if len(set(d.values())) != 1:
+
                     if risklevel == "DANGER":
                         dangerCount += 1
                         dangerList.append("datamatches : %s" % subnode.text)
+
                     elif risklevel == "WARNING":
                         warningCount += 1
                         warningList.append("datamatches : %s" % subnode.text)
+
                     printrisklevel(risklevel)
                     print("  Following datas should be the same :")
-                    for id in chktree.findall(".//%s/%s//datamatch[@id='%s']" % (flashType, node.tag, subnode.attrib.get("id"))):
+
+                    for id in chktree.findall(
+                        ".//%s/%s//datamatch[@id='%s']"
+                        % (flashType, node.tag, subnode.attrib.get("id"))
+                    ):
+
                         if id.attrib.get("nodisp") is not None:
-                            print("  %s at offset 0x%s length 0x%s" % (id.text, id.attrib.get("offset").upper(), id.attrib.get("length").upper()))
+                            print(
+                                "  %s at offset 0x%s length 0x%s"
+                                % (
+                                    id.text,
+                                    id.attrib.get("offset").upper(),
+                                    id.attrib.get("length").upper(),
+                                )
+                            )
                             print("    (too long to dilplay)")
+
                         elif id.attrib.get("seqrep") is not None:
-                            print("  %s at offset 0x%s length 0x%s, repeted 0x%s time" % (id.text, id.attrib.get("offset").upper(), id.attrib.get("length").upper(), id.attrib.get("seqrep").upper()))
+                            print(
+                                "  %s at offset 0x%s length 0x%s, repeted 0x%s time"
+                                % (
+                                    id.text,
+                                    id.attrib.get("offset").upper(),
+                                    id.attrib.get("length").upper(),
+                                    id.attrib.get("seqrep").upper(),
+                                )
+                            )
                             print("    (too long to dilplay)")
+
                         else:
-                            print("  %s at offset 0x%s length 0x%s" % (id.text, id.attrib.get("offset").upper(), id.attrib.get("length").upper()))
+                            print(
+                                "  %s at offset 0x%s length 0x%s"
+                                % (
+                                    id.text,
+                                    id.attrib.get("offset").upper(),
+                                    id.attrib.get("length").upper(),
+                                )
+                            )
                             print_formatedlines(d[id.text], 32)
-                    print
+                    print()
+
                 else:
                     printok()
 
             if subnode.tag == "repcheck":
                 checkCount += 1
                 ChkResult = True
-                print("%s :" % subnode.attrib.get("name"), end=' ')
-                key = bytes.fromhex(subnode.text) # hex2string(subnode.text)
+                print("%s :" % subnode.attrib.get("name"), end=" ")
+                key = bytes.fromhex(subnode.text)  # hex2string(subnode.text)
                 beg = 0
                 index = beg
                 nothing = True
                 indexlist = []
+
                 while index != -1:
                     index = rawfiledata.find(key, beg)
+
                     if index != -1 and index != int(subnode.attrib.get("offset"), 16):
                         nothing = False
                         ChkResult = False
                         indexlist.append("0x%X" % index)
+
                     elif index == int(subnode.attrib.get("offset"), 16):
                         nothing = False
+
                     beg = index + (len(subnode.text) // 2)
+
                 if nothing or not ChkResult:
+
                     if risklevel == "DANGER":
                         dangerCount += 1
                         dangerList.append("repcheck : %s" % subnode.attrib.get("name"))
+
                     elif risklevel == "WARNING":
                         warningCount += 1
                         warningList.append("repcheck : %s" % subnode.attrib.get("name"))
+
                     printrisklevel(risklevel)
+
                     if isReversed:
-                        print("  Following data (reversed) expected at offset 0x%s :" % subnode.attrib.get("offset").upper())
+                        print(
+                            "  Following data (reversed) expected at offset 0x%s :"
+                            % subnode.attrib.get("offset").upper()
+                        )
+
                     else:
-                        print("  Following data expected at offset 0x%s :" % subnode.attrib.get("offset").upper())
+                        print(
+                            "  Following data expected at offset 0x%s :"
+                            % subnode.attrib.get("offset").upper()
+                        )
+
                     print_formatedlines(subnode.text, 32)
+
                     if nothing:
                         print("    No matching data found!")
                         print()
+
                     else:
                         print("  Repetition(s) found at offset(s) :")
                         print("   ", ", ".join(indexlist))
@@ -691,10 +840,10 @@ if __name__ == "__main__":
                 else:
                     printok()
 
-
     print()
     print()
     print("******* Additional information *******")
+
     if flashType == "NOR":
         HDD = getDatas(rawfiledata, 0xF20204, 0x3C)
         MAC = string2hex(getDatas(rawfiledata, 0x3F040, 0x6)).upper()
@@ -704,18 +853,21 @@ if __name__ == "__main__":
         kiban_id = getDatas(rawfiledata, 0x3F098, 0xC)
         hdd_split = [i.decode("latin") for i in HDD.split()]
         print("HDD :", *hdd_split)
+
     if flashType == "NAND":
         MAC = string2hex(getDatas(rawfiledata, 0x90840, 0x6)).upper()
         CID = string2hex(getDatas(rawfiledata, 0x9086A, 0x6)).upper()
         eCID = getDatas(rawfiledata, 0x90870, 0x20)
         board_id = getDatas(rawfiledata, 0x90890, 0x8)
         kiban_id = getDatas(rawfiledata, 0x90898, 0xC)
+
     if flashType in ["NAND_PS3Xploit", "EMMC_PS3Xploit"]:
         MAC = string2hex(getDatas(rawfiledata, 0x90840 - 0x40000, 0x6)).upper()
         CID = string2hex(getDatas(rawfiledata, 0x9086A - 0x40000, 0x6)).upper()
         eCID = getDatas(rawfiledata, 0x90870 - 0x40000, 0x20)
         board_id = getDatas(rawfiledata, 0x90890 - 0x40000, 0x8)
         kiban_id = getDatas(rawfiledata, 0x90898 - 0x40000, 0xC)
+
     print("MAC address :", ":".join(a + b for a, b in zip(MAC[::2], MAC[1::2])))
     print("CID : 0x%s" % CID)
     print("eCID : %s" % eCID.decode("latin"))
@@ -732,22 +884,25 @@ if __name__ == "__main__":
     print()
     print("Total number of checks =", checkCount)
     print("Number of dangers =", end=" ")
+
     if dangerCount > 0:
         printcolored("red", dangerCount)
     else:
         printcolored("green", dangerCount)
+
     print("Number of warnings =", end=" ")
+
     if warningCount > 0:
         printcolored("yellow", warningCount)
     else:
         printcolored("green", warningCount)
 
     if dangerCount > 0:
-        print
+        print()
         print("Following check(s) returned a")
         printrisklevel("DANGER")
         printcolored("red", "  " + "\n  ".join(dangerList))
-        
+
     if warningCount > 0:
         print()
         print("Following check(s) returned a")
@@ -759,8 +914,8 @@ if __name__ == "__main__":
 
     if flashType in ["NOR", "EMMC_PS3Xploit"]:
         printcolored(
-        "MAGENTA",
-        """
+            "MAGENTA",
+            """
 
 
          ---------------------------------------------------------------------------- 
@@ -772,7 +927,8 @@ if __name__ == "__main__":
         | Thanks! It will help me a lot to improve that tool ;)                      |
          ---------------------------------------------------------------------------- 
 
-        """)
+        """,
+        )
 
     cl.close()
 
@@ -782,9 +938,9 @@ if __name__ == "__main__":
         cleanlog = cleanlog.replace("\x1B\x5B\x33\x33\x6D\x1B\x5B\x32\x32\x6D", "")
         cleanlog = cleanlog.replace("\x1B\x5B\x33\x35\x6D\x1B\x5B\x32\x32\x6D", "")
         cleanlog = cleanlog.replace("\x1B\x5B\x33\x36\x6D\x1B\x5B\x32\x32\x6D", "")
+
     with open("%s.checklog.txt" % inputFile, "w") as f:
         f.write(cleanlog)
-    
 
     if dangerCount > 0:
         sys.exit(3)
