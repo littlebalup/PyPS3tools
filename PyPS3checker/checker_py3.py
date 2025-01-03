@@ -85,7 +85,7 @@ def isMetldr2(data):
 
 
 def getDatas(file, offset, length):
-    bytes = file[offset : (offset + length)]
+    bytes = file[offset:(offset + length)]
     return bytes
 
 
@@ -111,8 +111,7 @@ def hex2string(data):
 def chunks(s, n):
     # Produce `n`-character chunks from `s`.
     for start in range(0, len(s), n):
-        yield s[start : start + n]
-
+        yield s[start:start+n]
 
 def print_formatedlines(s, n):
     c = 0
@@ -210,24 +209,25 @@ if __name__ == "__main__":
 
         sys.exit()
 
+
     startTime = time.time()
 
     # get args and set recording lists and counts
     inputFile = sys.argv[1]
     if not os.path.isfile(inputFile):
-        sys.exit('ERROR: input file "%s" not found!' % inputFile)
+        sys.exit("ERROR: input file \"%s\" not found!" % inputFile)
 
     dangerList = []
     warningList = []
     checkCount = 0
     dangerCount = 0
     warningCount = 0
-
+    
     skipHash = False
 
     # parse file
-    print('Loading file "%s" to memory...' % inputFile)
-    with open(inputFile, "rb") as f:
+    print("Loading file \"%s\" to memory..." % inputFile)
+    with open(inputFile,"rb") as f:
         rawfiledata = f.read()
 
     # parse xml
@@ -260,17 +260,13 @@ if __name__ == "__main__":
             break
     if flashType == "":
         print()
-        sys.exit(
-            "ERROR: unable to determine flash type! It doesn't seem to be a valid dump."
-        )
+        sys.exit("ERROR: unable to determine flash type! It doesn't seem to be a valid dump.")
 
     print(" Done")
 
     # create and start log
-    cl = open("%s.checklog.txt" % inputFile, "w")
-    cl.write(
-        "PyPS3checker %s. Check log.\n\n" % release + "Checked file : %s\n" % inputFile
-    )
+    cl = open('%s.checklog.txt' % inputFile, 'w')
+    cl.write("PyPS3checker %s. Check log.\n\n" % release + "Checked file : %s\n" % inputFile)
     # original = sys.stdout
     sys.stdout = Tee(sys.stdout, cl)
 
@@ -282,6 +278,7 @@ if __name__ == "__main__":
         print("  Reversed : YES")
     elif isReversed == False:
         print("  Reversed : NO")
+
 
     # SKU identification
     print()
@@ -302,9 +299,7 @@ if __name__ == "__main__":
             filedata = "%X" % calc
         skufiledata[tag] = filedata.lower()
         if tag == "idps":
-            print(
-                "  %s = 0x%s" % (tag, filedata[-2:].upper())
-            )  # print only last 2 digits
+            print("  %s = 0x%s" % (tag, filedata[-2:].upper()))  #print only last 2 digits
         else:
             print("  %s = 0x%s" % (tag, filedata.upper()))
     print()
@@ -360,9 +355,9 @@ if __name__ == "__main__":
             string2hex(getDatas(rawfiledata, addressPos, 0x4)), 16
         )
         ver = getDatas(rawfiledata, address, 0x8)
-        ver = ver[:-1]  # remove useless last 0x0A char
-        r = re.compile(r"""\d{3}\.\d{3}""")  # def format
-        ver = ver.decode("latin")
+        ver = ver[:-1]                       #remove useless last 0x0A char   
+        r = re.compile('\\d{3}\\.\\d{3}')         #def format 
+        ver = ver.decode('latin')
         if r.match(ver) is not None:
             print("  %s : %s" % (sdk.attrib.get("name"), ver))
         else:
@@ -476,32 +471,11 @@ if __name__ == "__main__":
                 ChkResult = True
                 print("%s :" % subnode.attrib.get("name"), end=" ")
                 if subnode.attrib.get("ldrsize") is not None:
-                    ldrsize = (
-                        int(
-                            string2hex(
-                                getDatas(
-                                    rawfiledata,
-                                    int(subnode.attrib.get("ldrsize"), 16),
-                                    0x2,
-                                )
-                            ),
-                            16,
-                        )
-                        * 0x10
-                    ) + 0x40
+                    ldrsize = (int(string2hex(getDatas(rawfiledata, int(subnode.attrib.get("ldrsize"), 16), 0x2)), 16) * 0x10) + 0x40
                     start = int(subnode.attrib.get("regionstart"), 16) + ldrsize
                     length = int(subnode.attrib.get("regionsize"), 16) - ldrsize
                 elif subnode.attrib.get("sizefrom") is not None:
-                    datasize = int(
-                        string2hex(
-                            getDatas(
-                                rawfiledata,
-                                int(subnode.attrib.get("sizefrom"), 16),
-                                0x2,
-                            )
-                        ),
-                        16,
-                    )
+                    datasize = int(string2hex(getDatas(rawfiledata, int(subnode.attrib.get("sizefrom"), 16), 0x2)), 16)
                     start = int(subnode.attrib.get("regionstart"), 16) + datasize
                     length = int(subnode.attrib.get("regionsize"), 16) - datasize
                 else:
@@ -528,14 +502,8 @@ if __name__ == "__main__":
                         warningCount += 1
                         warningList.append(subnode.attrib.get("name"))
                     printrisklevel(risklevel)
-                    print(
-                        "  All bytes from offset 0x%X to offset 0x%X should be 0x%s."
-                        % (start, start + length, subnode.text.upper())
-                    )
-                    print(
-                        "  Byte at offset 0x%X has value : 0x%s"
-                        % (FalseOffset, FalseValue.upper())
-                    )
+                    print("  All bytes from offset 0x%X to offset 0x%X should be 0x%s." % (start, start + length, subnode.text.upper()))
+                    print("  Byte at offset 0x%X has value : 0x%s"%(FalseOffset, FalseValue.upper()))
                     print("  Subsequent bytes in the range may be wrong as well.")
                     print()
 
@@ -560,12 +528,8 @@ if __name__ == "__main__":
                     )
                 else:
                     size = int(subnode.attrib.get("size"), 16)
-                hashdata = getMD5(
-                    rawfiledata, int(subnode.attrib.get("offset"), 16), size
-                )
-                for hash in hashtree.findall(
-                    ".//type[@name='%s']/" % (subnode.attrib.get("type"))
-                ):
+                hashdata = getMD5(rawfiledata, int(subnode.attrib.get("offset"), 16), size)
+                for hash in hashtree.findall(".//type[@name='%s']/"%(subnode.attrib.get("type"))):
                     if hashdata.lower() == hash.text.lower():
                         printok()
                         ChkResult = True
@@ -589,21 +553,12 @@ if __name__ == "__main__":
             if subnode.tag == "datalist":
                 print("%s :" % subnode.attrib.get("name"), end=" ")
                 if subnode.attrib.get("ldrsize") is not None:
-                    d = string2hex(
-                        getDatas(
-                            rawfiledata, int(subnode.attrib.get("ldrsize"), 16), 0x2
-                        )
-                    )
+                    d = string2hex(getDatas(rawfiledata, int(subnode.attrib.get("ldrsize"), 16), 0x2))
                     size = (int(d, 16) * 0x10) + 0x40
                 else:
                     size = int(subnode.attrib.get("size"), 16)
-                filedata = getDatas(
-                    rawfiledata, int(subnode.attrib.get("offset"), 16), size
-                )
-                for datatreshold in chktree.findall(
-                    ".//%s/%s/%s[@name='%s']/"
-                    % (flashType, node.tag, subnode.tag, subnode.attrib.get("name"))
-                ):
+                filedata = getDatas(rawfiledata, int(subnode.attrib.get("offset"), 16), size)
+                for datatreshold in chktree.findall(".//%s/%s/%s[@name='%s']/" % (flashType, node.tag, subnode.tag, subnode.attrib.get("name"))):
                     checkCount += 1
                     ChkResult = True
                     r = {}
@@ -612,22 +567,12 @@ if __name__ == "__main__":
                             c = float(v) / size * 100
                             if c > float(datatreshold.text.replace(",", ".")):
                                 ChkResult = False
-                                tag = string2hex(
-                                    [k] if isinstance(k, int) else k
-                                ).upper()
+                                tag = string2hex([k] if isinstance(k, int) else k).upper()
                                 r[tag] = c
                     else:
-                        _filedata = filedata.decode("latin")
-                        c = (
-                            float(
-                                _filedata.count(
-                                    chr(int(datatreshold.attrib.get("key"), 16))
-                                )
-                            )
-                            / size
-                            * 100
-                        )
-                        if c > float(datatreshold.text.replace(",", ".")):
+                        _filedata = filedata.decode('latin')
+                        c = float(_filedata.count(chr(int(datatreshold.attrib.get("key"), 16)))) / size * 100
+                        if c > float(datatreshold.text.replace(',', '.')):
                             tag = datatreshold.attrib.get("key").upper()
                             r[tag] = c
                     if ChkResult:
@@ -643,9 +588,6 @@ if __name__ == "__main__":
                         if datatreshold.attrib.get("key") == "*":
                             print("  Any bytes")
                         else:
-                            print(
-                                "  0x%s bytes" % datatreshold.attrib.get("key").upper()
-                            )
                         print(
                             "from offset 0x%s to offset 0x%X should be less than %s%%."
                             % (
@@ -654,16 +596,14 @@ if __name__ == "__main__":
                                 datatreshold.text.replace(",", "."),
                             )
                         )
+                            print("  0x%s bytes" % datatreshold.attrib.get("key").upper())
                         for x in sorted(r.keys()):
-                            print("	0x%s is %.2f%%" % ((x), r[x]))
+                            print("    0x%s is %.2f%%" % ((x), r[x]))
 
             if subnode.tag == "datamatchid":
                 print(subnode.text, ":", end=" ")
                 d = {}
-                for id in chktree.findall(
-                    ".//%s/%s//datamatch[@id='%s']"
-                    % (flashType, node.tag, subnode.attrib.get("id"))
-                ):
+                for id in chktree.findall(".//%s/%s//datamatch[@id='%s']" % (flashType, node.tag, subnode.attrib.get("id"))):
                     checkCount += 1
                     if id.attrib.get("seqrep") is not None:
                         c = 0
@@ -684,13 +624,7 @@ if __name__ == "__main__":
                             d[tag] = filedata.upper()
                             c += 1
                     else:
-                        filedata = string2hex(
-                            getDatas(
-                                rawfiledata,
-                                int(id.attrib.get("offset"), 16),
-                                int(id.attrib.get("length"), 16),
-                            )
-                        )
+                        filedata = string2hex(getDatas(rawfiledata, int(id.attrib.get("offset"), 16), int(id.attrib.get("length"), 16)))
                         tag = id.text
                         d[tag] = filedata.upper()
                 if len(set(d.values())) != 1:
@@ -702,40 +636,15 @@ if __name__ == "__main__":
                         warningList.append("datamatches : %s" % subnode.text)
                     printrisklevel(risklevel)
                     print("  Following datas should be the same :")
-                    for id in chktree.findall(
-                        ".//%s/%s//datamatch[@id='%s']"
-                        % (flashType, node.tag, subnode.attrib.get("id"))
-                    ):
+                    for id in chktree.findall(".//%s/%s//datamatch[@id='%s']" % (flashType, node.tag, subnode.attrib.get("id"))):
                         if id.attrib.get("nodisp") is not None:
-                            print(
-                                "  %s at offset 0x%s length 0x%s"
-                                % (
-                                    id.text,
-                                    id.attrib.get("offset").upper(),
-                                    id.attrib.get("length").upper(),
-                                )
-                            )
-                            print("	(too long to dilplay)")
+                            print("  %s at offset 0x%s length 0x%s" % (id.text, id.attrib.get("offset").upper(), id.attrib.get("length").upper()))
+                            print("    (too long to dilplay)")
                         elif id.attrib.get("seqrep") is not None:
-                            print(
-                                "  %s at offset 0x%s length 0x%s, repeted 0x%s time"
-                                % (
-                                    id.text,
-                                    id.attrib.get("offset").upper(),
-                                    id.attrib.get("length").upper(),
-                                    id.attrib.get("seqrep").upper(),
-                                )
-                            )
-                            print("	(too long to dilplay)")
+                            print("  %s at offset 0x%s length 0x%s, repeted 0x%s time" % (id.text, id.attrib.get("offset").upper(), id.attrib.get("length").upper(), id.attrib.get("seqrep").upper()))
+                            print("    (too long to dilplay)")
                         else:
-                            print(
-                                "  %s at offset 0x%s length 0x%s"
-                                % (
-                                    id.text,
-                                    id.attrib.get("offset").upper(),
-                                    id.attrib.get("length").upper(),
-                                )
-                            )
+                            print("  %s at offset 0x%s length 0x%s" % (id.text, id.attrib.get("offset").upper(), id.attrib.get("length").upper()))
                             print_formatedlines(d[id.text], 32)
                     print
                 else:
@@ -744,8 +653,8 @@ if __name__ == "__main__":
             if subnode.tag == "repcheck":
                 checkCount += 1
                 ChkResult = True
-                print("%s :" % subnode.attrib.get("name"), end=" ")
-                key = bytes.fromhex(subnode.text)  # hex2string(subnode.text)
+                print("%s :" % subnode.attrib.get("name"), end=' ')
+                key = bytes.fromhex(subnode.text) # hex2string(subnode.text)
                 beg = 0
                 index = beg
                 nothing = True
@@ -768,18 +677,12 @@ if __name__ == "__main__":
                         warningList.append("repcheck : %s" % subnode.attrib.get("name"))
                     printrisklevel(risklevel)
                     if isReversed:
-                        print(
-                            "  Following data (reversed) expected at offset 0x%s :"
-                            % subnode.attrib.get("offset").upper()
-                        )
+                        print("  Following data (reversed) expected at offset 0x%s :" % subnode.attrib.get("offset").upper())
                     else:
-                        print(
-                            "  Following data expected at offset 0x%s :"
-                            % subnode.attrib.get("offset").upper()
-                        )
+                        print("  Following data expected at offset 0x%s :" % subnode.attrib.get("offset").upper())
                     print_formatedlines(subnode.text, 32)
                     if nothing:
-                        print("	No matching data found!")
+                        print("    No matching data found!")
                         print()
                     else:
                         print("  Repetition(s) found at offset(s) :")
@@ -787,6 +690,7 @@ if __name__ == "__main__":
                         print()
                 else:
                     printok()
+
 
     print()
     print()
@@ -843,7 +747,7 @@ if __name__ == "__main__":
         print("Following check(s) returned a")
         printrisklevel("DANGER")
         printcolored("red", "  " + "\n  ".join(dangerList))
-
+        
     if warningCount > 0:
         print()
         print("Following check(s) returned a")
@@ -880,6 +784,7 @@ if __name__ == "__main__":
         cleanlog = cleanlog.replace("\x1B\x5B\x33\x36\x6D\x1B\x5B\x32\x32\x6D", "")
     with open("%s.checklog.txt" % inputFile, "w") as f:
         f.write(cleanlog)
+    
 
     if dangerCount > 0:
         sys.exit(3)
