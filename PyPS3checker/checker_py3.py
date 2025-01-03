@@ -72,7 +72,7 @@ def checkReversed(data):
         return False
     elif bytes == b"\xAD\xDE\xCE\xFA":
         return True
-    sys.exit("ERROR: unable to determine if reversed data! Too much curruptions.")
+    sys.exit("ERROR: unable to determine if reversed data! Too much corruptions.")
 
 
 def isMetldr2(data):
@@ -81,7 +81,7 @@ def isMetldr2(data):
         return "false"
     elif bytes == b"\x6D\x65\x74\x6C\x64\x72\x2E\x32":  # METLDR.2
         return "true"
-    sys.exit("ERROR: unable to determine if NAND or EMMC data! Too much curruptions.")
+    sys.exit("ERROR: unable to determine if NAND or EMMC data! Too much corruptions.")
 
 
 def getDatas(file, offset, length):
@@ -168,43 +168,46 @@ if __name__ == "__main__":
 
     release = "v0.11.x"
 
-    print()
-    print()
-    print()
-    printcolored("cyan", "  ____		____  ____ _____	  _			   _			 ")
     printcolored(
-        "cyan", " |  _ \ _   _|  _ \/ ___|___ /  ___| |__   ___  ___| | _____ _ __ "
-    )
-    printcolored(
-        "cyan", " | |_) | | | | |_) \___ \ |_ \ / __| '_ \ / _ \/ __| |/ / _ \ '__|"
-    )
-    printcolored(
-        "cyan", " |  __/| |_| |  __/ ___) |__) | (__| | | |  __/ (__|   <  __/ |   "
-    )
-    printcolored(
-        "cyan", " |_|	\__, |_|   |____/____/ \___|_| |_|\___|\___|_|\_\___|_|   "
-    )
-    printcolored("cyan", "		|___/											   %s " % release)
-    print()
-    printcolored("white", " Python checker script for PS3 flash memory dump files")
-    printcolored("cyan", " Copyright (C) 2015 littlebalup@gmail.com")
-    print()
-    print()
-    if len(sys.argv) == 1:
-        print(
-            textwrap.dedent(
-                """
-			Usage:
-			%s [input_file]
+        "cyan",
+        r"""
+    
+         ____        ____  ____ _____      _               _
+        |  _ \ _   _|  _ \/ ___|___ /  ___| |__   ___  ___| | _____ _ __
+        | |_) | | | | |_) \___ \ |_ \ / __| '_ \ / _ \/ __| |/ / _ \ '__|
+        |  __/| |_| |  __/ ___) |__) | (__| | | |  __/ (__|   <  __/ |
+        |_|    \__, |_|   |____/____/ \___|_| |_|\___|\___|_|\_\___|_|
+               |___/
+    
+        %s
 
-			 [input_file]   Dump filename to check.
+        %s
+        %s
+        """ % (
+                release,
+                colored("white", "Python checker script for PS3 flash memory dump files"),
+                colored("cyan", "Copyright (C) 2015 littlebalup@gmail.com"),
+              ),
+        )
+
+    if len(sys.argv) == 1:
+        print(textwrap.dedent(
+            """
+            Usage:
+                python %s [input_file]
+
+                [input_file] - Dump filename to check (default: dump.bin)
 			
-			 Examples:
-			  %s mydump.bin
-		"""
-                % (os.path.basename(sys.argv[0]), os.path.basename(sys.argv[0]))
+            Examples:
+                python %s dump.bin
+
+            """ % (
+                    os.path.basename(sys.argv[0]),
+                    os.path.basename(sys.argv[0])
+                )
             )
         )
+
         sys.exit()
 
     startTime = time.time()
@@ -358,7 +361,7 @@ if __name__ == "__main__":
         )
         ver = getDatas(rawfiledata, address, 0x8)
         ver = ver[:-1]  # remove useless last 0x0A char
-        r = re.compile("\d{3}\.\d{3}")  # def format
+        r = re.compile(r"""\d{3}\.\d{3}""")  # def format
         ver = ver.decode("latin")
         if r.match(ver) is not None:
             print("  %s : %s" % (sdk.attrib.get("name"), ver))
@@ -852,19 +855,23 @@ if __name__ == "__main__":
 
     if flashType in ["NOR", "EMMC_PS3Xploit"]:
         printcolored(
-            "MAGENTA",
-            "\n\n\
- ---------------------------------------------------------------------------- \n\
-| IMPORTANT NOTICE !														 |\n\
-| Checks of late CECH-25xxx, CECH-3xxxx and CECH-4xxxx consoles dumps still  |\n\
-| under development and may return false results. If you feel it's the case, |\n\
-| please post your *.checklog.txt in a new issue on my github repository:	|\n\
-|   https://github.com/littlebalup/PyPS3tools/issues						 |\n\
-| Thanks! It will help me a lot to improve that tool ;)					  |\n\
- ---------------------------------------------------------------------------- ",
-        )
+        "MAGENTA",
+        """
+
+
+         ---------------------------------------------------------------------------- 
+        | IMPORTANT NOTICE !                                                         |
+        | Checks of late CECH-25xxx, CECH-3xxxx and CECH-4xxxx consoles dumps still  |
+        | under development and may return false results. If you feel it's the case, |
+        | please post your *.checklog.txt in a new issue on my github repository:    |
+        |   https://github.com/littlebalup/PyPS3tools/issues                         |
+        | Thanks! It will help me a lot to improve that tool ;)                      |
+         ---------------------------------------------------------------------------- 
+
+        """)
 
     cl.close()
+
     with open("%s.checklog.txt" % inputFile) as f:
         cleanlog = f.read().replace("\x1B\x5B\x33\x31\x6D\x1B\x5B\x32\x32\x6D", "")
         cleanlog = cleanlog.replace("\x1B\x5B\x33\x32\x6D\x1B\x5B\x32\x32\x6D", "")
