@@ -1,0 +1,5 @@
+dump.bin.changelog.txt
+dump.bin
+
+../dist/
+../PyPS3checker/__pycache__
